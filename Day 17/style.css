@@ -4,6 +4,10 @@ body{
 img{
     width: 500px;
 }
-.divbox{
+.box{
     background-color: pink;
+}
+
+.box1{
+    color: red;
 }
