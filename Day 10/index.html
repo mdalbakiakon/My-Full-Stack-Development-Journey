@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>#Day 10 | Learning about media video audio in html</title>
+  </head>
+  <body>
+    <video
+      src="QS An-Nur 24-35.mp4"
+      height="550"
+      poster="quran.jpg"
+      controls
+      muted
+    ></video>
+    <p class="name">
+      <strong id="note">Video Attributes</strong>
+      <br />
+      <br />
+      <strong>src:</strong>
+      Specifies the path to the video file.
+      <br />
+      <strong>controls:</strong>
+      Adds video controls, like play, pause, and volume.
+      <br />
+      <strong>autoplay:</strong> Automatically starts playing the video when the
+      page loads.
+      <br />
+      <strong>loop:</strong> Repeats the video once it ends.
+      <br />
+      <strong>muted:</strong> Mutes the video by default.
+      <br />
+      <strong>poster:</strong> Specifies an image to be displayed before the
+      video starts playing.
+      <br />
+      <strong>width and height:</strong> Specifies the dimensions of the video.
+    </p>
+
+    <audio src="Azan.m4a" controls preload="auto"></audio>
+    <!-- ! here we have added the preload attribute as auto it should not use because it can make the website load slow so it is better to use preload="metadata" or keep it as default which is none -->
+    <p class="name">
+      <strong id="note">
+        Audio Attributes
+        <br />
+        <br>
+        Note!!!
+      </strong>
+
+      <strong
+        >"poster" is not available for the audio file rather there is another
+        attribute for the audio which is "preload"</strong
+      >
+      <br />
+      <br />
+      The "preload" attribute can have the following values:
+      <br />
+      <br />
+      <strong>none:</strong> This is the default value. It indicates that the
+      browser should not preload the audio file at all. The audio file will only
+      start downloading when the user initiates playback.
+      <br />
+      <br />
+      <strong>metadata:</strong> This value tells the browser to preload only
+      the metadata of the audio file, such as its duration and basic information
+      about the audio. This can be useful if you want to display the audio
+      duration to the user without fully loading the audio data.
+      <br />
+      <br />
+      <strong>auto:</strong> This value instructs the browser to preload the
+      entire audio file as much as possible without delaying the loading of
+      other important page content. The browser will try to load the audio file
+      in the background so that it's ready to play when the user decides to
+      start it.
+    </p>
+
+    <a href="#">Inline Element</a><iframe src="https://en.wikipedia.org/wiki/HTML" title="Learn HTML From Wikipedia" frameborder="1" width="600" height="800"></iframe>
+
+
+    <!-- * Here giving title is a good practise in modern web dev it enhance SEO -->
+    <!-- ! here frameborder only takes two option generally 1 or 0 -->
+    <!-- ! basically work as true false but if some one gave like 500 value to the attribute it will be count as 1 -->
+     <!--  ! when frameborder is True or given value by default it is 2 px we can style it css though but by default 2 px -->
+    <!-- ! iframe generally a inline element it it give opportunity to embedded another website or video or any content from other website to be add in the current one -->
+
+
+    <!-- * lets add a youtube video embedded or iframe -->
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/RKF8vynN-1c?si=iW2Zfhe2qUZlRHY7&amp;start=37" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <!-- * This is how we can add youtube video or content by using iframe by sharing the embedded iframe link from utube-->
+     <!-- ! remember iframe is an inline element!!!!!!!!!!! -->
+
+     <!-- svg -->
+    <svg width="300" height="300">
+      <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red"/>
+    </svg>
+
+    <!-- different way to add svg -->
+
+     <!-- ! <img src="img.svg" alt="my svg"> -->
+    <!-- !This will show until we add the namespce identifier -->
+    <!--* we should add the one namespace identifier in the src tag in img.src file -->
+
+    <!--* xmlns="http://www.w3.org/2000/svg" add this to the src tag as attribute in the img.svg file. -->
+
+    <img src="img.svg" alt="my svg">
+
+    <!-- Now it is showing!!! -->
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 15 | Learning CSS Types</title>
+    <style>
+        div{
+            background-color: bisque;
+        }
+        p{
+            background-color: yellow;
+        }
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Types of CSS</h1>
+    <div>
+        <ul>
+            <li>Inline CSS</li>
+            <li>Internal CSS</li>
+            <li>External CSS</li>
+        </ul>
+    </div>
+
+    <p style="background-color: yellowgreen;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptates sunt, tempore itaque esse aliquam sed officiis temporibus iste fuga eum, provident eos unde facere officia nisi et deleniti dicta.
+    </p>
+
+    <!-- ! this is inline css -->
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nesciunt sapiente libero recusandae, alias quod aspernatur voluptate. Excepturi sapiente temporibus similique. Dolor, architecto.
+    </p>
+
+    <!-- * Now here the CSS is not working because it was inline which is why it is a very bad practise because we have to write the code over and over again-->
+
+    <div>
+        Hello I am &lt;div&gt;
+    </div>
+
+    <!-- ! This is a internal CSS where it will target all the div and make there background colour such and such as we write the code -->
+
+    <!-- * Only issue with the Internal CSS is that it will make the html file bigger which is not good way to maintain code in future -->
+
+    <!-- * Now here is the interesting part if we already have done a inline in a p tag which will priotize the most then it will come to an external css then it will come to and internal css -->
+
+    <Section><strong>Note!!!</strong> Priority Level in    Types: Inline > External > Internal
+    </Section>
+    <script src="./script.js"></script>
+</body>
+</html>

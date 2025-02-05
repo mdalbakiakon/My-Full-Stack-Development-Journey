@@ -1,0 +1,20 @@
+body {
+    background-color: blanchedalmond;
+}
+
+h1, h2, p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.warning {
+    background-color: red;
+    color: #fff;
+}
+
+.warning p{
+    font-size: 30px;
+}
+
+img {
+    width: 800px;
+}

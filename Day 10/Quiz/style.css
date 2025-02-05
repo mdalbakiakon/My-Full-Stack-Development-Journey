@@ -1,0 +1,42 @@
+body{
+    background-color: orange;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1, h2 {
+    color: whitesmoke;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
+
+.note {
+    color: red;
+    font-size: 1.3rem;
+}
+
+#AMF {
+    border: 5px solid red;
+}
+
+hr {
+    border: none;
+    height: 3px;
+    background-color: rgb(80, 38, 8);
+    margin: 50px 50px;
+    /*! margin: top right bottom left */
+    /*! here top and bottom is 50 by the first attribute right and left is 50 by giving second attribute */
+}
+
+img {
+    /* * width: 100%; */
+    /*! 100% attribute will always take the device width */
+    width: 500px;
+    border: 5px solid red;
+}
+
+svg {
+    border: 3px solid black;
+}

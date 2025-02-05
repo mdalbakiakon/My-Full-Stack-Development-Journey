@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Learn about form in html" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Learning Forms in HTML</title>
+  </head>
+  <body>
+    <h3>Form for Full Stack Developer Course</h3>
+    <form action="url or page where the form info will be posted" method="post">
+      <div>
+        <label for="fullname">Full Name: </label>
+        <input
+          type="text"
+          id="fullname"
+          name="username"
+          placeholder="Enter Your Name"
+        autofocus  />
+      </div>
+
+      <!-- autofocus will automatically keep the cursor so we choose the first input section here to use the autofocus -->
+      <!-- label's for attribut must match the id name of the input/ when we will click on the label value it will take us to the input section meaning the cursor will pop up in the input section!!!! -->
+      <!-- name in the input section identify the same term input for example -->
+
+      <!-- <input type="radio" id="choose_gender1" name="gender" value="male">
+            <input type="radio" id="choose_gender2" name="gender2" value="female"> -->
+
+      <!-- here our name was different in the input tag right? so when we choose we will choose the both option meaning we can not say the html to choose only one in these two -->
+
+      <!-- lets fix it -->
+      <div>
+        Gender:
+        <input type="radio" id="male_gender" name="gender" value="male" />
+        <label for="male_gender">Male</label>
+        <input type="radio" id="female_gender" name="gender" value="female" />
+        <label for="female_gender">Female</label>
+      </div>
+
+      <!-- so here when the name attribute is same for the both radio input only one can be selected -->
+
+      <!-- Remember label's for attribute must match the id of the input and id refers to an unique identifier of a html tag -->
+
+      <div>
+        <input type="checkbox" id="terms" name="t&c" value="yes" />
+        <label for="terms">I agree to the terms</label>
+        <br />
+        <input type="checkbox" id="conditions" name="t&c" value="yes" />
+        <label for="conditions">I agree to the conditions</label>
+      </div>
+
+      <!-- so here the name was same but still we can select both because this is the type of checkbox input in checkbox input we can select multiple no problem at all -->
+
+      <label for="comment1">Enter Your First Comment</label>
+      <div>
+        <textarea
+          name="user_comment"
+          id="comment1"
+          placeholder="Any Comment"
+        ></textarea>
+      </div>
+      <label for="comment2">Enter Your Second Comment</label>
+      <div>
+        <textarea name="user_comment" id="comment2" placeholder="Any Comment">
+Your Comment</textarea
+        >
+      </div>
+      <label for="comment3">Enter Your Third Comment</label>
+      <div>
+        <textarea
+          rows="5"
+          cols="70"
+          name="user_comment"
+          id="comment3"
+          placeholder="Any Comment Bro??"
+        ></textarea>
+      </div>
+      <!-- So we also can specify our row and col which is taken by the area of the box -->
+
+      <label for="myFruits">Select Your Favorite Fruit</label>
+      <div>
+        <select name="fruits" id="myFruits">
+          <option value="apple">Apple</option>
+          <option value="banana">Banana</option>
+          <option value="cherry">Cherry</option>
+        </select>
+      </div>
+      <label for="otp">Enter Your OTP:</label>
+      <input
+        type="text"
+        id="otp"
+        name="otp"
+        pattern="[0-9]{4}"
+        inputmode="numeric"
+        placeholder="Please Enter 4 Digits OTP"
+        required
+      />
+      <!-- inputmode="numeric" means that this is OTP so it should be only digit input so when we use the inputmode="numeric" it will open the user's digit input layout not the entire keyboard so it is a good practise to give user direct option what to do it happens basically with the mobile users -->
+      <!-- pattern can be written as pattern = "[a-zA-Z0-9]+"
+       which means user can input a-z A-Z 0-9 no other special character and + means at least one must be given if user put it empty it wont be approved means like "" is not valid! when we specify like 4 digit must then we dont use the + word by the way + word may not need the word required as well because its ensure at least one input-->
+      <!-- required means you have to give other wise form wont work -->
+      <!-- type can be number but it will be a issue for example if the otp is 0123 the browser will take it as 123 not 0123 so it is a must to use the text type input -->
+      <!-- pattern means what we are allowing if it is specific so here we will be allowing the user to input 0-9 digits only -->
+      <!-- {4} meaning the only 4 digit is allowed-->
+
+      <br>
+      <label for="password">Enter Your Password:</label>
+      <input type="text" id="password" placeholder="Your Password" pattern=".{8,10}" required>
+
+      <!-- Here we did not give any pattern which means user can give any special character which is by default in text type so we may not use the pattern at all to take any special character included input -->
+        <!-- but we wanted here that user must give at least 8 or at maximum 10  -->
+         <!-- than we must use the pattern=".{minimum digit, maximum digit}" -->
+        <!-- check here we did not use the []!!! -->
+         <!-- [is used for the giving pattern] -->
+      <br>
+      <label for="confirmPassword">Confirm Your Password: </label>
+      <input type="text" id="confirmPassword" placeholder="Confirm Your Password" minlength="8" maxlength="10" required>
+
+      <!-- we can use minlength/maxlength attribute as well -->
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>

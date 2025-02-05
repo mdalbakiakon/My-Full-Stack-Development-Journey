@@ -1,0 +1,1 @@
+alert("Exercise | Day 02")

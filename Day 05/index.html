@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="I am learning today how to add image list videoes and tables in html">
+    <title>Image | Videoes | List | Tables</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="https://e0.pxfuel.com/wallpapers/606/159/desktop-wallpaper-artstation-bugatti-chiron-super-sport-300-sumer-razdan-bugatti-chiron-300.jpg" alt="Bugatti Chiron Super Sport">
+
+    <!-- we dont need to add px or anything in the html but in css we must add unit -->
+    <h1>Bugatti Chiron Super Sport</h1>
+    <p><video src="Bugatti Chiron Super Sport 300+.mp4" controls></video>
+        <hr>
+        <br>
+    <table>
+        <caption>Employee Details</caption>
+        <thead>
+            <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Occupation</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+        <tr>
+            <td>Harry</td>
+            <td>28</td>
+            <td>Programmer</td>
+        </tr>
+        <tr>
+            <td>Siam</td>
+            <td>24</td>
+            <td>Full Stack Developer</td>
+        </tr>
+
+        <tr>
+            <td colspan="2">Sam</td>
+            <td>UI/UX Designer</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Rony</td>
+            <td>23</td>
+            <td>SWE</td>
+        </tr>
+        <tr>
+            <td>44</td>
+            <td>Product Manager</td>
+            <td>Hellow World</td> 
+            <!-- it can be possible as much data we want but it should be maintained as much header th we add at the first row to maintain our table manner -->
+        </tr>
+        <tr>
+            <td>Rock</td>
+            <td>45</td>
+            <td>Wrestler</td>
+        </tr>
+        <tbody>
+        <tfoot>
+            <td>end</td>
+            <td>end</td>
+            <td>end</td>
+            <td>end</td>
+        </tfoot>
+    </table>
+    <hr>
+
+    <h2>My First List</h2>
+
+    <!-- type for unordered list is 
+     disc(which is default) 
+     circle 
+     square -->
+    
+     <ul type="circle">
+        <li>Facility 1</li>
+        <li>Facility 2</li>
+        <li>Facility 3</li>
+        <li>Facility 4</li>
+        <li>Facility 4</li>
+    </ul>
+
+    <br>
+    <h2>My Second List</h2>
+    
+    <!-- type for ordered list are many
+     type = "I" for Uppercase Roman
+     i for lower case roman
+     1 is default neumeric
+     A for upper case A/B/C.....
+     a for lower case a/b/c..... -->
+    
+     <ol type="I">
+        <li>Fac 1</li>
+        <li>Fac 2</li>
+        <li>Fac 3</li>
+        <li>Fac 4</li>
+        <li>Fac 5</li>
+    </ol>
+
+    <p>Very uncommonly used another type of list which is called defination list dl it is important for the job interview it has just a view of a list</p>
+
+
+    <p>For Example</p>
+
+    <dl>
+        <dt>HTML</dt>
+        <dd>This is one of the fundamental building blocks of the web. HTML, or “HyperText Markup Language,” has been around in some form since roughly 1993, when it was created by physicist Tim Berners-Lee. It’s now in its fifth generation, HTML5. HTML isn’t a programming language, rather it’s a “Markup language.” It uses a syntax of tags to change the way text is displayed, for instance. It can also define where images go on a page.</dd>
+
+        <dt>CSS</dt>
+        <dd>CSS or “Cascading Style Sheets” works with HTML to create the format for web pages. It works on top of the foundation of a page that was created with HTML. It also helps adapt pages to different formats optimized for desktops or mobile devices. The latest standard is CSS3, meaning they are in their third generation.</dd>
+
+        <dt>JavaScript</dt>
+        <dd>JavaScript, which is often abbreviated to JS, is another front-end programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries like JQuery. Whereas HTML & CSS are used to control presentation, formatting, and layout, JavaScript is used to control the behavior of different web elements. </dd>
+    </dl>
+    <script src="script.js"></script></p>
+</body>
+</html>

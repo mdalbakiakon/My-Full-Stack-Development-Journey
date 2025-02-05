@@ -1,0 +1,95 @@
+<!-- ! Create a Website containing different type of video audio svg -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Quiz on creating a website containing video audio img svg everything"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>#Quiz02</title>
+  </head>
+  <body>
+    <h1>#Quiz02</h1>
+    <hr>
+    <h2>Video Portion!!!</h2>
+    <p>#Video using normal video tag</p>
+    <video src="./QS An-Nur 24-35.mp4" height="500" controls></video>
+    <p>#video using youtube source</p>
+    <p class="note">Important note!!!</p>
+    <p>
+      YouTube does not allow direct link so we have to download a video than we
+      can use it or we can use <strong>iframe tag</strong> to use embedded
+      shared link from youtube directly
+    </p>
+    <p>This is using via <strong>Download</strong></p>
+    <video
+      src="./Heart touching quranic ayat for peace of mind - Check comments for full Quran Recitation.mp4"
+      controls
+      loop
+    ></video>
+    <p>This is using <strong>Iframe Tag</strong></p>
+    <iframe
+      width="285"
+      height="500"
+      src="https://www.youtube.com/embed/dzLTlrwvuKs?si=MpKL62dqsj_jAwle"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    <p>
+      Now using via <strong>Iframe Tag</strong>, But starting a specific time
+    </p>
+    <iframe
+      id="AMF"
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/iGAoq6f7ru0?si=xwCo1ACmaI9IjROe&amp;start=307"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    <hr />
+    <!-- !giving a specific frameborder color by the way if we dont use the frameborder="1" it will still show because border color has been given by id not the iframe attribute of itself -->
+    <!-- ! and the video is starting at a specific time  -->
+    <h2>Image Portion!!!</h2>
+    <p>By using through direct web address of the picture</p>
+    <img
+      src="https://i.pinimg.com/originals/cb/76/21/cb7621c471a0de2709d9a7135aa3e3c6.jpg"
+      alt="Image of Makkah"
+    />
+    <p>By using download</p>
+    <img src="./Madina.jpeg" alt="Madina" />
+    <p class="note">
+      <strong>
+        Don't forget to send Salawat upon our beloved Rasul SAW PBUH
+      </strong>
+    </p>
+    <hr>
+    <h2>SVG Portion!!!</h2>
+    <p>Using direct svg tag</p>
+    <svg>
+        <circle cx="50" cy="50" r="45" fill="wheat" stroke="grey" stroke-width="4px">
+    </svg>
+    <p class="note">using border to ensure the svg circle stay inside the svg tag!</p>
+
+    <img src="./959572_OFAAX41.svg" alt="svg image">
+    <!-- ! we did not had to use the namespace here because it was a actual svg image but if we want to create svg through tag like circle before than we must include a namespace identifier -->
+    <img src="./img.svg" alt="mySVG">
+    <!--! here in file we have used the namespace identifier!!!-->
+    <p class="note">BTW img tag and the svg is also a Inline Element Therefor it can be shown side by side depend on the device width!!!</p>
+    <hr>
+    <h2>Audio Portion!!!</h2>
+    <audio src="./Azan.m4a" controls muted></audio>
+    <!-- muted/autoplay will keep mute/automatically play the audio as the user enter the webpage -->
+    <hr>
+    <script src="script.js"></script>
+  </body>
+</html>

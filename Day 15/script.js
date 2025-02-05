@@ -1,0 +1,1 @@
+alert("Day 15 | Learning CSS Types")

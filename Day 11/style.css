@@ -1,0 +1,22 @@
+body {
+    background-color: orangered;
+}
+
+hr{
+    border: none;
+    height: 3px;
+    background: black;
+    margin: 20px 50px;
+}
+
+img{
+    width: 600px;
+}
+
+nav, #copyright {
+    color: bisque;
+}
+.note{
+    background-color: red;
+    color: whitesmoke;
+}

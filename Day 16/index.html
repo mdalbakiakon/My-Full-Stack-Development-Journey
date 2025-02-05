@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 16 | Styling with internal CSS</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+        div{
+            background-color: rgb(255, 0, 200);
+        }
+        .red{
+            background-color: rebeccapurple;
+        }
+        #green{
+            background-color: yellowgreen;
+        }
+
+        div > p{
+            background-color: yellow;
+        }
+        /*this is called the child selector. Child selector must be direct of its parrents*/
+        
+        div p {
+            background-color: yellow;
+        }
+        /* This is called descendant selector. every p while it may not be the direct child if it is under div it will be applied and most importantly the descendant selector has more priority than child*/
+
+        /*Universal Selector*/
+
+        *{
+            padding: 10px;
+            margin: 10px;
+        }
+
+        a{
+            color: grey;
+        }
+
+        /*psuedo selector*/
+        a:hover{
+            background-color: rgb(255, 0, 85);
+        }
+
+        a:visited {
+            color: navy;
+        }
+
+        a:link{
+            color:hotpink;
+        }
+        /*a:link is refered when a link is not visited yet
+        
+        a:link{} has more priority than a{} itself
+        
+        so if a link is not visited yet if we write a{} code to color it it will not show anything but goes as per a:link{} code's*/
+
+        a:active{
+            background-color: yellowgreen;
+        }
+
+        p:first-child{
+            background-color: aquamarine;
+        }
+
+    </style>
+
+    <!-- class or id are most specific -->
+</head>
+<body>
+    <div class="red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quos blanditiis quia vel eaque ipsa corporis impedit doloribus sapiente debitis et ratione aut! Minus, aut?</div>
+
+    <div id="green">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sed id ullam voluptas est porro adipisci, ducimus asperiores, odio natus distinctio reiciendis dolor veniam! Doloremque!
+    </div>
+
+    <div>
+        <p>
+            I am paragraph under div and also i am a first child of my div
+        </p>
+        
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ad id voluptas minima commodi, aspernatur nostrum laudantium voluptatibus. Laboriosam dolor iusto soluta, incidunt ipsum distinctio.
+        </p>
+        <article>
+            <p>
+                Hello world I am paragraph under div & under article and i am first child of article
+            </p>
+            <p>
+                Hello World!!!!
+            </p>
+        </article>
+    </div>
+
+        <h3>Let's learn pseudo selector</h3>
+        <a href="https://www.google.com" target="_blank" rel="noopener">Google me</a>
+        <a href="https://www.facebook3.com" target="_blank" rel="noopener">Facebook me</a>
+
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+body{
+    background-color: yellowgreen;
+}
+
+div, span{
+    background-color: yellow;
+}
+
+span{
+    color: purple;
+}
