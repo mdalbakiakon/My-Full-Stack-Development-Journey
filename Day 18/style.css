@@ -14,6 +14,11 @@ body{
     background-color: yellowgreen;
 }
 
+.title{
+    color: green;
+    font-size: larger;
+}
+
 h1, h2{
     text-align: center;
     font-family: "Baloo Bhai 2", serif;
@@ -46,6 +51,8 @@ p{
 }
 
 .description, .lorem{
+    text-indent: 50px;
+    /* indent will make some space before paragraph as we want */
     font-style: normal;
     font-weight: 500;
     text-decoration: none;
@@ -53,7 +60,10 @@ p{
 }
 
 .lorem{
+    text-indent: 0px;
+    /* * text-indent works on px or unit base so we can not use "none" to not apply indent */
+    width: 80px;
     border: 5px solid red;
-    text-indent: 50px;
-    /* indent will make some space before paragraph as we want */
+    overflow: hidden;
+    /*! if the width is too much small than the word might come out the box model of the p tag then overflow:hidden; is used to take care of the scenario so that the content not overflow from the container p */
 }
