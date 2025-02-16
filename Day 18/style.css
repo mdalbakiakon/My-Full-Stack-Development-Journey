@@ -10,6 +10,13 @@
 
 /* here we have add both baloo bhai and poppins font together */
 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
 body{
     background-color: yellowgreen;
 }
@@ -41,8 +48,6 @@ h2{
 }
 
 p{
-    font-family: "Poppins", serif;
-
     /** This is called fallback font where if first one doesn`t work on browser or even from the user side rendering font style than second one will be applied if browser or user side device accept so and it will continue till last */
     font-style: oblique; 
     /* oblique and italic are the same no need to think more less useful term!!!! */
@@ -50,9 +55,9 @@ p{
     text-decoration: underline; 
 }
 
-.description, .lorem{
+.description, .lorem, .lorem2{
     text-indent: 50px;
-    /* indent will make some space before paragraph as we want */
+    /** indent will make some space before paragraph as we want */
     font-style: normal;
     font-weight: 500;
     text-decoration: none;
@@ -67,3 +72,17 @@ p{
     overflow: hidden;
     /*! if the width is too much small than the word might come out the box model of the p tag then overflow:hidden; is used to take care of the scenario so that the content not overflow from the container p */
 }
+
+/* * trying the overflow part not hidden but with scrolling*/
+
+.lorem2{
+    width: 80px;
+    border: 3px solid black;
+    overflow: scroll;
+}
+
+.lorem3{
+
+}
+
+
