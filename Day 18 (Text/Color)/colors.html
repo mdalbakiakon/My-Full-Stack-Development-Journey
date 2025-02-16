@@ -4,8 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning CSS Colors</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        
+        *{
+            box-sizing: border-box;
+            font-family: "Roboto", serif;
+            font-weight: 500;
+        }
+
+        body{
+            background-color: black;
+        }
+
+        h1{
+            color: orange;
+        }
+
+        div{
+            background-color: orange;
+        }
+
+        .lorem{
+            /* color: darkblue;
+            color: aqua;
+            color: red; */
+
+            /* for example if the same box is getting multiple same occurance of property then the last code will be applicable*/
+            
+            /* color: red; */
+            /* color: #FF5733; */
+            /* color: rgb(255,255,255); */
+            /* color: rgba(255, 255, 255, 0.2); */
+            /* color: hsl(360, 100%, 100%); */
+            
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Today I am learning Color in CSS</h1>
+    <div>
+        Color can be represented in CSS following ways:
+        <ol>
+            <li>Direct Color Name</li>
+            <li>Hex Color Code</li>
+            <li>RGB Color Code</li>
+            <li>RGBA Color Code (A here means Alpha basically opacity it is 0 to 1)</li>
+            <li>HSL (Hue[degree based 0 to 360 degree], Saturation[basically purity of the colour used as parcentage], Lightness[making brigter also mesuring in parcentage])</li>
+            <li>HSLA (Same again A is Alpha determine the opacity of the colour from 0 to 1)</li>
+        </ol>
+    </div>
+    <p class="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum eaque alias quasi nihil odit optio doloribus ad, maiores, itaque minima molestias cumque possimus, adipisci perspiciatis doloremque. Repellat, cupiditate saepe et nisi officia consequatur? Eveniet exercitationem consequatur aut incidunt sapiente, delectus, enim reprehenderit minus officiis tempore earum adipisci sed voluptatem. Quo.</p>
 </body>
 </html>
