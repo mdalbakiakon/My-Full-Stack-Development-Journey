@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+
+        *{
+            box-sizing: border-box;
+            font-family: "Baloo Bhai 2", serif;
+        }
+
+        h1{
+            color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="yellow red green">Hello I am Learning CSS Specificity & Cascade Today</h1>
+    <div>
+        <h3>The Cascade Algorithm</h3>
+        <p>
+            CSS stands for Cascading Stylesheets. The cascade is the algorithm for solving conflicts where multiple CSS rules apply to an HTML element. It's the reason that the text of the button styled with the above CSS will be purple.
+        </p>
+
+        <p>
+            Understanding the cascade algorithm helps you understand how the browser resolves conflicts like this. The cascade algorithm has 4 distinct stages.
+        </p>
+
+        <ol>
+            <li><strong>Position and order of appearance:</strong> The order in which your CSS rules appear</li>
+            <li><strong>Specificity:</strong> An algorithm that determines which CSS selector has the strongest match</li>
+            <li><strong>Origin:</strong> The order in which CSS appears and where it comes from, whether that is a browser style, CSS from a browser extension, or your authored CSS</li>
+            <li><strong>Importance:</strong> Some CSS rules are weighted more heavily than others, especially with the !important rule type
+                Lets look into all these one by one</li>
+        </ol>
+    </div>
+</body>
+</html>
