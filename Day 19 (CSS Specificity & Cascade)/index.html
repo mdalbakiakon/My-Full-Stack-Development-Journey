@@ -14,7 +14,29 @@
 
         h1{
             color: aquamarine;
+            text-decoration: underline;
         }
+        
+        .yellow{
+            color: yellow;
+        }
+
+        .green{
+            color: green;
+        }
+
+        .red{
+            color: red;
+        }
+
+        /* red will be applicable because red is at the last position in the style tag as per first rule */
+
+        .note{
+            background-color: red;
+            color: white;
+        }
+
+
     </style>
 </head>
 <body>
@@ -31,6 +53,7 @@
 
         <ol>
             <li><strong>Position and order of appearance:</strong> The order in which your CSS rules appear</li>
+            <p class="note">The last position will be applicable</p>
             <li><strong>Specificity:</strong> An algorithm that determines which CSS selector has the strongest match</li>
             <li><strong>Origin:</strong> The order in which CSS appears and where it comes from, whether that is a browser style, CSS from a browser extension, or your authored CSS</li>
             <li><strong>Importance:</strong> Some CSS rules are weighted more heavily than others, especially with the !important rule type
