@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: wheat;
+}
+
+p{
+    width: 90vw;
+    /*! vw means viewport width which is users device width will be counted like 90% of his device width this means vw  */
+    /* so vw is quite easiest way in responsive approach */
+    
+    border: 3px solid burlywood;
+    
+    /* Now we want to make the p into the middle so we will be using margin: auto; */
+    
+    margin: auto;
+    
+    /* * auto means make the margin same on the right and left that's how it is centered */
+
+    background-color: palegoldenrod;
+}
