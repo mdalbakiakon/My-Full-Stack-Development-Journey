@@ -16,16 +16,28 @@
         font-weight: 500;
       }
 
-      body{
-        background-color: pink;
-      }
-
       .imp{
         color: red;
         font-size: 22px;
         border: 3px solid black;
         border-radius: 8px;
       }
+      
+      /*specificity: 1 + 10(.hello class) + 10(.google class) + 10(attribute selector) = 31*/
+      a.hello.google[href]{
+        color: hotpink;
+      }
+
+      /*specificity: 1*/
+      a{
+        color: black;
+        text-decoration: none;
+        border: 2px solid hotpink;
+        border-radius: 5px;
+      }
+
+      /*Therefor a.hello.google[href] > a so the color is not black anymore color has been turn into hotpink*/
+
     </style>
   </head>
   <body>
@@ -45,6 +57,8 @@
       <p class="imp">
         Remember using class is the best way it enhances &amp; reusability recode!!!
       </p>
+
+      <a class="hello google" href="www.google.com">www.google.com</a>
     </div>
   </body>
 </html>
