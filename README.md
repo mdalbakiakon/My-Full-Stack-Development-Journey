@@ -13,6 +13,7 @@ I’ll document my progress, share projects, and reflect on my experiences as I 
 | **React.js** | **MongoDB** | **Figma** |
 | **Next.js** | **PostgreSQL** | **Tailwind CSS** |
 
+<!--
 ## 🚀 **My Projects**  
 
 ### 🌐 **1. Personal Portfolio**  
@@ -32,6 +33,7 @@ A blog where I share my thoughts on web development.
 **Tech Stack:** *Next.js, Tailwind CSS, Firebase*  
 
 🔗 [View Project](#)  
+-->
 
 ## 🎯 **My Goals**  
 ✔ **Master Frontend & Backend Development**  
@@ -39,7 +41,9 @@ A blog where I share my thoughts on web development.
 ✔ **Contribute to Open-Source**  
 ✔ **Land My First Developer Job**  
 
+<!--
 ## 📌 **Connect With Me**  
 💼 [LinkedIn](#) | 🐦 [Twitter](#) | 🌐 [Portfolio](#)  
+-->
 
 🚀 **Follow my journey, and let's build the web together!**  
