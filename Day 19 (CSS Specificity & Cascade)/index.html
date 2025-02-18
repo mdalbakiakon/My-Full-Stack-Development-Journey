@@ -1,64 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap");
 
-        *{
-            box-sizing: border-box;
-            font-family: "Baloo Bhai 2", serif;
-        }
+      * {
+        box-sizing: border-box;
+        font-family: "Baloo Bhai 2", serif;
+      }
 
-        h1{
-            color: aquamarine;
-            text-decoration: underline;
-        }
-        
-        .yellow{
-            color: yellow;
-        }
+      img{
+        width: 85%;
+        border: 3px solid transparent;
+        border-radius: 8px;
+      }
 
-        .green{
-            color: green;
-        }
+      h1 {
+        color: aquamarine;
+        text-decoration: underline;
+      }
 
-        .red{
-            color: red;
-        }
+      .yellow {
+        color: yellow;
+      }
 
-        /* red will be applicable because red is at the last position in the style tag as per first rule */
+      .green {
+        color: green;
+      }
 
-        .note{
-            background-color: red;
-            color: white;
-        }
+      .red {
+        color: red;
+      }
 
+      /* red will be applicable because red is at the last position in the style tag as per first rule  kind of overwrite*/
+
+      .note {
+        background-color: red;
+        color: white;
+      }
+
+      .important{
+        color: red;
+        font-size: 22px;
+      }
+
+      [data-x=a]{
+        background-color: gray;
+      }
+
+      /*this is Attribute Selector*/
+
+      .try-imp{
+        background-color: orangered !important;
+        border-radius: 8px;
+      }
 
     </style>
-</head>
-<body>
-    <h1 class="yellow red green">Hello I am Learning CSS Specificity & Cascade Today</h1>
+  </head>
+  <body>
+    <h1 style="color: orange;" class="yellow red green">
+      Hello I am Learning CSS Specificity & Cascade Today
+    </h1>
+
+    <!--! here we have made an inline style therefor it will be the highest in the specifity -->
+
     <div>
-        <h3>The Cascade Algorithm</h3>
-        <p>
-            CSS stands for Cascading Stylesheets. The cascade is the algorithm for solving conflicts where multiple CSS rules apply to an HTML element. It's the reason that the text of the button styled with the above CSS will be purple.
-        </p>
+      <h3>The Cascade Algorithm</h3>
+      <p>
+        CSS stands for Cascading Stylesheets. The cascade is the algorithm for
+        solving conflicts where multiple CSS rules apply to an HTML element.
+        It's the reason that the text of the button styled with the above CSS
+        will be purple.
+      </p>
 
-        <p>
-            Understanding the cascade algorithm helps you understand how the browser resolves conflicts like this. The cascade algorithm has 4 distinct stages.
-        </p>
+      <p>
+        Understanding the cascade algorithm helps you understand how the browser
+        resolves conflicts like this. The cascade algorithm has 4 distinct
+        stages.
+      </p>
 
-        <ol>
-            <li><strong>Position and order of appearance:</strong> The order in which your CSS rules appear</li>
-            <p class="note">The last position will be applicable</p>
-            <li><strong>Specificity:</strong> An algorithm that determines which CSS selector has the strongest match</li>
-            <li><strong>Origin:</strong> The order in which CSS appears and where it comes from, whether that is a browser style, CSS from a browser extension, or your authored CSS</li>
-            <li><strong>Importance:</strong> Some CSS rules are weighted more heavily than others, especially with the !important rule type
-                Lets look into all these one by one</li>
-        </ol>
+      <ol>
+        <li>
+          <strong>Position and order of appearance:</strong> The order in which
+          your CSS rules appear
+        </li>
+        <p class="note">The last position will be applicable</p>
+        <li>
+          <strong>Specificity:</strong> An algorithm that determines which CSS
+          selector has the strongest match
+        </li>
+        <p class="note">
+          The order of specificity is: Inline Style > ID Selector > Class or
+          Attribute Selector > Element Selector > Universal Selector
+          <p class="important"><strong>So come from backward in terms of using specificity this will help to overwrite if it needed</strong></p>
+        </p>
+        <li>
+          <strong>Origin:</strong> The order in which CSS appears and where it
+          comes from, whether that is a browser style, CSS from a browser
+          extension, or your authored CSS
+        </li>
+        <p class="note">
+            If we don't add any style for a particular portion of our code browser will give them attribute as default but if we add our own than browser's will be overwritten by our style 
+        </p>
+        
+        <img src="./image.png" alt="learning specifity in css">
+
+
+        <li>
+          <strong>Importance:</strong> Some CSS rules are weighted more heavily
+          than others, especially with the !important rule type Lets look into
+          all these one by one
+        </li>
+
+        <p class="note">There is an option even if we made a inline style it can be changed which is using !important after the attribute for example..... <strong>color: red !important</strong></p>
+      </ol>
     </div>
-</body>
+
+    <div>
+        <h3 data-x="a">Learning About the Attribute Selector</h3>
+
+        <p class="try-imp" style="background-color: yellowgreen; font-weight: 500;">
+            data-x="something" is called Attribute Selector of a particular portion in terms of specificity it is same as Class............By the way this is an inline style css tag so we will be using importance on this portion. Without the importance rule now it's background-color is yellow green we will make it orangered!!!.........so now it is orangered because in css code we have make <strong>background-color: orangered !important</strong>
+        </p> 
+    </div>
+  </body>
 </html>
