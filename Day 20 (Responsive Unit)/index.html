@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box{
+            background-color: aquamarine;
+            border: 3px solid black;
+            width: 80vw;
+            /*vw unit means user device viewport width so 80% of the device will be shown if we write vw*/
+            margin: auto; 
+            /*margin: auto makes the .box same margin at the both side hence the div box has come in the middle */
+            /*btw margin: auto will only be applicable of the tags of html who are box type element not inline element*/
+            height: 20vh;
+        }
+        
+        .container{
+            background-color: aquamarine;
+            border: 3px solid black;
+            width: 80vw;
+            margin: 25px auto; 
+            /*top right bottom left*/
+            /*clockwise remember*/
+            height: 50vh;
+        }
+
+    </style>
     <title>Day 20 | Responsive Design</title>
-</head>
-<body>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit mollitia a laudantium. Similique commodi architecto id ea excepturi, error ipsum dicta hic consequatur autem enim. Laudantium, in nesciunt incidunt sapiente ipsam, eaque repudiandae et facere vitae quia commodi omnis est molestiae ut ipsum magnam? Neque quas a nesciunt numquam voluptatibus error saepe, quae dolorum asperiores repellendus dignissimos debitis tempora sequi, quam minus, modi possimus perspiciatis? Quae velit libero dignissimos. Nobis itaque recusandae hic animi tempora consequuntur dicta dolor asperiores natus minima. Quis, voluptas atque? Dolorum ea laboriosam veniam tenetur? Illum ipsum perspiciatis aut aliquid repudiandae. Recusandae dolore, molestiae minima sed nostrum commodi quas assumenda voluptates praesentium nam ullam esse sequi facilis repellat fuga. Pariatur distinctio unde voluptatibus error voluptatem maiores deleniti vitae autem, rem neque?</p>
-</body>
+  </head>
+  
+  <body>
+    <div class="box">
+        <p>This is a box</p>
+    </div>
+
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit vel fugit vitae maxime libero doloribus placeat molestias totam porro, sequi et iusto voluptates nihil magni dolorem quis quos facere. Aliquam amet mollitia quae expedita provident nostrum deleniti esse voluptatibus sapiente alias natus, explicabo vero obcaecati dolorum officiis repellat veritatis, blanditiis quia omnis? Ea labore rerum necessitatibus?</p>
+
+    </div>
+  </body>
 </html>
