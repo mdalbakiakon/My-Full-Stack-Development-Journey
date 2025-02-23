@@ -10,7 +10,14 @@
             box-sizing: border-box;
         }
 
-        .box{
+        html{
+          font-size: 12px;
+          /*so when we use the 12px html it means the every single tag of html will be count as 12px*/
+          /*html is a root element*/
+          /*we need this for our rem unit learning*/
+        }
+
+        .box, .try{
             background-color: aquamarine;
             border: 3px solid black;
             width: 80vw;
@@ -19,6 +26,7 @@
             /*margin: auto makes the .box same margin at the both side hence the div box has come in the middle */
             /*btw margin: auto will only be applicable of the tags of html who are box type element not inline element*/
             height: 20vh;
+            /*vh is as same as vw*/
         }
         
         .container{
@@ -29,7 +37,23 @@
             /*top right bottom left*/
             /*clockwise remember*/
             height: 50vh;
+            font-size: 18px;
         }
+
+        .container p{
+          font-size: 1.5em;
+          /*if we did not write em than .container's p will be 18px because it will inherit from parent .container*/
+          
+          /*so if we give 1.5 em it will become now 18*1.5 em in pixels*/
+
+          /*we know by default p tag font size is 16px so if our contaier would not hold the font-size: 18px it would be count as 16px by default and then our p's font size will be 16*1.5 in pixel */
+        }
+
+        .try{
+          font-size: 2rem;
+          /*so here 2rem means root element's 2 time will be the size in pixel so our root element is 12px font size therefor it will be 24 pix because 12*2 rem = 24 pixel*/
+        }
+
 
     </style>
     <title>Day 20 | Responsive Design</title>
@@ -43,6 +67,10 @@
     <div class="container">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit vel fugit vitae maxime libero doloribus placeat molestias totam porro, sequi et iusto voluptates nihil magni dolorem quis quos facere. Aliquam amet mollitia quae expedita provident nostrum deleniti esse voluptatibus sapiente alias natus, explicabo vero obcaecati dolorum officiis repellat veritatis, blanditiis quia omnis? Ea labore rerum necessitatibus?</p>
 
+    </div>
+
+    <div class="try">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis reiciendis rerum laboriosam totam aspernatur sint, perspiciatis ab et velit quo?</p>
     </div>
   </body>
 </html>
