@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 20 | CSS Display Property</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box,
+      .box2 {
+        border: 2px solid black;
+        /*we know div is a block eliment but yes we can make it a in line element let's see how*/
+        display: inline;
+        /*now it is a inline element not block anymore*/
+        margin: 20px;
+        padding: 20px;
+
+        /*So why it is not taking margin from the top are and as well as padding*/
+        /*because it is inline element not box element*/
+        /*but what if i want it to be inline but as well as same property what block element do let's do it for the box2*/
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <!-- <div class="box">I am a box</div>
+    <div class="box2">I am another box</div> -->
+
+    <!--! just activate the upper comment part we will see what is doing inline element explanation is right below  -->
+
+    <!--!  why there is a gap in this two div i have set it as margin: o still why?  -->
+    <!-- * Inline elements respect spaces, newlines, and tabs in the HTML code, which creates a small gap.Your HTML has a space or newline between <div class="box"> and <div class="box2">, causing the gap. -->
+
+    <!-- so we must remeber it that inline element respects a little gap tab or new line they create a space so we will write the code as...... -->
+    
+    <div class="box">I am a box</div><div class="box2">I am another box</div>
+    <!-- ! Now we don't see the gap -->
+    <span> I will become a good</span><span> Full Stack Developer</span>
+    
+    <!-- as we know span are already a inline element -->
+  </body>
+</html>
