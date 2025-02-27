@@ -7,15 +7,15 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-      *{
+      * {
         font-family: "Poppins", serif;
       }
 
-      ol > p{
+      .note {
         background-color: black;
         color: white;
       }
-      
+
       .box {
         border: 2px solid black;
         padding: 20px;
@@ -35,7 +35,7 @@
         text-shadow comes with 4 properties only the spread is not in the text-shadow syntax*/
       }
 
-      .outline{
+      .outline {
         border: 2px solid green;
         outline: 3px solid red;
         outline-offset: 3px;
@@ -46,7 +46,6 @@
         border-radius: 30px;
         /*outline only follows the border's rounded corner but can not have it's own property!!!*/
       }
-
     </style>
   </head>
   <body>
@@ -59,25 +58,39 @@
     </p>
 
     <div class="outline">
-        <h2>
-            Difference Between Outline and Border
-        </h2>
-        <ol>
-            <li><strong>Position:</strong> Outlines don't take up space; they're drawn around the element, outside of any border.</li>
-            <p>means that it will not affect the width height of the box model</p>
-            <li><strong>Offset:</strong> Using the outline-offset property, you can set the space between an outline and the edge or border of an element.</li>
-            <p>
-                means we can have gape in between outline and border but there will be no issue in the box model space!
-            </p>
-            <li><strong>Width:</strong> Borders can have varying widths on different sides, outlines have a uniform width.</li>
-            <p>
-                we can not give outline any width where border can take width or change by using css selector we know that's how indirectly may outline can get width but we can not directly give any width to outline!!!
-            </p>
-            <li><strong>Rounded Corner:</strong> Borders can have rounded corners using border-radius, while outlines generally cannot.</li>
-            <p>
-                we can not make outline rounded but if we make our border rounded outline will follow as it is the border radius but we can not directly make outline rounded!!!
-            </p>
-        </ol>
+      <h2>Difference Between Outline and Border</h2>
+      <ol>
+        <li>
+          <strong>Position:</strong> Outlines don't take up space; they're drawn
+          around the element, outside of any border.
+        </li>
+        <li>
+          <strong>Offset:</strong> Using the outline-offset property, you can
+          set the space between an outline and the edge or border of an element.
+        </li>
+        <li>
+          <strong>Width:</strong> Borders can have varying widths on different
+          sides, outlines have a uniform width.
+        </li>
+        <li>
+          <strong>Rounded Corner:</strong> Borders can have rounded corners
+          using border-radius, while outlines generally cannot.
+        </li>
+      </ol>
+    </div>
+    <div class="note">
+      means that it will not affect the width height of the box model
+      <br />
+      means we can have gape in between outline and border but there will be no
+      issue in the box model space!
+      <br />
+      we can not give outline any width where border can take width or change by
+      using css selector we know that's how indirectly may outline can get width
+      but we can not directly give any width to outline!!!
+      <br />
+      we can not make outline rounded but if we make our border rounded outline
+      will follow as it is the border radius but we can not directly make
+      outline rounded!!!
     </div>
   </body>
 </html>
