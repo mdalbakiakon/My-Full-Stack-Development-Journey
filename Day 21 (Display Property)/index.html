@@ -9,10 +9,10 @@
       * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
       }
 
-      .box,
-      .box2 {
+      .box{
         border: 2px solid black;
         /*we know div is a block eliment but yes we can make it a in line element let's see how*/
         display: inline;
@@ -22,10 +22,25 @@
 
         /*So why it is not taking margin from the top are and as well as padding*/
         /*because it is inline element not box element*/
-        /*but what if i want it to be inline but as well as same property what block element do let's do it for the box2*/
+        /*but what if i want it to be inline but as well as same property what block element do let's do it*/
+
+        /*width: 200px;*/
+        /*it will not work because it is an inline*/
       }
 
-      
+      .box {
+        display: inline-block;
+        width: 300px;
+      }
+
+      .box1{
+        /*display: none;*/
+        /*display: none means as if there is nothing so the whole thing will be gone no place will left but if we use....*/
+        
+        /*visibility: hidden;*/
+        /*it will just hide the box not it's entire area so there will be a blank space left as much the box1 is taking its space*/
+      }
+
     </style>
   </head>
   <body>
@@ -38,11 +53,12 @@
     <!-- * Inline elements respect spaces, newlines, and tabs in the HTML code, which creates a small gap.Your HTML has a space or newline between <div class="box"> and <div class="box2">, causing the gap. -->
 
     <!-- so we must remeber it that inline element respects a little gap tab or new line they create a space so we will write the code as...... -->
-    
-    <div class="box">I am a box</div><div class="box2">I am another box</div>
+
+    <div class="box box1">I am a box</div>
+    <div class="box">I am another box</div>
     <!-- ! Now we don't see the gap -->
     <span> I will become a good</span><span> Full Stack Developer</span>
-    
+
     <!-- as we know span are already a inline element -->
   </body>
 </html>
