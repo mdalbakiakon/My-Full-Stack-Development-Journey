@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 22 | Shadow & Outline CSS</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      *{
+        font-family: "Poppins", serif;
+      }
+
+      ol > p{
+        background-color: black;
+        color: white;
+      }
+      
+      .box {
+        border: 2px solid black;
+        padding: 20px;
+        /*box-shadow: h-offset v-offset blur spread colour
+        
+        box-shadow: inset 5px 5px 15px 5px yellowgreen;
+        
+        if we want to give shadow inside of the box then we will write the code as
+        
+        box-shadow: inset......*/
+        box-shadow: inset 5px 5px 15px 5px yellowgreen;
+      }
+
+      .text-shadow {
+        text-shadow: 6px 10px 3px green;
+        /*
+        text-shadow comes with 4 properties only the spread is not in the text-shadow syntax*/
+      }
+
+      .outline{
+        border: 2px solid green;
+        outline: 3px solid red;
+        outline-offset: 3px;
+        /*outline-offset means the gap between border and outline where it would not issue with the box model width height means if the box is 200px wide than it will remain as it is whatsoever the outline property is even it can go outside the html no issue*/
+
+        /*outline is outside the border*/
+
+        border-radius: 30px;
+        /*outline only follows the border's rounded corner but can not have it's own property!!!*/
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="box">I am a box</div>
+
+    <p class="text-shadow">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero,
+      obcaecati! Quidem eius aut dolore repudiandae esse, porro cum explicabo
+      beatae vero reprehenderit iusto delectus doloribus!
+    </p>
+
+    <div class="outline">
+        <h2>
+            Difference Between Outline and Border
+        </h2>
+        <ol>
+            <li><strong>Position:</strong> Outlines don't take up space; they're drawn around the element, outside of any border.</li>
+            <p>means that it will not affect the width height of the box model</p>
+            <li><strong>Offset:</strong> Using the outline-offset property, you can set the space between an outline and the edge or border of an element.</li>
+            <p>
+                means we can have gape in between outline and border but there will be no issue in the box model space!
+            </p>
+            <li><strong>Width:</strong> Borders can have varying widths on different sides, outlines have a uniform width.</li>
+            <p>
+                we can not give outline any width where border can take width or change by using css selector we know that's how indirectly may outline can get width but we can not directly give any width to outline!!!
+            </p>
+            <li><strong>Rounded Corner:</strong> Borders can have rounded corners using border-radius, while outlines generally cannot.</li>
+            <p>
+                we can not make outline rounded but if we make our border rounded outline will follow as it is the border radius but we can not directly make outline rounded!!!
+            </p>
+        </ol>
+    </div>
+  </body>
+</html>
