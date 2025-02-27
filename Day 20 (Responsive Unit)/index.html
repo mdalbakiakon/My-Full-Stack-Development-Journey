@@ -4,73 +4,266 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        html{
-          font-size: 12px;
-          /*so when we use the 12px html it means the every single tag of html will be count as 12px*/
-          /*html is a root element*/
-          /*we need this for our rem unit learning*/
-        }
+      html {
+        font-size: 12px;
+        /*so when we use the 12px html it means the every single tag of html will be count as 12px*/
+        /*html is a root element*/
+        /*we need this for our rem unit learning*/
+      }
 
-        .box, .try{
-            background-color: aquamarine;
-            border: 3px solid black;
-            width: 80vw;
-            /*vw unit means user device viewport width so 80% of the device will be shown if we write vw*/
-            margin: auto; 
-            /*margin: auto makes the .box same margin at the both side hence the div box has come in the middle */
-            /*btw margin: auto will only be applicable of the tags of html who are box type element not inline element*/
-            height: 20vh;
-            /*vh is as same as vw*/
-        }
+      .box,
+      .try {
+        background-color: aquamarine;
+        border: 3px solid black;
+        width: 80vw;
+        /*vw unit means user device viewport width so 80% of the device will be shown if we write vw*/
+        margin: auto;
+        /*margin: auto makes the .box same margin at the both side hence the div box has come in the middle */
+        /*btw margin: auto will only be applicable of the tags of html who are box type element not inline element*/
+        height: 20vh;
+        /*vh is as same as vw*/
+      }
+
+      .container {
+        background-color: aquamarine;
+        border: 3px solid black;
+        width: 80vw;
+        margin: 25px auto;
+        /*top right bottom left*/
+        /*clockwise remember*/
+        font-size: 18px;
+        min-height: 80vh;
+        /*if we want to make sure that in a page our box model must be take 80% of the area wheather the contect grow or not than we use the min height and vh property*/
+
+        /*dont have to be tensed that the area might overflow the content no it will not because we use min height not max height so the height will increase as we want it to be
+            
+            but have to be sure that we did not use any height property otherwise the box height will be applied even the content overflows*/
+      }
+
+      .container > div {
+        /* x > y ensures all y of x's direct child 
         
-        .container{
-            background-color: aquamarine;
-            border: 3px solid black;
-            width: 80vw;
-            margin: 25px auto; 
-            /*top right bottom left*/
-            /*clockwise remember*/
-            height: 50vh;
-            font-size: 18px;
-        }
-
-        .container p{
-          font-size: 1.5em;
-          /*if we did not write em than .container's p will be 18px because it will inherit from parent .container*/
+        for example: 
+          <div class="container">
+            <div>Direct child 1</div>
+            <div>Direct child 2</div>
+            
+            <section>
+              <div>Not a direct child</div>
+            </section>
           
-          /*so if we give 1.5 em it will become now 18*1.5 em in pixels*/
+          </div>
 
-          /*we know by default p tag font size is 16px so if our contaier would not hold the font-size: 18px it would be count as 16px by default and then our p's font size will be 16*1.5 in pixel */
-        }
+        here section tag's div is not the direct child of the .container so using > targets the first two divs who are the direct child of the .container
+        */
+        font-size: 1.5em;
+        /*if we did not write em than .container's p will be 18px because it will inherit from parent .container*/
 
-        .try{
-          font-size: 2rem;
-          /*so here 2rem means root element's 2 time will be the size in pixel so our root element is 12px font size therefor it will be 24 pix because 12*2 rem = 24 pixel*/
-        }
+        /*so if we give 1.5 em it will become now 18*1.5 em in pixels*/
 
+        /*we know by default p tag font size is 16px so if our contaier would not hold the font-size: 18px it would be count as 16px by default and then our p's font size will be 16*1.5 in pixel */
 
+        width: 50%;
+        /*Parcentage unit will be applied for it's parents for example here p is the child of .container so .container will be it's parents therefor the parent's width's 50% will be it's width
+          
+          so for parcentage unit the tag or content must be a child of some parents but you have to set the parent's width It is a must!!!!!*/
+        border: 2px solid red;
+      }
+
+      .container > div > div {
+        border: 2px solid blue;
+        width: 50%;
+      }
+
+      .try {
+        font-size: 2rem;
+        /*so here 2rem means root element's 2 time will be the size in pixel so our root element is 12px font size therefor it will be 24 pix because 12*2 rem = 24 pixel*/
+      }
+
+      .mycont {
+        border: 3px solid black;
+        font-size: 22px;
+        margin: 25px auto;
+
+        /* width: 100vmin; */
+
+        /*vmin means the minimum of (height/width) which is the minimum that will be applicable and by 100 it refers the percentage of how much of the minimum height wheather it is device height or weight
+          
+          for example a pc has big width but small height so when we right 100vmin then it will be count the pc device's  height's 100%
+          
+          
+          but in phone device than the width is small therefore the width's 100% will be applied*/
+
+        /*same thing goes with the vmax while it will take the max size between height or width of the device*/
+
+        width: 50vw;
+      }
     </style>
     <title>Day 20 | Responsive Design</title>
   </head>
-  
+
   <body>
     <div class="box">
-        <p>This is a box</p>
+      <p>This is a box</p>
     </div>
 
     <div class="container">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit vel fugit vitae maxime libero doloribus placeat molestias totam porro, sequi et iusto voluptates nihil magni dolorem quis quos facere. Aliquam amet mollitia quae expedita provident nostrum deleniti esse voluptatibus sapiente alias natus, explicabo vero obcaecati dolorum officiis repellat veritatis, blanditiis quia omnis? Ea labore rerum necessitatibus?</p>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit vel
+        fugit vitae maxime libero doloribus placeat molestias totam porro, sequi
+        et iusto voluptates nihil magni dolorem quis quos facere. Aliquam amet
+        mollitia quae expedita provident nostrum deleniti esse voluptatibus
+        sapiente alias natus, explicabo vero obcaecati dolorum officiis repellat
+        veritatis, blanditiis quia omnis? Ea labore rerum necessitatibus?
+        <div>Hello World!!!</div>
+      </div>
 
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla velit sunt
+      eaque? Aliquid ducimus maxime temporibus beatae distinctio et, autem
+      repellat, illo quos, accusantium quasi voluptas quia aperiam inventore.
+      Aliquam deserunt sequi dicta omnis necessitatibus maxime dolores excepturi
+      mollitia fuga provident? Ratione rerum a omnis dolorem non maiores vitae
+      architecto libero voluptatem quasi. Facere iusto praesentium beatae
+      consectetur, dicta consequuntur aliquid quod accusantium fugiat.
+      Laboriosam, repellat debitis! Nihil explicabo, repudiandae ipsam deleniti
+      temporibus recusandae deserunt, quas, itaque voluptatum libero quod
+      inventore ratione distinctio odit ex. Dicta placeat atque quibusdam maxime
+      tenetur beatae iusto nobis quidem, quos non, dolor explicabo a tempora
+      laudantium voluptatibus commodi quas tempore pariatur. Dolorum quam vel
+      placeat beatae quas error vitae, totam, porro libero magnam tenetur rerum
+      nostrum non nisi et quod alias ea voluptates nihil incidunt ad. Officia ad
+      quod recusandae rerum ratione, sapiente quas saepe impedit ipsum vel sit
+      dolore libero cupiditate consequuntur ipsa odit eaque quibusdam quos sunt
+      repudiandae unde placeat magnam. Ipsam dolores a, deserunt reprehenderit
+      unde dolor magnam minus exercitationem veniam nulla incidunt et natus sunt
+      omnis soluta, consectetur repudiandae nobis quibusdam beatae iure ratione
+      consequatur velit excepturi fuga. Voluptatem quaerat ducimus eveniet
+      placeat reprehenderit officia temporibus enim corrupti tenetur numquam,
+      dolor inventore odit repudiandae velit? Iste quod dignissimos maxime,
+      quasi ducimus eum debitis suscipit nam saepe nulla, ipsum ipsa. Expedita
+      animi iste saepe numquam ex necessitatibus sit adipisci praesentium
+      aspernatur aperiam provident, enim tenetur soluta corporis minima vel
+      ipsum. Nulla in animi accusantium molestiae sed quas natus culpa
+      praesentium? Tempora consequatur enim impedit dicta neque deserunt vero
+      possimus quia ab, laudantium dolorem! Aut ea ipsum quis, perferendis sequi
+      sunt magnam suscipit doloremque, ullam quae culpa, numquam eos
+      voluptatibus rerum aliquam libero sint esse error consequuntur deserunt
+      odit. Reprehenderit minima iste rerum nihil. Non debitis praesentium
+      commodi ratione. Quibusdam et ut fugit est assumenda delectus, adipisci
+      aut iusto velit facere vero nulla odio distinctio consequuntur doloribus
+      voluptates hic ipsam dolorum provident dolorem similique quaerat nostrum?
+      Inventore obcaecati, nisi, veritatis accusamus repudiandae cumque unde
+      pariatur sit id soluta ab in vitae ratione temporibus facilis a? Natus at
+      nihil vero magnam, vel doloremque accusantium dicta sunt labore ut
+      laudantium odit quae amet dignissimos nam veritatis, in praesentium
+      aperiam eos. Asperiores, doloribus repellendus quis cum minima corrupti
+      fugit dolorum exercitationem nostrum reiciendis repellat porro ipsam
+      voluptates explicabo consectetur, placeat, dignissimos natus quo quasi
+      possimus cupiditate sint architecto? Laboriosam, adipisci corrupti iusto
+      eveniet ipsam omnis alias consequuntur, tenetur aliquam totam fuga id
+      veritatis aspernatur rerum non? Inventore facere quod sunt! Sapiente
+      libero harum nemo culpa omnis nobis fuga quos aliquam corporis voluptatem
+      quam, et eius officia quidem impedit suscipit earum obcaecati dolorem,
+      nihil hic? Exercitationem odio vel itaque nihil laboriosam sunt labore
+      quisquam perspiciatis, velit maiores optio ipsam libero similique ipsum
+      laudantium sequi. Voluptatibus blanditiis excepturi tenetur obcaecati
+      molestiae cupiditate corrupti explicabo odio expedita, iste cum numquam.
+      Repudiandae debitis rerum exercitationem nisi et autem nemo architecto
+      corporis, tenetur sequi numquam, eligendi vel sapiente. Ex quisquam saepe,
+      vero ut temporibus nisi necessitatibus est assumenda molestiae ipsum
+      recusandae neque voluptates cumque illo expedita ullam in quis tempora
+      tenetur dolorum soluta nam, nobis ducimus natus. Id at, delectus numquam,
+      odio facere ad, adipisci ratione iusto debitis nobis odit corrupti. Veniam
+      optio ipsam suscipit libero qui impedit officiis, fugit adipisci commodi
+      quasi illo. Omnis delectus nam at, dolores dolore aliquid nulla velit
+      laborum distinctio fugiat voluptate cumque a impedit maxime accusamus,
+      saepe placeat? Doloribus alias error, vero quos numquam natus maxime
+      corrupti suscipit, odit molestiae in praesentium laudantium porro
+      temporibus iure nesciunt earum beatae! Dolorem in eveniet rem, labore
+      error eligendi ipsa perferendis aliquid laudantium perspiciatis molestias
+      necessitatibus debitis distinctio, magni iusto non. Quam nostrum iusto
+      culpa ea dolores inventore pariatur unde neque sequi, fugiat reprehenderit
+      id explicabo veritatis delectus illum optio ipsum alias voluptate mollitia
+      eveniet incidunt rem earum laboriosam. Nobis ad reiciendis vitae dolore
+      voluptatem cum libero atque aliquam. Commodi tempora mollitia, quidem
+      corrupti ipsum hic placeat excepturi eligendi velit laboriosam eaque ipsam
+      culpa rerum fugit explicabo beatae expedita saepe perferendis voluptatem
+      assumenda qui voluptas! Odio consectetur ullam magni eos cum, illum in,
+      doloremque dolores, perspiciatis culpa temporibus? Officia, earum
+      praesentium provident veniam totam, soluta error iste a dolorem
+      consectetur temporibus tenetur incidunt quisquam laborum sequi architecto
+      necessitatibus doloribus, labore saepe porro cupiditate amet eos? Debitis
+      saepe ullam numquam perspiciatis dolor ratione quae? Asperiores odio modi
+      nam necessitatibus neque quas quaerat omnis placeat vel tenetur maxime
+      recusandae voluptatibus, deserunt nulla mollitia cumque, nisi ipsam saepe
+      vitae repellat. Tenetur repellat doloremque vitae sint enim minus aliquid
+      tempore blanditiis labore odio quos asperiores aliquam veniam nemo,
+      eligendi voluptatum pariatur iure eos voluptate quas doloribus culpa.
+      Neque unde illo ducimus ex at voluptas repudiandae quae, excepturi
+      asperiores consequatur vel libero non quas animi sapiente quam dolorum
+      laboriosam culpa voluptatum atque minima laborum. Quae ipsum perspiciatis
+      sint asperiores molestias ex quam, quas tempora! Dolorum laudantium at eos
+      beatae nesciunt temporibus illo assumenda quia, nulla consequatur commodi
+      dolor sed. Autem deserunt incidunt sapiente rerum perferendis dignissimos
+      error doloremque pariatur saepe odit, cumque fugit adipisci inventore nam
+      dolorem? Dolores at dignissimos sequi atque nemo officia numquam culpa,
+      vero quod, expedita et quam soluta necessitatibus aperiam voluptatum aut
+      eos autem inventore blanditiis veniam! Provident reiciendis quisquam vero
+      eveniet iure, nobis saepe? Quia amet praesentium et impedit quas accusamus
+      dolore, odio maiores odit. Officia eius sint labore quas eaque tenetur
+      enim quia voluptatum quod, assumenda illum, debitis, porro sapiente
+      blanditiis nulla at molestias doloribus saepe. Ab possimus, esse enim
+      veritatis quaerat quisquam? Impedit, culpa eum. Nemo, ex officiis
+      accusantium, distinctio quod quia repellendus nisi odit expedita itaque,
+      excepturi aperiam eius suscipit est iure dolores? Aperiam ratione sint eos
+      voluptas voluptatem suscipit impedit quisquam excepturi, dolorem, ipsam
+      dolorum, quae doloribus! Veniam ea nulla, aliquam necessitatibus harum
+      repudiandae repellat, atque doloribus, voluptates pariatur quas sequi.
+      Officiis, ullam voluptate temporibus a molestias quia itaque soluta nobis
+      minima, eos autem magni. Non quam cupiditate sed eveniet sint, obcaecati,
+      esse quas sequi quae quasi recusandae magni hic impedit magnam? Dolorem
+      velit saepe iste minus reiciendis consequuntur, voluptas officiis? Natus
+      ratione quisquam quia non architecto atque! Officiis quas, nulla deleniti
+      ullam perspiciatis, numquam iure voluptatibus excepturi veniam temporibus
+      nihil quod repellat fugiat atque non sed error? Odit, excepturi ipsam
+      voluptates sed, deserunt dignissimos at ex necessitatibus, animi fugit
+      tempore distinctio recusandae quasi aut? Ipsum repellendus exercitationem
+      animi inventore, cum eius fugiat, beatae possimus aliquam necessitatibus
+      est. Ducimus molestias eius culpa, nemo modi pariatur ratione perspiciatis
+      a illum nobis delectus molestiae itaque, quas earum nesciunt accusamus
+      numquam cum vitae beatae sint ut! Facere blanditiis expedita doloribus
+      numquam corporis iste distinctio molestiae libero veritatis odit tenetur
+      hic ut voluptatem nam quaerat, enim illo? Esse veritatis corporis harum?
+      Eaque beatae laboriosam magnam tempore praesentium adipisci? Non
+      exercitationem pariatur dolorum ipsam unde, asperiores ullam amet
+      doloribus sed atque laudantium ad in maiores illum. Molestias, sed ex.
+      Magnam pariatur, illum nesciunt odio voluptatibus rem impedit ullam?
+      Consequuntur molestiae veniam enim minus recusandae nihil animi ipsam eum
+      iusto id pariatur, nam inventore culpa! Cupiditate neque numquam sequi
+      laborum illo aut a consectetur cumque facilis ut incidunt ratione est,
+      maiores modi ipsam dicta commodi et tempora laboriosam beatae provident
+      ea. Quas, quidem animi. Iusto tempora at quibusdam earum ex excepturi
+      magni non nulla mollitia? Cumque molestias eos libero modi dolorum saepe
+      vel. Et itaque necessitatibus tempora iure ratione nihil sunt modi
+      corporis fuga, rerum, possimus, quo quaerat. Ex.
     </div>
 
     <div class="try">
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis reiciendis rerum laboriosam totam aspernatur sint, perspiciatis ab et velit quo?</p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis
+        reiciendis rerum laboriosam totam aspernatur sint, perspiciatis ab et
+        velit quo?
+      </p>
+    </div>
+
+    <div class="mycont">
+      <p>I am another div</p>
     </div>
   </body>
 </html>
