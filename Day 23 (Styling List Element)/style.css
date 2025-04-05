@@ -1,0 +1,23 @@
+nav ul li{
+    /* list-style: none; */
+    /* it will make the disc gone*/
+    /* list-style: bengali; */
+
+    background-color: yellow;
+    /* this has made the bullet point outside so the bg colour is applied but the bullet or disc are outside so what to do make it inside*/
+
+    list-style-position: inside;
+    /*this will make the bullet or disc inside of the bg colour */
+
+    border: 2px solid black;
+
+    /* list-style-image: url(https://media4.giphy.com/media/a93jwI0wkWTQs/giphy.gif?cid=6c09b952mgt377235iomh8a7krkblwjz255y9cm1jqe0n9ax&ep=v1_gifs_search&rid=giphy.gif&ct=g);*/
+
+    /*this will apply any image as the bullet point*/
+
+    /*what if we want to add emojis in the place of bullet point*/
+
+    list-style-type: "";
+
+
+}
