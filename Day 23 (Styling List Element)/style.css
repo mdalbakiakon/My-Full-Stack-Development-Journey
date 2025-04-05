@@ -38,10 +38,16 @@ ol li{
 }
 
 
-.container ol li{
+.container2 ol li{
     background-color: lime;
     list-style: inside url(https://media4.giphy.com/media/a93jwI0wkWTQs/giphy.gif?cid=6c09b952mgt377235iomh8a7krkblwjz255y9cm1jqe0n9ax&ep=v1_gifs_search&rid=giphy.gif&ct=g);
 
 }
 
 /*so we can write the inside even as well like this*/
+
+.container li{
+    list-style: "🤢" inside;
+}
+
+/*so we can add the emojis too in the simple code as list-style*/
