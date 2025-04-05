@@ -1,0 +1,24 @@
+.box{
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+    /*so now it is overflowing!!*/
+    /*let's see what we can do about it*/
+
+    /* overflow: scroll; */
+    /* it will show a scroll bar all the time even if overflow is not happening the bar will be seen */
+
+    /* overflow: auto; */
+    /*it will also show the scroll bar but only when the overflow is occurring*/
+
+    /* overflow: hidden; */
+    /* it will make the overflow completely hidden */
+    
+    overflow: scroll;
+    white-space: nowrap;
+    /* this will make the text in single line although we have significant height of our box but it will not come next line */
+    /* basically the scroll bar come in the horizontal area by using white-space: nowrap; */
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
