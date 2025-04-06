@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+</head>
+
+<style>
+    p{
+        background-color: blue;
+        color: white;
+    }
+
+    .box p:nth-child(1){
+        background-color: yellow;
+        color: red;
+    }
+
+    /* another way to do this is...*/
+
+    .anotherWay p:first-child{
+        background-color: yellow;
+        color: red;
+    }
+</style>
+
+<body>
+ 
+    <!-- Write html and css code to style a paragraph inside a div which contains 5 paragraphs. The first paragraph must have background color yellow and text color red. The other paragraphs must have background color blue and text color white. The HMTL is written below for your reference. Do not change this html -->
+
+    <div class="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sequi dolorum dignissimos necessitatibus provident magnam nihil sapiente unde atque reprehenderit.</p>
+
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, laudantium.</p>
+
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div> 
+
+    <div class="anotherWay">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, laborum.</p>
+        <p>
+            lorem
+        </p>
+    </div>
+</body>
+</html>

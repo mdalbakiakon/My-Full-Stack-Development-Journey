@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    border: 2px solid black;
+    height: 200px;
+    width: 75vw;
+    margin: 3px;
+}
+
+
+/* ! by default every elements position property is set to static */
+
+
+.box1{
+    background-color: brown;
+    /* ! z-index wont work in static */
+    z-index: 1;
+    /* it did not work because we yet did not change the position property from static to others */
+    position: relative;
+    /* now it has changed */
+    
+    /* ! default z-index:0 which refers to its original position if we give any positive value this element will come forward if we use negitive value it will go backward doesnt matter the value itself any 1/2/3 value will work 
+    */
+
+    /* !it must be an integer though no float value will work */
+}
+
+.box2{
+    position: relative;
+    /** relative basically refers related to it's actual static position and then we can add top bottom left right what ever we need  */
+    background-color: peru;
+    left: 40px;
+    top: -40px;
+    /** but now we want to make sure that our box1 must be at the top so therefor we will be using z-index property */
+}
+
+.box3{
+    background-color: yellowgreen;
+    /* top: 200px; */
+    /* it wont work because we did not change it's position property yet it is still in static so no change occured in top 200px */
+}
+
+.box4{
+    background-color: yellow;
+}
