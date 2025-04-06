@@ -42,6 +42,7 @@ a {
   width: 420px;
   height: 800px;
   background-color: white;
+  overflow: hidden;
 }
 
 .suggestion {
