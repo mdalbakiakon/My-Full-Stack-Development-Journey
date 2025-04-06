@@ -1,49 +1,117 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/*! Theory 
+
+-->Relative: Change occurs from it's actual static position
+
+-->absolute: when we set it the other content or element will act like as if this element doesn't exist 
+
+it find's it's nearest positioned parent if the parents is positioned the changes occurs in that aspect but if it doesnot find it's parents is positioned than it will go ancestors to find the positioned parents if it doesnt find it will go to html and work as aspect of whole html
+
+-->fixed: fixed just fixed an element in certain pixel area even if the content of the page is scrolling the part will be fixed there
+
+-->sticky: sticky just stick at the top when the page is being scrolled unlike the fixed which always fixed at certain position sticky will scrolled until the page reaches it's own position than it will be stuck or stick*/
+
+/* ! transform, filter or perspective property also make an element appear as positioned so in absolute position we must check this and remember!!! */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.box{
-    border: 2px solid black;
-    height: 200px;
-    width: 75vw;
-    margin: 3px;
+body {
+  background-color: #282b38;
 }
 
+p {
+  color: antiquewhite;
+}
+
+.container {
+  /* position: relative; */
+  /* ! transform, filter or perspective property also make an element appear as positioned so in absolute position we must check this and remember!!! */
+  /* so now we have commented out our previous relative position so our green box won't act according to container which was it's parent*/
+
+  /* now we will add transform property to see it acts like positioned or static */
+
+  /*! transform: translate(0); */
+
+  /* so now the green box is acting according to container because transform has made the container act as positioned so the absolute positioned green box is doing according to container */
+
+  /*! filter: invert(0); */
+  
+  /* ivert makes the color inverted any way so now it is again working as position because filter is applied */
+
+  /*! perspective: 0em; */
+  
+  /* again perspective made it positioned */
+  
+  position: relative;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  padding: 50px;
+  margin: 50px;
+  box-shadow: 5px 5px 25px 5px black;
+}
+
+.box {
+  border: 2px solid black;
+  height: 200px;
+  width: 75vw;
+  margin: 3px;
+  border-radius: 25px;
+  box-shadow: 5px 5px 25px 5px black;
+}
 
 /* ! by default every elements position property is set to static */
 
+.box1 {
+  background-color: brown;
+  /* ! z-index wont work in static */
+  z-index: 1;
+  /* it did not work because we yet did not change the position property from static to others */
+  position: relative;
+  /* now it has changed */
 
-.box1{
-    background-color: brown;
-    /* ! z-index wont work in static */
-    z-index: 1;
-    /* it did not work because we yet did not change the position property from static to others */
-    position: relative;
-    /* now it has changed */
-    
-    /* ! default z-index:0 which refers to its original position if we give any positive value this element will come forward if we use negitive value it will go backward doesnt matter the value itself any 1/2/3 value will work 
+  /* ! default z-index:0 which refers to its original position if we give any positive value this element will come forward if we use negitive value it will go backward doesnt matter the value itself any 1/2/3 value will work 
     */
 
-    /* !it must be an integer though no float value will work */
+  /* !it must be an integer though no float value will work */
 }
 
-.box2{
-    position: relative;
-    /** relative basically refers related to it's actual static position and then we can add top bottom left right what ever we need  */
-    background-color: peru;
-    left: 40px;
-    top: -40px;
-    /** but now we want to make sure that our box1 must be at the top so therefor we will be using z-index property */
+.box2 {
+  position: relative;
+  /** relative basically refers related to it's actual static position and then we can add top bottom left right what ever we need  */
+  background-color: peru;
+  left: 40px;
+  top: -40px;
+  /** but now we want to make sure that our box1 must be at the top so therefor we will be using z-index property */
 }
 
-.box3{
-    background-color: yellowgreen;
-    /* top: 200px; */
-    /* it wont work because we did not change it's position property yet it is still in static so no change occured in top 200px */
+.box3 {
+  background-color: yellowgreen;
+  /* top: 200px; */
+  /* it wont work because we did not change it's position property yet it is still in static so no change occured in top 200px */
+  position: absolute;
+  /* when we set the position as absolute first things happend as if the element is not even exist in html */
+  /* it's parents is positioned which is container so let's see the changes how it occurs */
+  top: 0px;
+  right: 5px;
+  /* so the container was positioned as relative therefor it took 5px from it's parent's aspect from top and right */
 }
 
-.box4{
-    background-color: yellow;
+.box4 {
+  background-color: red;
+  position: fixed;
+  bottom: 5px;
+  /* so we have set the value of bottom 5px and set the box in the below of the page and it is fixed let's add some more content to see it moves or not */
+  /* so yes it is working */
+  height: 5vh;
+}
+
+.box5 {
+  background-color: orange;
+  height: 5vh;
+  position: sticky;
+  top: 3px;
+  width: 100%;
 }
