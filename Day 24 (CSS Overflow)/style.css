@@ -34,3 +34,22 @@
 */
 
 /*! overflow can be used for any tag so for the text-overflow: ellipsis we must ensure the correct tag is defined and the overflow and white-space property are also defined in the tag is safe practise!!!! */
+
+
+/*! overflow: clip is same as the hidden the difference between clip and hidden is 
+
+hidden hide the scroll bar
+clip also do the same but it also good for layout performance
+but hidden is old version browser supported
+*/
+
+
+.box2{
+  border: 3px solid green;
+  width: 250px;
+  height: 100px;
+  /* overflow-x: scroll;
+  overflow-y: hidden; */
+  overflow: scroll hidden;
+  /* we can write the code like this as well first property is for the x and 2nd is for y*/
+}
