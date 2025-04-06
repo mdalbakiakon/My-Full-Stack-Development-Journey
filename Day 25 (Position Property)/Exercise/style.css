@@ -46,20 +46,18 @@ a {
 
 .suggestion {
   display: flex;
-  margin: 0px 15px;
 }
 
-.sugg p{
+.suggestion p{
   color: rgb(63, 63, 63);
   background-color: transparent;
   margin: 5px;
   padding: 1px 10px;
   border: 1px solid rgba(0, 0, 0, 0.219);
-  border-radius: 20px;
+  border-radius: 25px;
 }
 
 h1 {
-  /* margin: 20px 10px; */
   position: relative;
   top: 15px;
   margin: 0px 0px 0px 10px;
@@ -77,7 +75,7 @@ h4 {
   justify-content: center;
 }
 
-.readMe p {
+.read p {
   font-weight: 600;
   padding: 10px 25px;
   border-radius: 25px;
