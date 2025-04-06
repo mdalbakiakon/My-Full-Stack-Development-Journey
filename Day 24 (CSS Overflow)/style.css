@@ -1,24 +1,36 @@
-.box{
-    border: 2px solid black;
-    width: 200px;
-    height: 200px;
-    /*so now it is overflowing!!*/
-    /*let's see what we can do about it*/
+/* overflow: scroll; */
+/* it will show a scroll bar all the time even if overflow is not happening the bar will be seen */
 
-    /* overflow: scroll; */
-    /* it will show a scroll bar all the time even if overflow is not happening the bar will be seen */
+/* overflow: auto; */
+/*it will also show the scroll bar but only when the overflow is occurring*/
 
-    /* overflow: auto; */
-    /*it will also show the scroll bar but only when the overflow is occurring*/
+/* overflow: hidden; */
+/* it will make the overflow completely hidden */
 
-    /* overflow: hidden; */
-    /* it will make the overflow completely hidden */
-    
-    overflow: scroll;
-    white-space: nowrap;
-    /* this will make the text in single line although we have significant height of our box but it will not come next line */
-    /* basically the scroll bar come in the horizontal area by using white-space: nowrap; */
+/* white-space: nowrap; */
+/* this will make the text in single line although we have significant height of our box but it will not come next line */
+/* basically the scroll bar come in the horizontal area by using white-space: nowrap; */
 
-    overflow: hidden;
-    text-overflow: ellipsis;
+.box {
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  overflow: hidden;
 }
+
+.box p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/** text-overflow: ellipsis needed some condition to work
+  
+  --> first of all the text tag should be define correctly if it is inside <p> tag we have to define the tag in css
+  
+  --> then the overflow property must be applied auto, hidden, scroll anything to see the effect
+
+  --> white-space: nowrap; is also a must to see the effect
+*/
+
+/*! overflow can be used for any tag so for the text-overflow: ellipsis we must ensure the correct tag is defined and the overflow and white-space property are also defined in the tag is safe practise!!!! */
