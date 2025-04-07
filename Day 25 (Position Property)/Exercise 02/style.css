@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  background-color: #13101a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  height: 50vh;
+  width: 750px;
+  background-image: url(./yellow-carnation-flower_463290-529.avif);
+  border-radius: 15px;
+  background-size: cover;
+}
+
+img {
+  position: relative;
+  right: 130px;
+  /* top: 10px; */
+  width: 600px;
+  z-index: 1;
+}
+
+.imgbox {
+  background-color: #13101a;
+  width: 35%;
+  border-radius: 15px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.info {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  position: absolute;
+  right: 0px;
+  width: 65%;
+  height: 100%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h4 {
+  font-style: italic;
+  text-align: center;
+}
+
+.description {
+  margin: 50px 0px 0px 0px;
+  text-align: center;
+}
