@@ -83,7 +83,7 @@ input::placeholder {
     white-space: nowrap;
   display: flex;
   /* align-items: center; */
-  gap: px;
+  gap: 5 px;
 }
 
 .remember a {
