@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+    font-weight: 600;
+}
+
+body{
+
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.logo{
+    display: flex;
+}
+
+.header{
+    display: flex;
+    position: relative;
+    /* border: 2px solid red; */
+    height: 50px;
+}
+
+nav{
+    /* list-style: none; */
+    display: flex;
+    padding: 12px 0px;
+    position:absolute;
+    right: 10%;
+}
+
+nav li{
+    list-style: none;
+    margin: 0px 12px;
+}
+
+.signup{
+    position: absolute;
+    top:5px;
+    right: 0;
+    /* border: 2px solid red; */
+    border-radius: 15px;
+    padding: 5px 20px;
+    background-color: orange;
+    /* box-shadow: 5px 5px 25px 2px rgba(0, 0, 0, 0.651); */
+
+}
+
+.container{
+    background: 
+        linear-gradient(
+            to bottom right,
+            rgb(9, 4, 19), 
+            rgba(255, 0, 128, 0.6)
+        ),
+        url(./milad-fakurian-nY14Fs8pxT8-unsplash.jpg);
+    background-blend-mode: soft-light;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 1200px;
+    height: 850px;
+    /* border: 2px solid transparent; */
+    border-radius: 15px;
+    box-shadow: 5px 5px 12px 2px rgba(0, 0, 0, 0.651);
+    /* background-color: #281a3f; */
+    padding: 12px;
+    overflow: hidden;    
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+}
+
+.page-class{
+    /* border: 2px solid peru; */
+    height: 772px;
+    display: flex;
+    position: relative;
+}
+
+.form-class{
+    /* border: 2px solid yellowgreen; */
+    width: 40%;
+}
+
+#welcome{
+    font-family: "Montserrat", sans-serif;
+    font-size: 5rem;
+    font-weight: 900;
+}
+
+h2{
+    font-family: "Montserrat", sans-serif;
+    font-size: 4.5rem;
+    position: relative;
+    top: -30px;
+    font-weight: 800;
+    color: rgba(255,255,255,0.5);
+}
+
+.landing-class {
+    background: 
+        linear-gradient(
+            to bottom right,
+            rgb(9, 4, 19), 
+            rgba(255, 0, 128, 0.6)
+        ),
+        url(./milad-fakurian-nY14Fs8pxT8-unsplash.jpg);
+    background-blend-mode: soft-light;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: right;
+    height: 772px;
+    display: flex;
+    position: relative;
+    border-radius:15px ;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    overflow: hidden;
+}
+
+
+.description{
+    position: relative;
+    top: 400px;
+}
+
+.form-class {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+    width: 100%;
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Heading */
+  .form-class h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 600;
+  }
+  
+  /* Input container with icon */
+  .input-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .input-container .icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: white;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border-radius: 25px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Remember + Forgot password section */
+  .remember {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    font-size: 15px;
+    margin-top: 20px;
+    white-space: nowrap;
+  }
+  
+  .remember label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+  }
+  
+  .remember a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .remember a:hover {
+    text-decoration: underline;
+  }
+  
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Login button */
+  button {
+    width: 40%;
+    margin: auto;
+     /* Top margin + center horizontally */
+    padding: 12px;
+    border-radius: 25px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 850ms ease;
+  }
+  
+  button:hover {
+    background-color: orange;
+    border-color: orange;
+    color: white;
+    transition: all 850ms ease;
+  }
+  
+  /* Register link */
+  .register-link {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  .register-link a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+  
+
+  .bx {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    /* transform: translateY(-50%); */
+    font-size: 20px;
+    color: white;
+  }
+  
+  .input-box {
+    margin: 60px auto;
+    width: 100%;
+  }
+  
+  .input-class {
+    position: relative;
+    margin-bottom: 20px;
+  }
