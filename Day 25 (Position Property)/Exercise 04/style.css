@@ -11,8 +11,8 @@
 
 body {
   /* background-size: contain; */
-  background-repeat: no-repeat;
-  background-position: center;
+  /* background-repeat: no-repeat; */
+  /* background-position: center; */
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -25,6 +25,10 @@ body {
 a {
   text-decoration: none;
   color: white;
+}
+
+nav a:hover{
+  text-decoration: underline;
 }
 
 .logo {
@@ -59,14 +63,20 @@ nav li {
   border-radius: 15px;
   padding: 5px 20px;
   background-color: orange;
+  transition: all 850ms ease;
   /* box-shadow: 5px 5px 25px 2px rgba(0, 0, 0, 0.651); */
+}
+
+.signup:hover{
+  box-shadow: 0px 0px 15px 5px orange;
+  transition: all 850ms ease;
 }
 
 .container {
   background: linear-gradient(
-      to bottom right,
+      120deg,
       rgb(9, 4, 19),
-      rgba(255, 0, 128, 0.6)
+      rgba(255, 35, 145, 0.493)
     ),
     url(./milad-fakurian-nY14Fs8pxT8-unsplash.jpg);
   background-blend-mode: soft-light;
@@ -87,15 +97,11 @@ nav li {
 
 .page-class {
   /* border: 2px solid peru; */
-  height: 772px;
+  /* height: 772px; */
   display: flex;
   position: relative;
 }
 
-.form-class {
-  /* border: 2px solid yellowgreen; */
-  width: 40%;
-}
 
 #welcome {
   font-family: "Montserrat", sans-serif;
@@ -134,9 +140,13 @@ h2 {
   overflow: hidden;
 }
 
+logo-box a:hover{
+  text-decoration: none;
+}
+
 .description {
   position: relative;
-  top: 400px;
+  top: 380px;
 }
 
 .form-class {
@@ -144,14 +154,14 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 400px;
-  width: 100%;
-  padding: 40px 30px;
+  max-width: 420px;
+  /* width: 100%; */
+  padding: 40px 40px;
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
+  border-radius: 15px;
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.1);
 }
 
 /* Heading */
@@ -194,9 +204,9 @@ input::placeholder {
 /* Remember + Forgot password section */
 .remember {
   display: flex;
+  /* padding: auto 20px; */
   justify-content: space-between;
-  /* align-items: center; */
-  font-size: 15px;
+  font-size: 16px;
   margin-top: 20px;
   white-space: nowrap;
 }
@@ -204,7 +214,7 @@ input::placeholder {
 .remember label {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
   white-space: nowrap;
 }
 
@@ -218,6 +228,7 @@ input::placeholder {
 }
 
 form {
+  width: 320px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -226,23 +237,22 @@ form {
 
 /* Login button */
 button {
-  width: 40%;
+  width: 50%;
   margin: auto;
   /* Top margin + center horizontally */
   padding: 12px;
   border-radius: 25px;
   border: 2px solid white;
-  background-color: transparent;
+  background-color: orange;
+  border-color: orange;
   color: white;
   cursor: pointer;
   font-size: 16px;
   transition: all 850ms ease;
 }
 
-button:hover {
-  background-color: orange;
-  border-color: orange;
-  color: white;
+button:hover{
+  box-shadow: 0px 0px 15px 5px orange;
   transition: all 850ms ease;
 }
 
