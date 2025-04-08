@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  
+}
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(./pexels-joshua-welch-763172-1624600.jpg);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.card {
+  width: 380px;
+  height: 650px;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+
+.input-box {
+  margin: 60px auto;
+  width: 85%;
+}
+
+.input-class {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 45px 12px 15px;
+  border-radius: 25px;
+  border: 1.5px solid white;
+  background-color: transparent;
+  color: white;
+  outline: none;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.bx {
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  /* transform: translateY(-50%); */
+  font-size: 20px;
+  color: white;
+}
+
+.remember {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.remember label {
+    white-space: nowrap;
+  display: flex;
+  /* align-items: center; */
+  gap: 5 px;
+}
+
+.remember a {
+  color: white;
+  text-decoration: none;
+}
+
+.remember a:hover {
+  text-decoration: underline;
+}
+
+button {
+  width: 40%;
+  margin-top: 25px;
+  padding: 12px;
+  border-radius: 25px;
+  border: 1.5px solid white;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  transition: 850ms;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+  transition: 850ms;
+}
+
+.register-link {
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.register-link a {
+  color: white;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
