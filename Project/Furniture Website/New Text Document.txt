@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+  text-decoration: none;
+  list-style: none;
+  color: white;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background: linear-gradient(to bottom, rgb(15, 15, 15), #1f1d27);
+}
+
+/* BODY layout */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+/* Background image */
+.bg {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(31, 29, 39, 0.35),
+      rgba(31, 29, 39, 0.95)
+    ),
+    url(./gray-sofa-white-living-room-interior-with-copy-space-3d-rendering.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Section wrapper */
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Anchor link styles */
+nav a {
+  color: white;
+}
+
+/* Header container */
+.header {
+  position: absolute;
+  top: 0px;
+  max-width: 1200px;
+  width: 85vw;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+/* Logo */
+.logo {
+  position: absolute;
+  left: 2rem;
+  /* top: 0.1px; */
+  margin-top: 6.2px;
+  font-size: 72px;
+}
+
+.logo i {
+  color: #1f1d27;
+  /* text-shadow: 0 0 25px #1f1d27; */
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: 500;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+nav ul li a:hover {
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff,
+    0 0 80px #0ff;
+}
+
+/* Signup button */
+.signup {
+  position: absolute;
+  right: 2rem;
+  background-color: #0ff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.signup a{
+  color: #1f1d27;
+  font-weight: 700;
+  transition: 0.3s all ease-in;
+}
+
+.signup a:hover{
+  box-shadow: 0px 0px 30px 10px #0ff;
+  transition: 0.3s all ease-in;
+}
+
+/* Hero content */
+.hero-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Slogan text */
+.slogan {
+  position: absolute;
+  padding: 1rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 6rem;
+  color: #1f1d27;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.slogan h2 {
+  font-family: "Charmonman", cursive;
+  /* color: #1f1d27; */
+  /* font-weight: 900; */
+  /* letter-spacing: 2vw; */
+  /* opacity: 0.1; */
+}
+
+
+.hero-2 {
+  max-width: 1200px;
+  width: 85vw;
+  text-align: center;
+  position: relative;
+}
+
+p {
+  position: relative;
+  padding: 2em;
+}
+
+.nexa {
+  position: absolute;
+  left: 90px;
+}
+
+.nexa a {
+  color: #1f1d27;
+  font-size: 1.6em;
+}
+
+.hero-3{
+  max-width: 1400px;
+}
+
+.card{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8%;
+}
+
+.card1, .card2, .card3{
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* border: 2px solid red; */
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0px 0px 25px black;
+}
+
+.card1-img, .card2-img, .card3-img{
+  /* width: 30%; */
+  width: 100%;
+  /* height: 30%; */
+  aspect-ratio: 1/1;
+  /* border: 2px solid bisque; */
+  background: url(./Black-Sofa.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 20px;
+  border-bottom-right-radius: 0px;
+}
+
+.card2-img{
+  background: url(./ezgif.com-resize.jpg);
+  background-size: contain;
+}
+
+.card3-img{
+  background: url(./book-shelf.jpg);
+  background-size: contain;
+}
+
+.card1-des, .card2-des, .card3-des{
+  /* border: 2px solid yellow; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  /* bottom: 15px; */
+  font-size: 1rem;
+  /* width: 85%; */
+  padding: 0px 20px;
+  
+}
+
+.card h3{
+  margin: 0px auto 20px;
+}
+
+
+.price{
+  width: 50%;
+  /* color: transparent; */
+  /* color: #0ff; */
+  /* text-shadow: 0px 0px 25px #0ff; */
+  /* font-weight: 800; */
+  font-size: 32px;
+  font-weight: 700;
+  /* letter-spacing: 15px; */
+  background-color: #1f1d27;
+  /* border: 2px solid navajowhite; */
+  border-top-right-radius: 20px;
+  mix-blend-mode: darken;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 98px;
+  bottom: 48px;
+  z-index: 20;
+  /* box-shadow: 0px -10px 25px #1f1d27; */
+}
+
+.buy {
+  position: absolute;
+  bottom: 30px;
+}
+
+.buy{
+  /* display: inline-block; */
+  color: #1f1d27;
+  font-weight: 700;
+  background-color: #0ff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease-in;
+  z-index: 40000;
+}
+
+.buy:hover {
+  box-shadow: 0 0 10px 5px #0ff;
+}
+
+
+
+/* ====== Media Queries ====== */
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+}
