@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+    list-style: none;
+    text-align: left;
+}
+
+h1{
+    color: white;
+    position: absolute;
+    font-size: 5em;
+    font-family: "Montserrat", serif;
+    font-weight: 900;
+    left: 60px;
+    text-decoration: underline;
+}
+
+h2{
+    position: absolute;
+    color: white;
+    font-size: 1.8em;
+    left: 60px;
+    top: 85px;
+    font-weight: 700;
+    /* text-decoration: underline; */
+    /* opacity: 0.5; */
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(46, 44, 54);
+    overflow: hidden;
+}
+
+h3, p{
+    color: white;
+    font-family: "poppins", serif;
+}
+
+h3{
+    font-size: 1.8em;
+    /* font-weight: 700; */
+    font-style: oblique;
+    opacity: 0.5;
+    /* mix-blend-mode: overlay; */
+}
+
+
+.des{
+    position: absolute;
+    left: 60px;
+    bottom: 150px;
+    width: 480px;
+    /* box-shadow: 5px 5px 15px; */
+    opacity: 0.4;
+}
+
+#leo-h2{
+    font-family: "poppins", serif;
+    /* background: url(https://t4.ftcdn.net/jpg/11/97/04/17/360_F_1197041776_YPhk2ACJ85frUqunQSIfTsz7uw33Dwaq.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: yellowgreen */
+    text-decoration: none;
+    font-size: 4.2em;
+    position: absolute;
+    opacity: 2;
+    left: 60px;
+    top: 495px;
+    /* font-weight: 00; */
+    /* bottom: 500px; */
+    letter-spacing: 2px;
+}
+
+.container{
+    position: absolute;
+    width: 1350px;
+    height: 850px;
+    /* border: 2px solid yellowgreen; */
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px 5px black;
+    overflow: hidden;
+}
+
+i{
+    padding: 8px;
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+    transition: 500ms;
+}
+
+nav i{
+    margin: 8px auto;
+}
+
+i:hover{
+    color: yellowgreen;
+    transition: 500ms;
+}
+
+.control{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50px;
+    height: 100%;
+    /* background-color: rgb(0, 0, 0); */
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    position: relative;
+    background: rgba(0, 0, 0, 0.3); /* Tinted black glass */
+    -webkit-backdrop-filter: blur(2px); /* For Safari */
+    backdrop-filter: blur(2px);
+    /* border: 1px solid rgba(255, 255, 255, 0.1); */
+    color: white;
+    box-shadow: 10px 0px 35px 2px rgb(0, 0, 0, 0.7);
+}
+
+.control-icon{
+    position: absolute;
+    bottom: 2px;
+}
+
+.green-icon{
+    /* padding:8px; */
+    background-color: yellowgreen;
+    border-bottom-left-radius: 15px;
+    transition: 500ms;
+}
+
+.green-icon:hover{
+    /* background-color: transparent; */
+    /* transform: translateY(-50px); */
+    border-radius: 15px;
+    color: black;
+    box-shadow: 0px 0px 15px 5px yellowgreen;
+    transition: 500ms;
+}
+
+.green-icon i:hover{
+    /* background-color: transparent; */
+    /* transform: translateY(-50px); */
+    color: black;
+    transition: 500ms;
+
+}
+
+.bg{
+    position: absolute;
+    border-radius: 15px;
+    width: 1350px;
+    height: 850px;
+    background: linear-gradient(to right,rgba(29, 29, 29, 0.795), rgba(56, 56, 56, 0.685)), url(./1655213.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
+}
+
+
+.btn{
+    position: absolute;
+    left: 60px;
+    bottom: 0px;
+    font-weight: 700;
+    margin: 50px auto 70px;
+}
+
+.btn a{
+    background-color: yellowgreen;
+    color: #000;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 15px; 
+    box-shadow: 0px 5px 15px black;
+    transition: 500ms;
+}
+
+.btn a:hover{
+    box-shadow: 0px 0px 15px 5px yellowgreen;
+    transition: 500ms;
+    /* opacity: 1; */
+}
+
+.space{
+    mix-blend-mode: soft-light;
+    letter-spacing: 19px;
+}
