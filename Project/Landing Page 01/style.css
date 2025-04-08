@@ -64,7 +64,7 @@ h3{
 }
 
 #leo-h2{
-    font-family: "poppins", serif;
+    font-family: "Montserrat", serif;
     /* background: url(https://t4.ftcdn.net/jpg/11/97/04/17/360_F_1197041776_YPhk2ACJ85frUqunQSIfTsz7uw33Dwaq.jpg) no-repeat center;
     background-size: cover;
     -webkit-background-clip: text;
@@ -78,7 +78,7 @@ h3{
     top: 495px;
     /* font-weight: 00; */
     /* bottom: 500px; */
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
 .container{
