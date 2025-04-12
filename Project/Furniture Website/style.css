@@ -280,10 +280,10 @@ span {
   text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
 }
 
-.svg-chend {
+/* .svg-chend {
   top: 0;
   right: 0;
-}
+} */
 
 /* ====== Responsive Media Queries ====== */
 @media (max-width: 1024px) {

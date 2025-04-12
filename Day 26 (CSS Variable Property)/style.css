@@ -1,0 +1,55 @@
+:root{
+    --primary-color: hotpink;
+    --secondary-color: #1d1f27;
+    /* :root basically refers to global variable or preset and it will help changes in code in just one single change */
+
+    /* it does not only available for the color changes :root can actually save variable of different attribute as well like margine, padding, font size, etc*/
+
+    --deffontsize: 24px;
+    --defop: 0.5;
+    --defpad: 20px;
+    --defbr:20px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: var(--secondary-color);
+    /* using var to give color */
+}
+
+.nav{
+    background-color: aquamarine;
+
+}
+
+.nav ul{
+    display: flex;
+    justify-content: space-between;
+    /* our :root padding was 20px which was global let's make a local of it*/
+    --defpad: 100px;
+    padding: var(--defpad);
+    opacity: var(--defop);
+}
+
+.nav ul li{
+    list-style: none;
+    font-size: var(--deffontsize);
+}
+
+.container{
+    /* background-color: hotpink; */
+    color: var(--primary-color);
+    font-size: var(--deffontsize);
+    padding: var(--defpad);
+    /* so the global did not change as though we change it in .nav ul as 100px but in container it is being applied as 20px which was :root global var */
+
+    margin: 30px;
+    border: 3px solid red;
+    border-radius: var(--defbr);
+}
