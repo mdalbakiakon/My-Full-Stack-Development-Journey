@@ -1,125 +1,168 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    list-style: none;
-    color: white;
-    font-family: "Orbitron", sans-serif;
-    font-size: 1.2rem;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Orbitron", sans-serif;
+  color: white;
+  font-size: 1.2rem;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+    url(https://images.hdqwalls.com/wallpapers/mountains-minimal-landscape-4k-5b.jpg);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 15px 2px grey;
+  overflow: hidden;
+}
+
+.navbar {
+  position: relative;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  height: 100%;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  justify-content: space-between;
+  z-index: 20;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logout ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+i {
+  display: inline-block;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+i:hover,
+a:hover {
+  text-shadow: 0px 0px 5px white, 0px 0px 10px wheat;
+}
+
+a:active,
+a:active i, i:active{
+  transition: 0.3s ease;
+  font-size: 1.1rem;
+  transform: translateY(5px); /* Moves the entire anchor (text and icon) 5px down */
+}
+
+label {
+  transition: 0.3s ease;
+}
+
+input {
+  display: none;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  height: 100%;
+  width: 250px;
+  transform: translateX(-100%);
+  transition: transform 0.75s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 23px;
+  padding-left: 2px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  z-index: 19;
+}
+
+#burger:checked ~ .hero .slide {
+  transform: translateX(50px);
+}
+
+.hamb {
+  opacity: 1;
+  transition: opacity 0.75s ease;
 }
 
 
-body{
-    width: 100%;
-    height: 100%;
-    /* background:black; */
-    /* text-decoration: none; */
+#burger:checked ~ .hero .navbar .hamb {
+  opacity: 0;
+  pointer-events: none;
 }
 
-a{
-    /* color: white; */
-    text-decoration: none;
+.slide-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-section{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.close {
+  align-self: flex-end;
+  cursor: pointer;
 }
 
-.container{
-    display: flex;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0,0,0,0.2)), url(https://images.hdqwalls.com/wallpapers/mountains-minimal-landscape-4k-5b.jpg);
-    background-blend-mode: multiply;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 60vw;
-    height: 65vh;
-    border-radius: 25px;
-    box-shadow: 0px 0px 15px 2px grey;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* border: 2px solid red; */
-}
-
-.navbar{
-    position: relative;
-    /* background-color: red; */
-    /* border: 2px solid yellow; */
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    height: 100%;
-    width: 50px;
-    display: flex;
-    flex-direction: column;
-     align-items: center;
-     padding: 25px;
-     justify-content: space-between;
-    border-top-left-radius: inherit;
-    border-bottom-left-radius: inherit;
-}
-
-nav ul{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.info{
-    text-align: center;
-    flex: 1;
-    /* border: 2px solid black; */
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-h1{
-    font-size: 3rem;
-}
-
-p{
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-
-i{
-    display: inline-block;
-    transition: 0.3s ease;
-    /* cursor: pointer; */
-}
-
-i:hover{
-    transition: 0.3s ease;
-    text-shadow: 0px 0px 5px white, 0px 0px 10px wheat;
-}
-
-a:active i {
-    font-size: 1.1rem;
-    transform: translateY(5px);
-    transition: 0.3s ease;
-}
-
-.close{
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-}
-
-input{
-    position: absolute;
-    z-index: -200000;
-    display: none;
+#logout-menu {
+  position: absolute;
+  bottom: 28px;
 }
