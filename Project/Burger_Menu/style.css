@@ -112,7 +112,9 @@ a:active i,
 i:active {
   transition: 0.3s ease;
   font-size: 1.1rem;
-  transform: translateY(5px);
+  transform: translateY(
+    5px
+  ); /* Moves the entire anchor (text and icon) 5px down */
 }
 
 label {
@@ -157,11 +159,8 @@ input {
 }
 
 .slide-menu {
-  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 20px;
 }
 
@@ -185,11 +184,50 @@ input {
     font-size: 0.9rem;
   }
 
+  /* .container {
+      flex-direction: column;
+      padding: 10px;
+    } */
+
+  /* .navbar {
+      flex-direction: row;
+      width: 100%;
+      height: 50px;
+      padding: 10px;
+      justify-content: space-between;
+    } */
+
+  /* nav ul {
+      flex-direction: row;
+      gap: 15px;
+    } */
+
+  /* .slide {
+      width: 70%;
+      max-width: 250px;
+      height: 100vh;
+      transform: translateX(-100%);
+      border-radius: 0 25px 25px 0;
+    }
+  
+    #burger:checked ~ .hero .slide {
+      transform: translateX(50px);
+    } */
+
   .info {
     flex: 1;
     padding: 20px;
     gap: 15px;
   }
+
+  /* .info h1, .info p {
+      width: 90vw;
+    } */
+
+  /* #logout-menu {
+      position: static;
+      margin-top: auto;
+    } */
 }
 
 @media (max-width: 480px) {
@@ -218,12 +256,16 @@ input {
     padding: 10px;
   }
 
+
   .navbar {
     position: fixed;
     top: 0;
     left: 0;
     flex-direction: row;
     width: 100vw;
+    /* border-radius: 25px; */
+    /* margin-top: 20px; */
+    /* background-color: red; */
     padding: 15px;
     height: auto;
     justify-content: center;
@@ -231,7 +273,9 @@ input {
     z-index: 19;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
+    /* box-shadow: 0px 0px 55px 0px rgba(0, 0, 0, 0.555); */
   }
+
 
   nav ul .small,
   .logout {
@@ -239,9 +283,12 @@ input {
   }
 
   .hamb {
+    /* width: 100%; */
+    /* margin-top: 20px;   */
     opacity: 1;
     z-index: 22;
     transition: opacity 4.5s ease;
+    /* background-color: red; */
   }
 
   .slide {
@@ -252,6 +299,7 @@ input {
     text-align: center;
     width: 100vw;
     height: 100vh;
+    /* background-color: rgba(34, 34, 34, 0.2); */
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     transform: translateY(-100%);
@@ -261,25 +309,27 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* Center vertically */
+    /* padding: 20px; */
+    /* border: 2px solid red; */
   }
 
   .close {
     position: static;
   }
 
-  .slide ul {
+  .slide ul{
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .slide-menu {
-    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* <-- This horizontally centers all li inside */
     justify-content: center;
+    /* border: 2px solid red; */
   }
 
   .slide-menu .close {
@@ -289,8 +339,16 @@ input {
     width: 100%;
   }
 
+  /* .slide-menu li {
+    border: 2px solid yellow;
+  } */
+
   .close {
+    /* border: 2px solid red; */
     position: relative;
+    /* top: 15px; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
     cursor: pointer;
   }
 
@@ -307,4 +365,4 @@ input {
     transition: opacity 0.75s ease;
     pointer-events: none;
   }
-}
+} 
