@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+@font-face {
+    font-family: "h1";
+    src: url(./automata.display.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1.8rem;
+    text-align: center;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 500;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 1rem;
+    transition: 0.75s ease;
+}
+
+/* Hide the checkbox */
+#button {
+    display: none;
+}
+
+.btn {
+    width: 120px;
+    height: 60px;
+    background-color: black;
+    overflow: hidden;
+    border-radius: 30px;
+    position: relative;
+}
+
+.circle {
+    height: 60px;
+    width: 60px;
+    /* border: 2px solid transparent; */
+    background-color: rgb(255, 174, 0);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+    background: url(./icons8-moon-60\ \(1\).png);
+    background-position: center;
+    background-size: cover;
+    /* transition: background 0.75s ease; */
+}
+
+p {
+    width: 92vw;
+    font-size: 0.8rem;
+}
+
+h1 {
+    font-family: "h1", serif;
+    width: 92vw;
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+/* When checkbox is checked */
+#button:checked ~ .container .btn .circle {
+    transform: translateX(60px);
+    /* border: 2px solid transparent; */
+    background:url(./icons8-sun-60.png);
+    background-position: center;
+    background-size: cover;
+}
+
+#button:checked ~ .container .btn {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#button:checked ~ .container {
+    background-color: black;
+    color: white;
+    transition: 0.75s ease;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    * {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        width: 100px;
+        height: 50px;
+    }
+
+    .circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    #button:checked ~ .container .btn .circle {
+        transform: translateX(50px);
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    * {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        width: 90px;
+        height: 45px;
+    }
+
+    .circle {
+        width: 45px;
+        height: 45px;
+    }
+
+    #button:checked ~ .container .btn .circle {
+        transform: translateX(45px);
+    }
+
+    h1 {
+        width: 92vw;
+        font-size: 1.3rem;
+    }
+
+    p {
+        width: 92vw;
+        font-size: 0.6rem;
+    }
+}
