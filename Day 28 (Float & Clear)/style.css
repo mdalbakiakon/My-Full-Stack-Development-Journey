@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    height: 100%;
+    width: 100%;
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   padding: 20px; 
+}
+
+
+img{
+    float: left;
+    /* so now the img has floating at the left side inside of it's parents cards and it will let others as it is just the img is floating imagine that and the other thing will do work as newspapper*/
+}
+
+.cards{
+    border: 2px solid black;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card{
+    border: 2px solid black;
+}
+
+.card:nth-child(3){
+    background-color: red;
+    clear: left;
+    /* it will not let the floating part at the left side anymore */
+}
+
+/* x:nth-child(y) means select x if it is yth child of it's parents */
+
+
+.container{
+    border: 2px solid red;
+    display: flow-root;
+    /* flow-root generally dont make the content overflown */
+
+}
+
+.cardx{
+    border: 2px solid black;
+}
+
+.container img{
+    float: left;
+}
