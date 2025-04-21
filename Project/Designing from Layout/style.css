@@ -349,10 +349,11 @@ button:hover, .up-btn i:hover {
         flex-direction: column;
         align-items: center;
         gap: 3vh;
+        /* border: 2px solid red; */
     }
 
     .card {
-        width: 75vw;
+        width: 85vw;
         height: 40vh;
         padding: 5px;
     }
@@ -362,8 +363,8 @@ button:hover, .up-btn i:hover {
     }
 
     .card-info {
-        gap: 15px;
-        height: 40%;
+        gap: 20px;
+        height: auto;
     }
 
     h3 {
@@ -402,5 +403,26 @@ button:hover, .up-btn i:hover {
 
     .slider ul {
         gap: 15px;
+    }
+}
+
+@media (max-width:320px){
+    .card {
+        width: 85vw;
+        height: 40vh;
+        padding: 15px;
+    }
+
+    h3 {
+        font-size: 0.85rem;
+    }
+
+    p, .description, button {
+        font-size: 0.65rem;
+    }
+
+    .card-info {
+        gap: 10px;
+        height: auto;
     }
 }
