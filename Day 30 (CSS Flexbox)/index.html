@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 30 | Mastering CSS Flexbox</title>
+    <style>
+        .container{
+            border: 5px solid hotpink;
+            display: flex;
+            height: 20vh;
+            justify-content: center;
+            /*justify content center will center the item as compared to main axis which is determined by flex direction and by defaltu flex direction is row and main axis will be row axis and other axis will be cross axis and it will change if we change the flex direction as column*/
+            align-items: center;
+            flex-direction: row-reverse;
+            /*by row-reverse the item will be displayed as reverse manner*/
+        }
+        .item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: 800;
+            height: 2rem;
+            width: 10vw;
+            margin: 2px;
+            background-color: blueviolet;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="item item1">1</div>
+            <div class="item item2">2</div>
+            <div class="item item3">3</div>
+            <div class="item item4">4</div>
+            <div class="item item5">5</div>
+        </div>
+    </main>
+</body>
+</html>

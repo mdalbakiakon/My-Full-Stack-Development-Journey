@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --frame-height: 692.5px;
+  --frame-width: 324.7px;
+  --frame-radius: 42px;
+  --frame-border: 10px;
+  --island-width: 94px;
+  --island-height: 28px;
+  --island-radius: 999px;
+  --frame-color: #1c1c1c;
+  --frame-glow: rgba(0, 0, 0, 0.35);
+  --screen-color: #222;
+  --glare: rgba(255, 255, 255, 0.2);
+  --primary-color: #323232;
+  --secondary-color: #0C0C0C;
+  --btn-color: #FF8000;
+  --text-color: #FFFFFF;
+  --text-dull-color:#ffffff71;
+  --def-pad: 15px;
+  --btn-pad: 8px
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background: #FF8000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 10vw;
+}
+
+.iphone-frame {
+  width: var(--frame-width);
+  height: var(--frame-height);
+
+  border-radius: var(--frame-radius);
+  box-shadow: 0 20px 40px var(--frame-glow),
+    inset 0 0 10px rgba(255, 255, 255, 0.04), 0 8px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border: var(--frame-border) solid #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+  padding: var(--def-pad);
+}
+
+.dynamic-island {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: var(--island-width);
+  height: var(--island-height);
+  background-color: #000;
+  border-radius: var(--island-radius);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6), 0 10px 20px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.frame1{
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color)), url(https://img3.wallspic.com/crops/4/0/1/1/4/141104/141104-sports_car-supercar-mclaren_12c-car-automotive_lighting-2048x1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: saturation;
+    /* padding: var(--defpad); */
+}
+
+.logo{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 55px;
+    cursor: pointer;
+}
+
+.headline{
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+}
+
+.headline h1{
+    font-size: 2.5rem;
+    padding: var(--def-pad);
+    color: var(--text-color); 
+    line-height: 0.9;
+}
+
+span{
+    color: var(--btn-color);
+}
+
+.slogan{
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    font-size: 0.75rem;
+    padding: var(--def-pad);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slogan p{
+    color: var(--text-dull-color);
+}
+
+.right-arrow-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--btn-color);
+  cursor: pointer;
+  padding: var(--btn-pad);
+}
+
+div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-info{
+  width: 100%;
+  position: absolute;
+  top: 55px;
+  gap: 20px;
+  padding: 0px var(--def-pad);
+}
+
+.dp{
+  width: 40px;
+  height: 40px;
+  /* border: 1px solid; */
+  border-radius: 50%;
+  background: url(./ezgif.com-crop.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.location{
+  gap: 1px;
+  color: var(--text-dull-color);
+  font-size: 0.75rem;
+}
+
+.menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.name{
+  color: var(--text-dull-color);
+  position: relative;
+  bottom: 170px;
+  /* border: 2px solid red; */
+  /* padding: var(--defpad); */
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 0.35;
+  width: 100%;
+}
+
+.name h1{
+  display: inline-block;
+}
+
+ul{
+  display: flex;
+  justify-content: space-between;
+  /* padding: var(--def-pad); */
+}
+
+.nav-class{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+  /* background-color: transparent; */
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+  padding: var(--def-pad);
+  /* border: 2px solid red; */
+  border-radius: var(--frame-radius);
+  width: 100%;
+}
+
+.nav-class ul{
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  gap: 50px;
+}
+
+li a i{
+  font-size: 1.25rem;
+  /* font-weight: 900; */
+}
