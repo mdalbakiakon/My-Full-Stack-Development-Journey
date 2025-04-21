@@ -17,7 +17,7 @@ a, i, button {
     cursor: pointer;
 }
 
-.overlay{
+.overlay {
     display: none;
 }
 
@@ -48,7 +48,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 5px 20px;
-    margin: 10px 10px;
+    margin: 10px;
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
     box-shadow: 0px 0px 50px 0px black;
@@ -247,16 +247,16 @@ input {
     text-align: center;
 }
 
-a:hover, i:hover{
+a:hover, i:hover {
     transition: 0.5s ease;
     color: yellowgreen;
 }
 
-.logo a:hover, .up-btn i:hover{
+.logo a:hover, .up-btn i:hover {
     color: white;
 }
 
-button:hover, .up-btn i:hover{
+button:hover, .up-btn i:hover {
     transition: 0.5s ease;
     box-shadow: 0 0 20px yellowgreen;
 }
@@ -312,13 +312,9 @@ button:hover, .up-btn i:hover{
         height: auto;
         display: flex;
         align-items: center;
-        /* flex-direction: column; */
         padding: 5px 10px;
         margin: 5px;
-        /* gap: 10px; */
         justify-content: space-between;
-        /* cursor: auto; */
-        /* z-index: 50; */
     }
 
     .logo svg {
@@ -327,22 +323,18 @@ button:hover, .up-btn i:hover{
     }
 
     .overlay {
-        /* display: none; */
         display: none;
         position: fixed;
         top: 0;
         left: 0;
         height: 100%;
         width: 100%;
-        background-color: transparent; /* now it actually darkens */
+        background-color: transparent;
         z-index: 39;
-    }    
-
+    }
 
     #slide:checked ~ label .overlay {
         display: flex;
-        /* background-color: rgb(255, 0, 0); now it actually darkens */
-
     }
 
     nav ul {
@@ -357,19 +349,16 @@ button:hover, .up-btn i:hover{
         flex-direction: column;
         align-items: center;
         gap: 3vh;
-        /* z-index: 18; */
     }
 
     .card {
         width: 75vw;
         height: 40vh;
         padding: 5px;
-        z-index: 18;
     }
 
     .card-pic {
         height: 150px;
-        /* margin-bottom: 10px; */
     }
 
     .card-info {
@@ -396,8 +385,6 @@ button:hover, .up-btn i:hover{
 
     button {
         padding: 6px 12px;
-        /* font-size: rem; */
-        /* z-index: 45; */
     }
 
     .up-btn {
@@ -409,7 +396,6 @@ button:hover, .up-btn i:hover{
     }
 
     .slider {
-        /* width: 85vw; */
         gap: 15px;
         padding: 15px;
     }
