@@ -276,11 +276,12 @@ button:hover, .up-btn i:hover {
     .card {
         width: 75vw;
         height: auto;
+        padding: 15px;
     }
 
     .card-pic {
         height: 150px;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
     }
 
     nav ul {
@@ -298,7 +299,7 @@ button:hover, .up-btn i:hover {
 
     .card-info {
         gap: 20px;
-        margin-bottom: 10px;
+        /* margin-bottom: auto; */
     }
 }
 
@@ -355,11 +356,12 @@ button:hover, .up-btn i:hover {
     .card {
         width: 85vw;
         height: 40vh;
-        padding: 5px;
+        padding: 12px;
     }
 
     .card-pic {
         height: 150px;
+        margin-bottom: 8px;
     }
 
     .card-info {
@@ -410,7 +412,16 @@ button:hover, .up-btn i:hover {
     .card {
         width: 85vw;
         height: 40vh;
-        padding: 15px;
+        padding: 10px;
+    }
+
+    /* .card-pic {
+        height: 140px;
+    } */
+
+    .card-pic{
+        margin-bottom: 5px;
+
     }
 
     h3 {
