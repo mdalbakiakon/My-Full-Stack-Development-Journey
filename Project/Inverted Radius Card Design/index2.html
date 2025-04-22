@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverted Radius Box Design</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000000;
+            flex-direction: column;
+        }
+
+        .box{
+            position: relative;
+            width: 500px;
+            height: 500px;
+            border: 5px solid bisque;
+            border-radius: 25px;
+            background: url(https://images.hdqwalls.com/download/ford-mustang-shelby-gt500-front-km-1280x2120.jpg);
+            background-position: center;
+            background-size: cover;
+            box-shadow: 0 0 15px black;
+        }
+
+        .box::before{
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            content: "Shelby GT500";
+            height: auto;
+            width: auto;
+            background-color: #000000;
+
+            color: bisque;
+            border: 5px solid black;
+            border-top-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            padding: 0px 10px;
+            box-shadow: 5px 5px bisque, 0px 0px black;
+        }
+
+        .curve1{
+            z-index: 2;
+            position: absolute;
+            top: 48px;
+            left: 0px;
+            width: 25px;
+            height: 25px;
+            box-shadow: -5px -5px bisque;
+            border-top-left-radius: 25px;
+            background-color: transparent;
+        }
+
+        .curve2{
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: black;
+            left: -5px;
+            top: 43px;
+            box-shadow: 13px 0px black, 8px 0px black, 0px 8px black, 0px 13px black;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="curve1"></div>
+        <div class="curve2"></div>
+    </div>
+</body>
+</html>
