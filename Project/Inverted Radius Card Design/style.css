@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-  --frame-height: 692.5px;
-  --frame-width: 324.7px;
+  --frame-height: 702.5px;
+  --frame-width: 334.7px;
   --frame-radius: 42px;
   --frame-border: 10px;
   --island-width: 94px;
@@ -47,11 +47,13 @@ body {
   height: var(--frame-height);
   border-radius: var(--frame-radius);
   border: var(--frame-border) solid #000;
-  background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
-  box-shadow:
-    0 20px 40px var(--frame-glow),
-    inset 0 0 10px rgba(255, 255, 255, 0.04),
-    0 8px 10px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  box-shadow: 0 20px 40px var(--frame-glow),
+    inset 0 0 10px rgba(255, 255, 255, 0.04), 0 8px 10px rgba(0, 0, 0, 0.2);
   padding: var(--def-pad);
   overflow: hidden;
   position: relative;
@@ -73,8 +75,11 @@ body {
 }
 
 .frame1 {
-  background:
-    linear-gradient(to bottom, var(--primary-color), var(--secondary-color)),
+  background: linear-gradient(
+      to bottom,
+      var(--primary-color),
+      var(--secondary-color)
+    ),
     url(https://img3.wallspic.com/crops/4/0/1/1/4/141104/141104-sports_car-supercar-mclaren_12c-car-automotive_lighting-2048x1280.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -240,13 +245,13 @@ span {
 .card {
   position: absolute;
   width: 92%;
-  height: 36%;
+  height: 38%;
   bottom: 90px;
-  background: rgba(0, 0, 0, 0.2);
+  background: transparent;
   -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px);
   display: flex;
-  /* flex-direction: column; Stack children vertically */
+  flex-direction: row; /* Added this line */
   justify-content: flex-start;
   align-items: center;
   box-shadow: 0 10px 15px black;
@@ -262,43 +267,61 @@ span {
   width: 58px;
   right: -2px;
   bottom: -2px;
-  border-top-left-radius: 25px;
-  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-top-left-radius: var(--frame-radius);
+  /* border: 2px solid rgba(0, 0, 0, 0.3); */
   z-index: 28;
   background-color: var(--btn-color);
-  /* border: 2px solid red; */
+  /* border: 2px solid transparent; */
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: inset 1px 1px 8px black;
+
 }
 
 .hider svg{
+  /* font-size: 24px; */
+  /* color: black; */
   cursor: pointer;
 }
 
-/* .hider1{
-  position: absolute;
-  width: 58px;
-  height: 58px;
-  right: -2px;
-  bottom: 58px;
-  border-bottom-right-radius:15px ;
-  border: 2px solid rgba(0, 0, 0, 0.3);
-  background-color: wheat;
-} */
-
-
 .card-info {
-  width: 100%;
-  /* padding: var(--def-pad); */
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Changed from space-evenly to center */
+  align-items: flex-start; /* Ensures left alignment */
+  width: 80%;
+  padding: 5px;
   z-index: 10;
-  text-align: center;
-  white-space: normal;
   text-align: left;
+  white-space: normal;
+  font-size: 0.85rem;
+  gap: 3.2rem;
+  line-height: 1.5rem;
+  align-self: center; /* Added to vertically center within .card */
+}
+
+.card-info span {
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.card-info h2,
+.card-info h2 span {
+  font-size: 1.6rem;
+}
+
+.card-info ul {
+  display: flex;
+  gap: 1rem;
 }
 
 .card-pic {
-  width: 100%;
+  position: absolute;
+  right: 5px;
+  top: 0;
+  width: 50%;
   height: 100%; /* Adjust as needed */
   background: url(./car.png);
   background-size: contain;
@@ -307,7 +330,9 @@ span {
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
   z-index: 20;
+  filter: drop-shadow(0px 4px 15px black);
 }
+
 .navbar {
   position: absolute;
   bottom: 20px;
@@ -325,4 +350,36 @@ span {
   justify-content: space-around;
   align-items: center;
   font-size: 1.25rem;
+}
+
+i {
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+i:hover {
+  color: var(--btn-color);
+  transition: 0.5s;
+}
+
+/* Responsive styles for mobile devices */
+/* ✅ Responsive layout for mobile devices */
+@media screen and (max-width: 768px) {
+  body {
+    width: 100vw;
+    height: 100%;
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+    gap: var(--def-pad);
+    overflow-y: auto;
+  }
+
+  section {
+    height: 100vh;
+    padding: var(--def-pad);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
