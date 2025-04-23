@@ -23,10 +23,53 @@
             font-weight: 800;
             height: 2rem;
             width: 10vw;
-            margin: 2px;
             background-color: blueviolet;
             border: 2px solid black;
         }
+
+        .container2{
+            height: 500px;
+            border: 5px solid red;
+            display: flex;
+            padding: 25px 0px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            /*we can use the direction and wrap value all togethar as well*/
+            flex-flow: column wrap;
+            /*so now our flex direction has become column and it wraping meaning multiple line will be seen inside the container*/ 
+        }
+
+        /*in container2 we can see that there is too much content therefor our container is overflowing to stop such issue if we want to make the content comes in the next line we need to use flex-wrap */
+
+        /*Now we can see there is our content all seeing*/
+
+        .container2{
+            align-content: center;
+            /*gap: 2px;*/
+            /*if we do gap:2px it will make 2px around each item in the container2 vertically + horizontally*/
+
+            /*row-gap: 2px;/
+            /*column-gap: 25px;*/
+
+            /*so now column wise gap is 25px and row by row gap is 2px now we can set it like this as well there is also a shortcut using such which is*/
+
+            gap: 2px 25px;
+
+            /*row column*/
+        }
+
+        /*so difference between align item and content when to use what first of all there is no justify item and align item is used for if there is no overflowing it will do the work but if it overflows that means too many item or content inside the container the align item will not make all the content togethar at the middle so for applying all of them to work we will use the align-content: center now the all will come close together as there is no padding and it will look what we want it to be looked!*/
+
+        /*For now just keep in mind that there will be no vissible gap between the rows if we use the align-content that's it to avoid any condusion!*/
+
+
+        .order-1{
+            order: 1;
+            width: auto;
+        }
+
+        /*default order of each item is 0 so as the order increase it will come next next next much higher order come last*/
     </style>
 </head>
 <body>
@@ -37,6 +80,42 @@
             <div class="item item3">3</div>
             <div class="item item4">4</div>
             <div class="item item5">5</div>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae enim accusamus debitis totam vel iure eligendi quos, cum sit. Recusandae, tempore voluptates? Sint suscipit vel, cumque corrupti nemo fuga doloribus, dolor magni architecto mollitia repudiandae! Similique, molestiae voluptatum tenetur magnam enim mollitia beatae autem perspiciatis doloribus dolore vitae facilis iusto.</p>
+
+        <div class="container2">
+            <div class="item order-1">5555 my order has been set to 1 and my width is auto so I am overflowing</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
         </div>
     </main>
 </body>
