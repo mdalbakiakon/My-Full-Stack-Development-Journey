@@ -261,6 +261,10 @@ button:hover, .up-btn i:hover {
     box-shadow: 0 0 20px yellowgreen;
 }
 
+.footer{
+    padding: 5px;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .cards {
