@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style: none;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.header{
+    width: 70%;
+    height: 80px;
+    /* border: 2px solid red; */
+    display: flex;
+    padding: 0px 50px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    margin: 10px;
+}
+
+.logo{
+    background: url(./image.png);
+    height: 100%;
+    width: 200px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* spacing between list items */
+  }
+  
+  nav ul li {
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* spacing between text and icon */
+    cursor: pointer;
+  }
+  
+  nav ul li span {
+    display: block;
+  }
+  
+
+.headline{
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 10px 250px;
+    background-color: rgb(37, 37, 37);
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    gap: 120px;
+}
+
+.headtopic{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.download-links{
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.link{
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: auto;
+    padding: 8px 20px;
+    border-radius: 5px;
+    background-color: rgb(0, 195, 255);
+    color: white;
+    border: 3px solid rgb(0, 195, 255);
+}
+
+.thirtyday{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.buynow{
+    background-color: transparent;
+    border: 3px solid white;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    margin-top: -15px;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+a{
+    color: white;
+}
+
+.topic{
+    width: 50%;
+}
+
+video{
+    height: 350px;
+    width: 50%;
+}
