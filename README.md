@@ -7,11 +7,11 @@ I’ll document my progress, share projects, and reflect on my experiences as I 
 ## 🛠️ **Technologies I'm Learning**  
 
 | 🖥️ Frontend | 🖧 Backend | ⚙️ Tools & Other |
-|-------------|-----------|-----------------|
-| **HTML & CSS** | **Node.js** | **Git & GitHub** |
-| **JavaScript** | **Express.js** | **VS Code** |
-| **React.js** | **MongoDB** | **Figma** |
-| **Next.js** | **PostgreSQL** | **Tailwind CSS** |
+| :---------: | :--------: | :-------------: |
+| **HTML & CSS** | **Python** | **Git & GitHub** |
+| **JavaScript** | **Django** | **VS Code** |
+| **React.js** | **PostgreSQL** | **Figma** |
+| **Next.js** | **MySQL** | **Tailwind CSS** |
 
 <!--
 ## 🚀 **My Projects**  
