@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+}
+
+.container{
+    border: 5px solid black;
+    display: grid;
+    grid-template-columns: 100px auto 150px;
+    grid-template-rows: 200px auto;
+}
+
+.item{
+    background-color: yellowgreen;
+    border: 3px solid green;
+    height: 55px;
+    width: 55px;
+}
