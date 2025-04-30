@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 50vw;
+    height: 70vh;
+    border: 5px solid blueviolet;
+}
+
+.box{
+    height: 80px;
+    width: 80px;
+    border: 4px solid black;
+    background-color: yellowgreen;
+}
