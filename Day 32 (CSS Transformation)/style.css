@@ -21,6 +21,11 @@ body{
     width: 50vw;
     height: 70vh;
     border: 5px solid blueviolet;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+    place-items: center;
+    gap: 50px;
 }
 
 .box{
@@ -28,4 +33,26 @@ body{
     width: 80px;
     border: 4px solid black;
     background-color: yellowgreen;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.box1{
+    transform: rotate(0.125turn);
+    /* 1 turn = 360deg */
+    /* the rotation occur from the center point which means in circular motion */
+}
+
+.box2{
+    /* Default transform origin are the center of the item but we can set them*/
+    /* transform-origin: center; */
+    /* transform-origin: top left; */
+    /* transform-origin: 100% 0%;  */
+    /* same as top left */
+    transform-origin: 50px 100px;
+    /* from x axis and y axis */
+    transform: rotate(30deg);
+}
+
