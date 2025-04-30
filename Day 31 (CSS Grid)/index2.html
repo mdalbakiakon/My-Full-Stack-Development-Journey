@@ -1,39 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
 
-        body{
-            width: 100vw;
-            height: 100%;
-        }
+      body {
+        width: 100vw;
+        height: 100%;
+      }
 
-        .container{
-            border: 5px solid black;
-            margin: 10px;
-            display: grid;
-            /*we will be learning here the way using area into grid!*/
-            
-        }
+      .item{
+        border: 3px solid yellowgreen;
+        height: 100px;
+      }
+
+      .container {
+        border: 5px solid black;
+        margin: 10px;
+        display: grid;
+        /*we will be learning here the way using area into grid!*/
+        grid-template-areas:
+          "nav nav nav"
+          "side article article"
+          "footer footer footer";
+          gap: 10px;
+      }
+
+      .item-1{
+        grid-area: nav;
+      }
+
+      .item-2{
+        grid-area: article;
+      }
+
+      .item-5{
+        grid-area: side
+      }
+
+      .item-8{
+        grid-area: footer;
+      }
+
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- another way of using grid -->
 
     <div class="container">
-        <div class="item">1</div>
-        <div class="item">2</div>
-        <div class="item">3</div>
-        <div class="item">4</div>
-        <div class="item">5</div>
+      <div class="item item-1">1</div>
+      <div class="item item-2">2</div>
+      <div class="item ">3</div>
+      <div class="item">4</div>
+      <div class="item item-5">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item item-8">8</div>
     </div>
-</body>
+  </body>
 </html>

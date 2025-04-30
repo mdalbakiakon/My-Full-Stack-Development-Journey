@@ -4,37 +4,44 @@
     box-sizing: border-box;
 }
 
+html{
+    height: 100%;
+    width: 100%;
+}
+
 body{
     height: 100%;
     width: 100%;
-    /* padding: 10px; */
     display: flex;
-    place-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .container{
-    width: 80vw;
-    height: 100vh;
+    width: 60vw;
+    height: 50vh;
     border: 5px solid black;
     display: grid;
-    grid-template-columns: [first-c]100px [second-c]auto [third-c]150px [forth-c];
-    grid-template-rows: 100px 100px;
-    gap: 5px;
+    /* grid-template-columns: [first-c]100px [second-c]auto [third-c]150px [forth-c]; */
+    /* grid-template-rows: 100px 100px; */
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    /* gap: 5px;
     column-gap: 50px;
-    row-gap: 90px;
+    row-gap: 90px; */
     /* justify-content: center;
     align-content: center; */
-    place-content: center;
+    /* place-content: center; */
+    align-content: center;
+    place-items: center;
     /* ! place-content: center makes the entire justify content center and align content center both togather */
-    justify-items: center;
-    align-items: center;
 }
 
 .item{
     /* background-color: yellowgreen; */
     border: 3px solid red;
-    height: 55px;
-    width: 55px;
+    height: 80px;
+    width: 80px;
 }
 
 .item-4{
@@ -48,8 +55,8 @@ body{
 }
 
 .item-5{
-    grid-column: first-c/forth-c;
-    width: 55px;
-    align-self: center;
-    justify-self: center;
+    /* grid-column: first-c/forth-c; */
+    /* width: 55px; */
+    /* align-self: center; */
+    /* justify-self: center; */
 }
