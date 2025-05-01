@@ -19,13 +19,17 @@ body{
 
 .container{
     width: 50vw;
-    height: 70vh;
+    height: auto;
     border: 5px solid blueviolet;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    place-content: center;
+    display: flex;
+    flex-direction: column;
+    /* grid-template-columns: 1fr 1fr; */
+    /* place-content: center; */
     place-items: center;
     gap: 50px;
+    perspective: 800px; /*! eeded to enable 3D visualization. The parent must have perspective set for 3D transforms like translateZ() to be visible.*/
+
+    /* ! it means the viewer is seeing a 3d object from 800px distance */
 }
 
 .box{
@@ -51,8 +55,59 @@ body{
     /* transform-origin: top left; */
     /* transform-origin: 100% 0%;  */
     /* same as top left */
-    transform-origin: 50px 100px;
+    /* transform-origin: 50px 100px; */
     /* from x axis and y axis */
+    transform-origin: bottom center;
     transform: rotate(30deg);
 }
+
+
+.box3{
+    /* transform: rotateX(50deg); */
+    /* rotate in x axis aspect */
+    /* transform: rotateY(50deg); */
+    /* rotate in y axis aspect */
+    transform: rotateZ(50deg);
+    /* rotate in z axis */
+}
+
+
+.box4{
+    /* transform: scale(1.5); */
+    /* just in ration the scale will make the box look bigger or smaller */
+    /* transform: scale(0); */
+    /* scale 0 means it will be so small that we can not see it anymore */
+    /* transform: scale(-1); */
+    /*! it will make the box keep the size at it is but it will reverse the box for minus*/
+
+    /* transform: scaleX(2); */
+    /* only stretch in the x axis  */
+    transform: scaleY(1.5);
+    /* stretch in y axis */
+}
+
+.box5{
+    /* skew is for slopping */
+    /* ! we have to remember that - will slopp at the right in term of x axis */
+    /* transform: skewX(20deg); */
+    /* transform: skewX(-20deg); */
+    transform: skewY(20deg);
+    transform: skewX(20deg);
+    transform: skew(20deg, 20deg);
+    /* x axis, y axis if we both togethar like this! */
+}
+
+.box6{
+    /* transform: translateX(20px); */
+    /* transform: translateY(20px); */
+    /* transform: translateZ(500px); */
+    /*! z is not working right?? because we have to enable the 3d aspect by default which is not enabled */
+
+    transform-style: preserve-3d;
+    /* ! now 3d will work */
+    transform: translateZ(-500px);
+    /* so it is like as if the box is far away */
+}
+
+
 
