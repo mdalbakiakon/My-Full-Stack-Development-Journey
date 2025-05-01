@@ -95,6 +95,7 @@ body{
     transform: skewX(20deg);
     transform: skew(20deg, 20deg);
     /* x axis, y axis if we both togethar like this! */
+    /* !skew can not be applicable in Z axis */
 }
 
 .box6{
@@ -109,5 +110,9 @@ body{
     /* so it is like as if the box is far away */
 }
 
-
+.box7{
+    /* multiple transform property */
+    transform: translateX(100%) translateY(-80px) skewX(-25deg);
+    /* by % it means of it's own height's perspective */
+}
 
