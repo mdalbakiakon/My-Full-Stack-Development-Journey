@@ -33,10 +33,12 @@ body{
     width: 100px;
     height: 100px;
     background-color: #ddd;
+    perspective: 500px;
+    /*! this is needed for activate z index in the child class 3d like translate3d matrix3d may be seen without perspective set but it is needed when we specially refering z index*/
 }
 
 .blue{
-    background-color: rgba(0, 255, 255, 0.5);
+    background-color: rgba(140, 0, 255, 0.25);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,4 +71,74 @@ body{
 
 .translate:hover{
     transform: translate(50%, 50%);
+}
+
+
+/* ! matrix() defines for scaleX skewY skewX scaleY traslateX translateY*/
+
+.matrix:hover {
+    transform: matrix(1.5, 0.425, 0, 1.5, 0, 0);
+}
+
+/* ! we can not use any unit in matrix */
+/* ! the value of the skew degree should be in tan(deg) than use the unitless value */
+/* ! in matrix the translate value are by default px cause we dont write any unit or matrix func doesn`t take any unit */
+
+
+.rotate:hover{
+    transform: rotate(45deg)
+}
+
+.skew:hover{
+    transform: skew(25deg, 25deg);
+    /*! skew(45deg, 45deg) makes it disapper or paper thin plane in the screen  */
+}
+
+.skewX:hover{
+    transform: skewX(30deg);
+}
+.skewY:hover{
+    transform: skewY(30deg);
+}
+
+
+.matrix3d:hover{
+    transform: matrix3d(  -0.6,
+    1.34788,
+    0,
+    0,
+    -2.34788,
+    -0.6,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    10,
+    1);
+}
+
+/*! matrix3d takes all 3d included value upto 16 in them first 12 are for linear and last 4 are for perspective*/
+
+
+.translate3d:hover{
+    /*! translate3d(tx, ty, tz) */
+    transform: translate3d(42px, -62px, -135px);
+}
+
+
+.rotateY:hover{
+    transform: rotateY(60deg);
+}
+
+.rotateX:hover{
+    transform: rotateX(60deg);
+}
+
+.translateZ:hover{
+    transform: translateZ(-500px);
+    /* ! - shows inside the screen and + means it will come forward */
 }
