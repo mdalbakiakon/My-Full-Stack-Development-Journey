@@ -104,6 +104,11 @@ body{
     /* transform: translateZ(500px); */
     /*! z is not working right?? because we have to enable the 3d aspect by default which is not enabled */
 
+    /** if we say translateX(10%) it will be translate 10% of the box size not it's parents size */
+    /** similarly translateY in % take height value of the box */
+    /** z doesnt take the % because we know that a box or any element by default is 2d therefor translateZ takes other unit not %  */
+
+    
     transform-style: preserve-3d;
     /* ! now 3d will work */
     transform: translateZ(-500px);
