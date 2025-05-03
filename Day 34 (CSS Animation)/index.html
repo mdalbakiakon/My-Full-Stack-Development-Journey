@@ -5,12 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 34 | CSS Animation</title>
     <style>
-        .container{
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
 
+        html, body{
+            height: 100%;
+            width: 100%;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            height: 50vh;
+            aspect-ratio: 1/1;
+            background-color: orange;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .box{
+            width: 100px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            background-color: yellowgreen;
+            animation-name: myAnim;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-timing-function: linear;
+        }
 
+        @keyframes myAnim{
+            50%{
+                transform: translateY(-200%);
+            }
+            100%{
+                transform: translateX(500%);   
+            }
         }
     </style>
 </head>
