@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sidebar Expand</title>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      color: white;
+      list-style: none;
+      font-weight: 500;
+    }
+
+    h1{
+        font-size: 2.5rem;
+        font-weight: 800;
+    }
+
+    body, html {
+      width: 100%;
+      height: 100%;
+    }
+
+    input {
+      display: none;
+    }
+
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      background: rgba(0, 0, 0, 0.425) url('https://images.hdqwalls.com/wallpapers/firewatch-digital-art-4k-a3.jpg') no-repeat;
+      /* if we use any function like linear-gradient () than we must use , comma before url*/
+      background-position: center;
+      background-size: cover;
+      background-blend-mode: multiply;
+    }
+
+    .side-navbar {
+      height: 100%;
+      width: 65px;
+      background-color: rgba(49, 49, 49, 0.123);
+      border-right: 1px solid rgba(255, 255, 255, 0.05);
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+      padding-top: 20px;
+      transition: width 0.15s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 20px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+
+    i {
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .icon-name {
+      display: none;
+      opacity: 0;
+      white-space: nowrap;
+      transition: opacity 0.3s ease;
+    }
+
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 50px;
+      text-align: center;
+    }
+
+    /* Toggle styles */
+    .menubar,
+    .close {
+      z-index: 5;
+    }
+
+    .close {
+      display: none;
+    }
+
+    #click:checked ~ .container .side-navbar {
+      width: 220px;
+    }
+
+    #click:checked ~ .container .side-navbar .icon-name {
+      display: inline;
+      opacity: 1;
+    }
+
+    #click:checked ~ .container .side-navbar ul li label .menubar {
+      display: none;
+    }
+
+    #click:checked ~ .container .side-navbar ul li label .close {
+      display: inline;
+    }
+  </style>
+</head>
+<body>
+
+  <input type="checkbox" id="click" />
+  <div class="container">
+    <div class="side-navbar">
+      <ul>
+        <li>
+          <label for="click">
+            <i class="fi fi-br-bars-sort menubar"></i>
+            <i class="fi fi-br-cross close"></i>
+          </label>
+        </li>
+        <li>
+          <i class="fi fi-br-home"></i>
+          <span class="icon-name">Home</span>
+        </li>
+        <li>
+          <i class="fi fi-br-bell"></i>
+          <span class="icon-name">Notifications</span>
+        </li>
+        <li>
+          <i class="fi fi-br-settings"></i>
+          <span class="icon-name">Settings</span>
+        </li>
+        <li>
+          <i class="fi fi-br-user"></i>
+          <span class="icon-name">Profile</span>
+        </li>
+      </ul>
+    </div>
+    <div class="main">
+      <h1>Hello Lorem</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, sequi dignissimos ratione unde facilis dolore repellendus ipsam placeat quam magnam eum eveniet necessitatibus provident voluptatum nostrum tempora eaque voluptatem, rerum eos. Ipsam magnam sunt placeat sit repudiandae fuga omnis tempora aspernatur rerum iusto natus, doloribus maiores? Nam, nobis. Eum maxime in quia vel nisi facere rerum odio voluptatem distinctio architecto, natus temporibus quisquam voluptatibus aut fuga. Tenetur quidem, quam ea expedita perferendis est ipsa culpa veritatis voluptates sapiente neque fuga molestiae perspiciatis totam. Placeat iure doloribus voluptatem ipsam accusantium incidunt esse ab magni eaque illo animi eius iusto sunt, dicta aliquid nemo quas facilis molestiae voluptatibus? Rerum saepe, ipsam nobis ad sequi, vero quibusdam neque aperiam repudiandae sed tenetur accusantium!
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
