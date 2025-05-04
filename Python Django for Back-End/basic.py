@@ -69,3 +69,38 @@ print(float(f"{math.cos(x_rad):.2f}"))
 print(2.40)
 
 # ! float value ignore the last 0 what so ever we give .2f but string does not
+
+a = 2.4567
+
+print(f"{a:.2f}")
+
+b = 2.3278
+
+print(f"{b:.2f}")
+
+#! it will also round
+
+c = 2.40000
+
+print(f"{c:.2f}")
+
+
+# * so just use easy way round()
+
+d = 5.284903
+
+print(round(d, 3))
+
+boolme = True
+
+if boolme:
+    print(f"The Condition was {boolme}")
+
+x = f"The Condition was {boolme}"
+
+print(x)
+print(type(x))
+
+print(round(4.50, 2))
+print(str(round(4.50, 2)))   #round is mathmatics so before applying str() it will already conver 4.50 into 4.5 as float 
+print(f"{4.50:.2f}") #this is pure string from the beginning to end
