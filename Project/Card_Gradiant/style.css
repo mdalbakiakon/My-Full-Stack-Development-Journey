@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
+
+  body {
+    background-color: #202020;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    width: 400px;
+    aspect-ratio: 1/1;
+    position: relative;
+    border-radius: 20px;
+    background-color: #202020;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  /*| Glowing rotating border */
+  .card::before {
+    content: "";
+    position: absolute;
+    top: -25%;
+    left: -25%;
+    width: 150%;
+    height: 150%;
+    background: conic-gradient(from 0deg,transparent 85%, rgb(140, 0, 255));
+    border-radius: inherit;
+    animation: rotate 3s linear infinite;
+    z-index: -1;
+    filter: blur(8px);
+  }
+  /* Mask inner part to keep glow only on border */
+  .card::after {
+    content: "Amazing Right?";
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    
+    display: grid;
+    place-items: center;
+
+    color: rgb(140, 0, 255);
+    font-family: "poppins", serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background-color: #202020;
+    border-radius: 15px;
+    z-index: 1;
+    /* box-shadow: inset 0px 0px 10px black; */
+
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
