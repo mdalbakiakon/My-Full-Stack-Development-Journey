@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Inverted</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+
+        body{
+            background-color: #231729;
+            background: url(https://wallpapercat.com/w/full/2/e/7/608087-3840x2160-desktop-4k-car-race-wallpaper-photo.jpg) no;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card{
+            background-color: rgba(128, 128, 128, 0.1);
+            width: 420px;
+            height: 350px;
+            border-radius: 25px;
+            position: relative;
+            padding: 10px;
+        }
+
+        .circle{
+            background-color: orange;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            cursor: pointer;
+            display: flex;
+        }
+
+        .mask{
+            height: 90px;
+            width: 90px;
+            background-color: #231729;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            border-top-left-radius: 50px;
+        }
+
+        .mask::before{
+            content: "";
+            background: radial-gradient(circle at top left, transparent 70%, #231729 75%);
+            height: 25px;
+            width: 25px;
+            -webkit-backdrop-filter: blur(25px);
+            backdrop-filter: blur(25px);
+            position: absolute;
+            top: -25px;
+            right: 0;
+        }
+
+        .mask::after{
+            content: "";
+            background: radial-gradient(circle at top left, transparent 70%, #231729 75%);
+            height: 25px;
+            width: 25px;
+            -webkit-backdrop-filter: blur(25px);
+            backdrop-filter: blur(25px);
+            position: absolute;
+            bottom: 0;
+            left: -25px;
+        }
+
+        .card img{
+            position: absolute;
+            right: 10px;
+            top: 110px;
+            height: 120px;
+        }
+
+        i{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="./image.png" alt="car">
+        <div class="mask"></div>
+        <div class="circle"><i class="fi fi-rr-arrow-small-right"></i></div>
+    </div>
+</body>
+</html>
