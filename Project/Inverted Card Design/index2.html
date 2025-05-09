@@ -94,13 +94,30 @@
             align-items: center;
             font-size: 3rem;
         }
+
+        .wrap{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
     </style>
 </head>
 <body>
-    <div class="card">
-        <img src="./image.png" alt="car">
-        <div class="mask"></div>
-        <div class="circle"><i class="fi fi-rr-arrow-small-right"></i></div>
+    <div class="wrap">
+        <div class="card">
+            <img src="./image.png" alt="car">
+            <div class="mask"></div>
+            <div class="circle"><i class="fi fi-rr-arrow-small-right"></i></div>
+        </div><div class="card">
+            <img src="./image.png" alt="car">
+            <div class="mask"></div>
+            <div class="circle"><i class="fi fi-rr-arrow-small-right"></i></div>
+        </div><div class="card">
+            <img src="./image.png" alt="car">
+            <div class="mask"></div>
+            <div class="circle"><i class="fi fi-rr-arrow-small-right"></i></div>
+        </div>
     </div>
 </body>
 </html>
