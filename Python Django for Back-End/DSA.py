@@ -27,4 +27,17 @@ print("Type: ",type(s))
 
 
 # | Method of list
- 
+a = []
+a.append("Tomato")
+print(a)
+a.extend(["Banana", "Apple"])
+print(a)
+
+print(a[::-1])
+
+a = a + ["Banana", "Cherry", "Cucumber"]
+
+print(a)
+a.sort()
+
+print(a)
