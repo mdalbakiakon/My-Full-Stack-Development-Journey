@@ -30,7 +30,7 @@ body {
   align-items: center;
 }
 
-.navbar{
+.navbar nav{
     border: 2px solid red;
     height: 50px;
     width: 60vw;
@@ -39,7 +39,7 @@ body {
     align-items: center;
 }
 
-.hero1 main h1 {
+.hero1 .main h1 {
     width: 60vw;
   font-family: "Bebas Neue", sans-serif;
   font-size: 10vw; /* scale with screen */
@@ -49,6 +49,7 @@ body {
   line-height: 12rem;
   color: white;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .main{
