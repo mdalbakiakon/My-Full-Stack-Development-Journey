@@ -50,3 +50,6 @@ a.sort(key=len, reverse = True)
 print("In reversing order: ", a)
 
 # if the length is equal it will follow alphabetic 
+
+
+print(a)
