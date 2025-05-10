@@ -40,4 +40,13 @@ a = a + ["Banana", "Cherry", "Cucumber"]
 print(a)
 a.sort()
 
-print(a)
+print(a) #now the list has been sorted according to the Alphabetic order
+# what if we want it to be sorted according to the length of the word
+
+a.sort(key=len)
+print("Sorting According to length: ", a)
+
+a.sort(key=len, reverse = True)
+print("In reversing order: ", a)
+
+# if the length is equal it will follow alphabetic 
