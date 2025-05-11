@@ -53,3 +53,8 @@ print("In reversing order: ", a)
 
 
 print(a)
+
+myList = [1,24,34,90,2,3]
+print(myList[:])
+print(myList[::-1])
+print(myList[::2])
