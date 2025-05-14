@@ -161,8 +161,23 @@ funcy_func()
 print("Changed Global Variable:",globalVar)    
     
 
+print("\n")
+
+# | Iterator
+myList = list(range(1,11))
+it = iter(myList)
+print("I am Iterator")
+print(next(it))
+print(next(it))
+print(next(it))
+print(next(it))
+print(next(it))
+print(next(it))
+print(next(it))
+
 
 print("\n")
+
 
 # | generator
 
