@@ -1,1 +1,1 @@
-alert("Welcome to my journey of becoming a Full Stack Developer #day03")
+alert("Day 03 | Welcome to my journey of becoming a Full Stack Developer")
