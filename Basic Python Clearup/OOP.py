@@ -97,3 +97,31 @@ b = Person1("Mishkath", "girl")
 a.info()
 b.info()
 
+print("\n")
+
+class Company:
+    companyName = "Google"
+    noOfEmployee = 0
+    noOfYears = 5
+    
+    def __init__(self, name):
+        self.name = name
+        self.salary = 10000
+        Company.noOfEmployee += 1
+    
+    def showDetails(self):
+        print(f"Employee Name: {self.name}\nSalary: {self.salary}\nCompany Name: {self.companyName}\n")
+    
+    
+emp1 = Company("X")
+emp2 = Company("Y")
+emp3 = Company("Z")
+
+emp1.showDetails()
+emp2.showDetails()
+emp3.showDetails()
+
+
+print(Company.noOfEmployee)
+print(emp1.companyName)
+print(emp1.noOfYears)
