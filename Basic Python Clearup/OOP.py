@@ -47,3 +47,53 @@ car().drive() #! it means from the class car()
 car = car()
 car.drive()
 # ? now it is working!
+
+print("\n")
+
+#|Constructor!!
+
+# constructor helps to make an object of a class by using __init__(self)
+
+
+class Person:
+    name = "Siam"
+    occ = "Developer"
+    
+    def info(self):
+        print(f"{self.name} is a {self.occ}")
+
+a = Person()
+a.info()
+a.name = "Mishkath"
+a.occ = "Dr. of Pharmacy"
+a.info()
+
+
+# what if i dont want to use any default value than we use the constructor
+
+class Person1:
+    def __init__(self):
+        print("Hello World")   #!This is called a default constructor
+    def info(self):
+        print(f"{self.name} is a good {self.gender}")
+
+a = Person1()    
+b = Person1()
+
+# so whenever we make an object of a class the __init__(self) will definately run this is a function which will run whenever the object is created even though we never called it
+
+
+class Person1:
+    def __init__(self, name, gender):    #! This is called parameter constructor
+        self.name = name
+        self.gender = gender
+        
+    def info(self):
+        print(f"{self.name} is a good {self.gender}")
+
+a = Person1("Siam", "boy")    
+b = Person1("Mishkath", "girl")
+
+a.info()
+b.info()
+
