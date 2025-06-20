@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 350px;
+    height: 500px;
+    background: url(https://images.footlocker.com/is/image/EBFL2/84665170?wid=250&hei=250) no-repeat center;
+    background-color: rgba(102, 51, 153, 0.3);
+    clip-path: path("M 30 50 L 150 50 L 180 30 L 320 30 L 350 50 L 350 480 L 320 500 L 30 500 L 0 480 L 0 70 L 30 50 Z");
+    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.5));   
+}
+
+
+

@@ -1,0 +1,124 @@
+@font-face {
+    font-family: "NS bold";
+    src: url(./assets/font/NetflixSans-Bold.otf);
+}
+
+@font-face {
+    font-family: "NS medium";
+    src: url(./assets/font/NetflixSans-Medium.otf);
+}
+
+@font-face {
+    font-family: "NS light";
+    src: url(./assets/font/NetflixSans-Light.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    color: white;
+    font-family: "NS bold", serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.navbar{
+    width: 65vw;
+    height: auto;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin: 5px 0px 0px 0px; */
+}
+
+.logo{
+    width: 180px;
+    height: 100%;
+    /* border: 2px solid yellow; */
+    z-index: 999;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.signin{
+    background-color: red;
+    padding: 7px 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    font-family: "NS medium";
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0,0,0,0.6), rgba(0,0,0,0.6),  rgba(0,0,0,0.6), rgba(0, 0, 0, 0.95)), url(https://assets.nflxext.com/ffe/siteui/vlv3/8200f588-2e93-4c95-8eab-ebba17821657/web/BD-en-20250616-TRIFECTA-perspective_a237910f-1432-435d-ba49-45bf0ba10a60_large.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    background-blend-mode: multiply;
+}
+
+/* .black-screen {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+} */
+
+
+.content{
+    width: 700px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+    /* font-weight: 1200; */
+    gap: 30px;
+}
+
+.content .headline{
+    font-family: "NS bold";
+    text-align: center;
+    font-size: 4rem;
+    line-height: 85px;
+}
+
+.content .plan{
+    font-family: "NS medium";
+    font-size: 1.2rem;
+}
+
+.content p{
+   font-family: "NS light";
+    font-size: 1rem; 
+}
