@@ -18,3 +18,7 @@ else{
     alert("Staying in the window")
     console.log("Staying in the window")
 }
+
+document.title = "I am changing my website title"
+
+document.body.style.backgroundColor = "red"
