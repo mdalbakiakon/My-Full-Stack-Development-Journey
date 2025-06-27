@@ -1,0 +1,8 @@
+
+primary color: #f8f7f3
+secondary color: #ffb647
+font color: #020202
+
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+font-family: "Mona Sans", sans-serif;
