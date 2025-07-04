@@ -23,13 +23,10 @@ body{
     background-size: cover;
 }
 
-header{
-    margin-bottom: 50px;
-}
 
-header h1{
+h1{
     font-weight: 900;
-    font-size: 48px;
+    font-size: 36px;
 }
 
 form{
@@ -39,17 +36,95 @@ form{
     justify-content: center;
     align-items: center;
     gap: 20px;
-    padding: 20px;
+    padding: 30px 20px;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    /* border: 1px solid rgba(0, 0, 0, 0.5); */
     border-radius: 25px;
+    border: 1px solid #dddddd36;
 }
 
 input{
+    width: 350px;
     background-color: transparent;
     padding: 5px;
-    border-radius: 12px;
-    /* border: 1px solid rgba(255, 255, 255, 0.5); */
-    border: 1px solid #ddd;
+    border-radius: 15px;
+    border: 1px solid #dddddd36;
+    height: 50px;
+    font-size: 16px;
+}
+
+input::placeholder{
+    font-weight: 700;
+    color: #dddddd36
+}
+
+#submit{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+    color: black;
+    cursor: pointer;
+}
+
+label{
+    color: #dddddd36;
+}
+
+
+.form-username, .form-password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ft{
+    position: relative;
+    
+}
+
+i{
+    position: absolute;
+    right: 10px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ddd;
+    z-index: 1;
+}
+
+.form-rememberMe input{
+    width: auto;
+}
+
+.form-rememberMe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-remfor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+
+p{
+    color: #dddddd36;
+}
+
+a{
+    font-weight: 700;
+    color: #dddddd36;
+}
+
+#rememberMe{
+
 }
