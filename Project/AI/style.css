@@ -1,0 +1,208 @@
+/* ===== Base Styles ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: "brand-font";
+    src: url(./assets/font/Conthrax-SemiBold.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    color: #131313;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    background-color: #131313;
+}
+
+body {
+    width: clamp(300px, 95vw, 1600px);
+    margin: 0 auto;
+}
+
+/* ===== Header & Navigation ===== */
+.header {
+    /* Header styles if needed */
+}
+
+.nav {
+    width: clamp(300px, 95vw, 1600px);
+    height: 60px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.nav__logo a {
+    font-family: "brand-font";
+    font-size: 1.5rem;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    border-right: 1px solid #131313;
+}
+
+.nav__item a {
+    font-size: 0.9rem;
+}
+
+.nav__item--last {
+    border: none;
+}
+
+.nav__actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav__search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px;
+    border-radius: 50%;
+    background-color: #131313;
+}
+
+.nav__search i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+.nav__login {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #131313;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.nav__login a {
+    color: white;
+}
+
+/* ===== Main Content ===== */
+.main {
+    /* Main container styles if needed */
+}
+
+.background-shape svg {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.hero {
+    width: 100%;
+    height: calc(100vh - 65px);
+    position: relative;
+}
+
+.hero__container {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.hero__headlines {
+    /* Container for headlines */
+}
+
+.hero__title {
+    font-family: "brand-font";
+    text-transform: uppercase;
+    font-size: 7.8rem;
+    line-height: 95px;
+}
+
+.hero__title--offset-1 {
+    position: relative;
+    left: 60px;
+}
+
+.hero__title--offset-2 {
+    position: relative;
+    left: 120px;
+}
+
+.hero__image img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 600px;
+    z-index: 1;
+}
+
+.hero__accent {
+    /* Container for accent text */
+}
+
+.hero__accent-text {
+    font-size: 15rem;
+    font-weight: 500;
+    position: relative;
+    bottom: 155px;
+    background: linear-gradient(to right, #161616,#3f3f3f, #161616);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.hero__description {
+    color: white;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.hero__stats {
+    /* Stats container */
+}
+
+.hero__stats li i {
+    color: rebeccapurple;
+}
+
+/* ===== Footer ===== */
+.footer {
+    /* Footer styles if needed */
+}
