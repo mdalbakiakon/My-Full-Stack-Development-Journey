@@ -1,6 +1,43 @@
-# Auto detect text files and perform LF normalization
+# Core settings
 * text=auto
 
-# Handle binary files with Git LFS
-*.mp4 filter=lfs diff=lfs merge=lfs -text
-*.exe filter=lfs diff=lfs merge=lfs -text
+# Git LFS for binaries
+*.{png,jpg,jpeg,gif,ico,svg,mp4,mov,webm,woff2} filter=lfs diff=lfs merge=lfs -text
+*.{pdf,zip,tar,gz,exe,dmg,pkg,deb,rpm} filter=lfs diff=lfs merge=lfs -text
+
+# Language detection - Frontend
+*.js   linguist-language=JavaScript
+*.jsx  linguist-language=JavaScript
+*.ts   linguist-language=TypeScript
+*.tsx  linguist-language=TypeScript
+*.css  linguist-language=CSS
+*.scss linguist-language=CSS
+*.sass linguist-language=CSS
+
+# Tailwind configuration
+tailwind.config.{js,cjs} linguist-language=JavaScript
+*.postcssrc linguist-language=PostCSS
+postcss.config.{js,cjs} linguist-language=PostCSS
+
+# Backend languages
+*.py    linguist-language=Python
+*.go    linguist-language=Go
+*.rs    linguist-language=Rust
+
+# Documentation files
+*.md    linguist-documentation
+*.mdx   linguist-documentation
+
+# Excluded from stats - Config files
+*.{json,yaml,yml,toml,env} linguist-detectable=false
+
+# Excluded from stats - Generated files
+/dist/** linguist-vendored
+/build/** linguist-vendored
+/node_modules/** linguist-vendored
+/coverage/** linguist-vendored
+
+# Excluded from stats - Lock files
+*-lock.* linguist-vendored
+yarn.lock linguist-vendored
+pnpm-lock.yaml linguist-vendored
