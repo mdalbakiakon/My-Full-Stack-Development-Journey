@@ -14,10 +14,10 @@
 *.scss linguist-language=CSS
 *.sass linguist-language=CSS
 
-# Tailwind configuration
+# Tailwind & PostCSS configuration
 tailwind.config.{js,cjs} linguist-language=JavaScript
-*.postcssrc linguist-language=PostCSS
-postcss.config.{js,cjs} linguist-language=PostCSS
+*.postcssrc linguist-language=JavaScript
+postcss.config.{js,cjs} linguist-language=JavaScript
 
 # Backend languages
 *.py    linguist-language=Python
@@ -28,8 +28,8 @@ postcss.config.{js,cjs} linguist-language=PostCSS
 *.md    linguist-documentation
 *.mdx   linguist-documentation
 
-# Excluded from stats - Config files
-*.{json,yaml,yml,toml,env} linguist-detectable=false
+# Optional: Exclude configs (comment out if you want them counted)
+#*.{json,yaml,yml,toml,env} linguist-detectable=false
 
 # Excluded from stats - Generated files
 /dist/** linguist-vendored
@@ -38,6 +38,6 @@ postcss.config.{js,cjs} linguist-language=PostCSS
 /coverage/** linguist-vendored
 
 # Excluded from stats - Lock files
-*-lock.* linguist-vendored
 yarn.lock linguist-vendored
+package-lock.json linguist-vendored
 pnpm-lock.yaml linguist-vendored
