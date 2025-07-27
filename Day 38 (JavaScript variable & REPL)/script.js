@@ -67,3 +67,13 @@ document.title = "Hey I am a SWE"
 
 document.body.style.backgroundColor = "red"
 // this terms will add inline css in the html
+
+
+let age = 25
+console.log(age)
+console.log(typeof age)
+
+
+age = "John"
+console.log(age)
+console.log(typeof age)
