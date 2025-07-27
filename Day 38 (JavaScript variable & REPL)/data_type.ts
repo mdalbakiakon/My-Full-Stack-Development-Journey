@@ -28,3 +28,30 @@ console.log(2n + 5n)
 
 console.log("obj:", {})
 console.log("obj:"+ {})
+
+// , is used for concatenation in true sense + is not if + sees there are number he will add the number but if he find one is string than he will use .toString() for concatenation
+
+console.log({}.toString())
+console.log(typeof {}.toString())
+
+//? so .toString() actually try to make the data type into string but in case of symbol it return [type, constructor name]
+
+// | so type is object and the constructor or class behind the .toString() for { } is Object class
+
+//! so it returns [object Object] and this is a string not a list
+
+
+// null vs undefined
+let my_var 
+console.log(typeof my_var)  //it will print undefined not null
+
+// | they both are same in typical programming sense but undefined or assinged as undefined means in future we will be assigning something in this var where null means we fixed it as null
+
+// btw null's type is object
+let my_var2 = null 
+console.log(typeof my_var2)  //object
+
+
+//! null is NOT actually an object; it’s a primitive value.
+//! But typeof null still returns "object" for historical backward compatibility reasons.
+//? it happended in 1995 when null set to be all zero bits and type has been given to its as an object it is saying that it is a fault in Js but for backward compatibility JS keeps it as it is.
