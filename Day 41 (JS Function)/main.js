@@ -53,4 +53,4 @@ function collageInfo(name, notice, funcVal){
 
 collageInfo("Mishkath", "From tomorrow collage will be started", funcVal)
 // we must give our arrow function as a argument when we are calling the combined function
-// calling function or invoking the function is same thing!
+// calling function or invocating the function is same thing!
