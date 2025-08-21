@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+* {
+  font-family: "Outfit", sans-serif;
+}
+
+.brand-name,
+.headings {
+  font-family: "Cookie", cursive;
+  font-weight: 700;
+}
+
+
+.material-symbols-rounded {
+  font-family: 'Material Symbols Rounded' !important;
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 700,
+    'GRAD' 0,
+    'opsz' 48;
+}
+
+#cart-items{
+  scroll-behavior: smooth;
+}
+
+#cart-items::-webkit-scrollbar {
+  width: 12px;
+}
+
+#cart-items::-webkit-scrollbar-track {
+  background: #303030; 
+  border-radius: 10px;
+}
+
+#cart-items::-webkit-scrollbar-thumb {
+  background-color: #505050;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  cursor: pointer;
+}
+
+
+@theme {
+  --color-primary: #303030;
+}
