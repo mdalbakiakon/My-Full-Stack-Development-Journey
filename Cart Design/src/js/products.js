@@ -79,5 +79,4 @@ export const products = [
     pro_image: "./js/assets/ps5.png",
     color: "#902E3B",
   }
-
 ];

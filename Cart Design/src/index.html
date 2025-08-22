@@ -13,7 +13,7 @@
 
 <body class="relative">
 
-  <header class="w-full sticky top-0 h-[60px] bg-white z-50 ">
+  <header class="w-full sticky top-0 h-[60px] bg-white z-50 mt-2 sm:mt-5">
     <div class="h-full">
       <div class="navbar w-full max-w-7xl h-full flex justify-between items-center mx-auto px-4 py-2">
         <div class="logo h-full w-auto flex">
@@ -46,7 +46,7 @@
 
     <div id="product-container" class="px-1 w-full mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"></div>
 
-    <div id="overlay" class="overlay hidden fixed z-55 top-0 left-0 w-full h-screen bg-black opacity-75"></div>
+    <div id="overlay" class="overlay hidden fixed z-55 top-0 left-0 w-full h-screen bg-black opacity-85"></div>
 
     <div id="cart-container"
       class="hidden flex flex-col fixed w-[85vw] sm:w-[65vw] md:w-1/2 lg:w-1/3 xl:w-1/4 h-screen right-0 top-0 z-60 bg-primary p-4">
@@ -58,22 +58,31 @@
         </span>
       </div>
 
-
-      <div class="mt-10 w-full text-right text-lg font-semibold text-amber-300">
-        <span id="remove-all" class="cursor-pointer hidden">Remove all<span>
+      <div id="remove-all" class="pt-10 w-full text-right text-lg font-semibold text-amber-300 hidden cursor-pointer">
+        Remove all
       </div>
 
+      <div id="cart-items" class="flex-1 overflow-y-auto pt-2 pb-4 hidden"></div>
 
-      <div id="cart-items" class="flex-1 overflow-y-auto mt-2 mb-4">
-      </div>
-
-      <div id="empty-ghost" class="w-full h-full mb-16 flex flex-col justify-center items-center select-none">
+      <div id="empty-ghost" class="w-full h-full my-auto flex flex-col justify-center items-center select-none">
         <img src="./js/assets/ghost.svg" alt="ghost logo">
         <h2 class="text-xl text-[#202020] font-semibold">Your Cart is Empty<h2>
       </div>
 
+      <!-- Promo Code Section -->
+      <div id="promo-section" class="pt-6 pb-4">
+        <div class="flex gap-2">
+          <input id="promo-input" type="text" placeholder="Enter Promo Code"
+            class="flex-1 px-3 py-2 rounded-lg text-white text-md outline-none border-2 border-[#202020]" />
+          <button id="apply-promo" class="bg-amber-300 text-primary font-semibold px-4 py-2 rounded-lg cursor-pointer">
+            Apply
+          </button>
+        </div>
+        <p id="promo-message" class="pt-2 text-sm font-semibold text-red-500 hidden"></p>
+      </div>
+
       <div
-        class="charges shrink-0 mt-auto mb-4 flex justify-between items-center tracking-tighter text-white text-2xl font-semibold">
+        class="charges shrink-0 mt-auto pt-4 pb-4 flex justify-between items-center tracking-tighter text-white text-2xl font-semibold">
         <h2>Total</h2>
         <div id="subtotal-price">$0.00</div>
       </div>
