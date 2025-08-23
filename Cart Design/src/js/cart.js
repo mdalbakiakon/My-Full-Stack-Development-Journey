@@ -9,9 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
 
   const cartItemsContainer = document.getElementById("cart-items");
-  const subtotalPrice = document.getElementById("subtotal-price");
+  const subtotalPrice = document.getElementById("total-price");
   const cartCount = document.getElementById("cart-count");
-  const removeAllBtn = document.getElementById("remove-all");
+  const removeAllDiv = document.getElementById("remove-all-div");
+  const removeAllBtn = document.getElementById("remove-all-btn");
 
   const promoInput = document.getElementById("promo-input");
   const applyPromoBtn = document.getElementById("apply-promo");
@@ -82,11 +83,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (cartItems.length === 0) {
       ghost.classList.remove("hidden");
-      removeAllBtn.classList.add("hidden"); // hide when empty
+      removeAllDiv.classList.add("hidden"); // hide when empty
       cartItemsContainer.classList.add("hidden");
     } else {
       ghost.classList.add("hidden");
-      removeAllBtn.classList.remove("hidden"); // force show when items exist
+      removeAllDiv.classList.remove("hidden"); // force show when items exist
       cartItemsContainer.classList.remove("hidden");
     }
 
@@ -101,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       itemElement.innerHTML = `
         <div class="flex justify-between items-center w-full h-[60px] gap-2">
-          <div class="h-full aspect-square bg-white flex items-center justify-center rounded-2xl overflow-hidden shrink-0">
+          <div class="h-full aspect-square bg-[#252525] flex items-center justify-center rounded-2xl overflow-hidden shrink-0">
             <img class="h-full w-full object-contain p-1" src="${item.pro_image}" />
           </div>
           <div class="flex flex-col justify-center text-[#a7a7a7] flex-1 overflow-hidden">
