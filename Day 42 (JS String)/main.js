@@ -20,7 +20,9 @@ let myName = "Siam";
 let friend = "Mishkath";
 
 console.log(`${friend} is ${myName}'s best friend!`);
-// this is called template literals --> use backtic and we can use '' "" also inside it and use ${var_name}
+//| this is called template literals --> use backtic and we can use '' "" also inside it and use ${var_name}
+//| ${var} is called string interpolition
+
 
 // Escape sequence \n \t \r
 // \n for new line
@@ -70,7 +72,33 @@ console.log(myName)
 console.log(myName.trim())
 // so trim will remove the left and right most whitespace not the middle one
 
+console.log(myName.split(/\s+/))
+// /\s+/ will make sure the inside two string if any number of space is there they will be removed 
+// ! but if the string is not trimmed or it has outside whitspace then they will be count in the list as single whitespace at front and back
+
+console.log(myName.trim().split(/\s+/))
+// now after removing the terminal space we will use the /\s+/ to find our desired list
+
+
 myNumber = 12354;
 console.log(myNumber)
 console.log(myNumber.toString())
 // make any variable into string we will be using toString() method
+
+let myString = '12.56'
+console.log(myString)
+console.log(parseInt(myString))
+console.log(parseFloat(myString))
+
+
+myName = "Bangladesh"
+console.log(myName.charAt(5))
+console.log(myName.indexOf("la"))
+console.log(myName.startsWith("b"))
+console.log(myName.startsWith("B"))
+console.log(myName.startsWith("Bang"))
+console.log(myName.startsWith("Bag"))
+console.log(myName.endsWith("Bag"))
+console.log(myName.endsWith("desh"))
+console.log(myName.length)
+// length is property not a name!!!
