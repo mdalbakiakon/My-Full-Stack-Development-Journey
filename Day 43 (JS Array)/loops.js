@@ -34,4 +34,36 @@ a.forEach((value, index, array)=>{
 
 //| forEach --> always val-index-arr VIA
 
+let object = {
+    a:1,
+    b:2,
+    c:3
+}
+
+for (const key in object) {
+    const element = object[key];
+    console.log(element)
+}
+
+//! dictionary is not iterable remember that
+
+object = ['apple', 'banana']
+for (const element of object) {
+    console.log(element)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
