@@ -8,6 +8,5 @@ while(x != 0){
     x = x-1
 }
 
-
 console.log(arr.reduce((a,b) => a*b, 1))
 
