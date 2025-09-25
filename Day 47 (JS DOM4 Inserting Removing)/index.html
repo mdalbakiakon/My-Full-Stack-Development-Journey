@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .box {
+            border: 2px solid black;
+        }
+
+        .yellow{
+            background-color: yellow;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="box2">
+        I am the first box
+    </div>
 
-    <div class="container">
-        
+    <div class="box2">
+        I am the second box
+    </div>
+
+    <div class="container red green">
         <!-- this is a comment -->
         <div class="box">
             <p class="my-text">
@@ -18,10 +34,17 @@
             </p>
         </div>
 
-        <p class="super-text">I am <b>Superman</b></p>
+        <p class="super-text" data-created-by="Siam" data-id="42" data-rename-it="renamed-super-text">I am
+            <b>Superman</b>
+        </p>
+        <!-- data-attribute must be init with data-.... -->
+        <!-- it will be shown as createdBy BTW -->
+        <!-- - will be removed and the next letter will be capitalize -->
+        <!-- it will be shown as dictionary pair -->
 
     </div>
 
-    <script src="./main.js"></script>    
+    <script src="./main.js"></script>
 </body>
+
 </html>

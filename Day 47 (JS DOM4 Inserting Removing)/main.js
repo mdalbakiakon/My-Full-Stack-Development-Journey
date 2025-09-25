@@ -97,7 +97,7 @@ console.log(document.querySelector(".box").getAttribute("style"))
 //| .attributes it will give a map or dictionary or object in JS but it's purely called NameNodeMap
 console.log("\n.attributes")
 console.log(document.querySelector(".box").attributes)
-
+console.log(document.querySelector(".super-text").attributes)
 
 //| .removeAttribute()
 console.log("\n.removeAttribute()")
@@ -106,4 +106,108 @@ document.querySelector(".box").removeAttribute("style")
 
 //* if with any website we want to change their content we can go and write the document.designMode = "on" and we can change their content in our end */
 
+
+
+
+//| data-attribute --> .dataset
+console.log("\nData Attribute --> .dataset")
+console.log(document.querySelector(".box").dataset) 
+console.log(document.querySelector(".super-text").dataset) 
+
+
+
+
 let box = document.querySelector(".box")
+
+
+
+
+// | very important --> insertion/creation
+let x = document.createElement("div")
+x.setAttribute("class", "created")
+// another way to set className like this btw it will replace the previous one
+x.className = "new-create"
+x.innerHTML = "<h1>Oh Hi, I am newly created</h1>"
+box.append(x)
+
+
+let y = document.createElement("p")
+y.className = "created-paragraph"
+y.innerHTML = "lorem ipsum"
+box.prepend(y)
+
+// prepand will add inside the box but at the top and append will insert inside the box but at the bottom
+
+let replace = document.createElement("h2")
+replace.innerText = "frog looks creepy"
+y.replaceWith(replace)
+// it has replaced the lorem ipsum
+
+
+box.after(replace)
+box.before(replace)
+//! a DOM node can only exist in one place at a time.
+// so lastly it is showing at the before which means outside the box but before the box
+
+// ! what if we want the same node to be multiple
+box.append(replace.cloneNode(true))
+// .cloneNode(true) will make a clone so we can now use it in multiple place!
+
+// ! this are the node way to make it 
+// what if we directly want to make a adjuscent html/text/element
+
+
+
+// | .insertAdjucentHTML
+box.insertAdjacentHTML("afterbegin", "<div>Hello World1</div>")
+box.insertAdjacentHTML("afterend", "<div>Hello World2</div>")
+box.insertAdjacentHTML("beforeend", "<div>Hello World3</div>")
+box.insertAdjacentHTML("beforebegin", "<div>Hello World4</div>")
+
+
+// | .insertAdjucentElemet
+box.insertAdjacentElement("afterbegin", y)
+
+
+//| .remove()
+document.querySelector(".box2").remove()
+// this will remove or delete the element
+// ! remove() is a function that's why we need to add the braces
+
+
+
+// | classList
+let cont = document.querySelector(".container")
+console.log(cont.classList)
+// ! classList is not a function that's why we dont need to add the braces
+
+// classList is a list but what about we need the full name of the class only no need for the list
+// classList.value
+console.log(cont.classList.value)
+// .className
+console.log(cont.className)
+
+
+//| adding classes into the classList
+cont.classList.add("Siam")
+console.log(cont.classList)
+// if the same goes on and on it will only count once
+
+// |removing class from the classList
+cont.classList.remove("red")
+console.log(cont.classList)
+
+// | replace class in the classList
+cont.classList.replace("green", "yellow")
+console.log(cont.classList)
+
+
+//| togle
+cont.classList.toggle("yellow")
+console.log(cont.classList)
+cont.classList.toggle("yellow")
+console.log(cont.classList)
+cont.classList.toggle("yellow")
+console.log(cont.classList)
+cont.classList.toggle("yellow")
+console.log(cont.classList)
