@@ -37,7 +37,7 @@ let cont = document.querySelector(".container");
 function createCard(title, cName, views, monthsOld, duration, thumbnail) {
   let card = document.createElement("div");
   card.style.cssText =
-    "width: 100%; height: 110px; border-radius: 5px; display: flex; gap: 10px; align-items: center; padding:5px; cursor: pointer;";
+    "width: 100%; height: 110px; border-radius: 10px; display: flex; gap: 10px; align-items: center; padding:5px; cursor: pointer;";
 
   card.addEventListener("mouseover", () => {
     card.style.background = "#191919";
@@ -49,7 +49,7 @@ function createCard(title, cName, views, monthsOld, duration, thumbnail) {
 
   let thumb = document.createElement("div");
   thumb.style.cssText =
-    "width: 168px; height: 98px; border-radius: 5px;overflow: hidden; display: flex;  align-items: center; justify-content: center; position: relative";
+    "width: 168px; height: 94px; border-radius: 10px;overflow: hidden; display: flex;  align-items: center; justify-content: center; position: relative";
 
   thumb.innerHTML = `<img src="${thumbnail}" style="width:100%; height:100%; object-fit:cover;" />`;
 
@@ -62,7 +62,7 @@ function createCard(title, cName, views, monthsOld, duration, thumbnail) {
 
   let info = document.createElement("div");
   info.style.cssText =
-    "flex: 1; display: flex; flex-direction: column; gap: 10px; height: 100%; padding: 5px 0px; overflow: hidden; text-align:left;";
+    "flex: 1; display: flex; flex-direction: column; gap: 5px; height: 100%; padding: 5px 0px; overflow: hidden; text-align:left;";
 
   let vid_title = document.createElement("div");
   vid_title.style.cssText = `
@@ -84,7 +84,7 @@ function createCard(title, cName, views, monthsOld, duration, thumbnail) {
     width: 100%;
     color: white;
     opacity: 0.5;
-    font-size: 14px;
+    font-size: 13px;
     `;
 
 if (views >= 1000000) {
