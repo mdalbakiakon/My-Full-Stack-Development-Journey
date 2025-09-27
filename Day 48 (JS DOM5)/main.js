@@ -25,6 +25,26 @@ btn.addEventListener("contextmenu", ()=>{
 //!contextmenu is used for if someone right clicks!!!!
 
 
+
+document.addEventListener("keydown", (e)=>{
+    console.log(e.key)
+})
+
+// keyboard use keydown to connect with user end input
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // | Event Handling
 let elem = document.getElementById("hey")
 elem.onclick = function(){
@@ -34,18 +54,23 @@ elem.onclick = function(){
 //! Note: adding an handler with JS overwrite the existing handler in HTML
 
 
-elem.addEventListener("mousemove", ()=>{
+elem.addEventListener("mouseover", ()=>{
     elem.style.backgroundColor = "red"
 })
 
-elem.addEventListener("mouseout", ()=>{
-    elem.style.fontSize = "32px"
-    elem.style.display = "block"
-})
 
 
-// elem.removeEventListener("mousemove", ()=>{
-//     elem.style.backgroundColor = "white"
-// })
+//! for the removeEventListener we can not use the arrow key function we need  the handler or the function with certain names
 
 
+function myMouseOut(){
+    elem.style.fontSize = "120px"
+    //! we must use the elem in function to work on elem.evenlistener
+    // otherwise it wont work 
+}
+
+
+elem.addEventListener("mouseout", myMouseOut)
+elem.removeEventListener("mouseout", myMouseOut)
+
+// now the eventlistener has been removed

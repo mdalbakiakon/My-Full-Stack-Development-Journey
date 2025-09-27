@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+
+
+    <style>
+
+        .child, .childContainer, .container{
+            background-color: white;
+            border: 2px solid black;
+            padding: 34px;
+            margin: 34px;
+        }
+
+        .childContainer{
+            background-color: beige;
+        }
+
+        .container{
+            background-color: yellow;
+        }
+
+
+
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container">
+        <section class="childContainer">
+            <!-- I am a boy -->
+            <div class="child">
+                I am a child
+            </div>
+        </section>
+
+        <!--! here span is a inline element but we know div is a block here the issue is div can not be inside the span therefor browser make the span close before the div starts
+        
+        so the code is like span end than the div started 
+        so i am a boy will be inside the span and the div will be separated
+        -->
+    </div>
+
+    <script>
+
+        //! using stopPropagation will stop the eventbubbling issue 
+        document.querySelector(".child").addEventListener("click", (e) => {
+            e.stopPropagation()
+            //now it has stopped propagation
+            alert("child was clicked")
+        })
+
+        document.querySelector(".childContainer").addEventListener("click", (e) => {
+            e.stopPropagation()
+            alert("childContainer was clicked")
+        })
+
+        document.querySelector(".container").addEventListener("click", () => {
+            alert("container was clicked")
+        })
+
+
+        //setInterval(func, time in ms)....do certain works after particular time peroiod
+
+        let child = document.querySelector(".child")
+        setInterval(()=>{
+                child.style.backgroundColor = child.style.backgroundColor === "red" ? "white" : "red";
+        }, 1000)
+
+
+        function randomColor(){
+            let val1 = Math.floor(Math.random()* 256) 
+            let val2 = Math.floor(Math.random()* 256) 
+            let val3 = Math.floor(Math.random()* 256)
+            return `rgb(${val1}, ${val2}, ${val3})`
+        }
+
+        let cont = document.querySelector(".container")
+        
+        let a = setInterval(()=>{
+            cont.style.backgroundColor = randomColor()
+        },500)
+
+        clearInterval(a)
+        //it will stop the interval
+
+
+        //setTimeOut works only for once it will not do the same work like in interval
+
+        let b = setTimeout(()=>{
+            document.querySelector(".childContainer").style.backgroundColor = "orangered"
+        }, 2000)
+        //after 2 second the color will be orangered and it will do only once if we want to work it after certain time pass
+
+        clearTimeout(b)
+        //same way for the timeout stopping the work
+        
+    </script>
+</body>
+
+</html>
