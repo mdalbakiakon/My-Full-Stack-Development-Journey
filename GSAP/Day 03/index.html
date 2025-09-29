@@ -1,11 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fluid Button Hover</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      color: white;
+    }
+
+    body{
+      background-color: yellowgreen;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    i{
+        color: white;
+        font-size: 1.25rem;
+        rotate: 45deg;
+    }
+
+    .box{
+      height: 400px;
+      aspect-ratio: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      filter: url(#goo);
+    }
+
+    .btn{
+      width: 150px;
+      height: 50px;
+      background-color: #111;
+      border-radius: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+    }
+
+    .circle{
+      height: 50px;
+      aspect-ratio: 1;
+      background-color: #111;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Smooth background transition */
+    .btn, .circle {
+      transition: background-color 0.3s ease;
+    }
+  </style>
 </head>
 <body>
+  <div class="box">
+    <div class="btn">Resume</div>
+    <div class="circle"><i class="fa-solid fa-arrow-up"></i></div>
+  </div>
+
+  <!-- Gooey filter -->
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none;">
+    <defs>
+      <filter id="goo">
+        <!-- Lower blur for sharper edges -->
+        <feGaussianBlur in="SourceGraphic" stdDeviation="4 0" result="blur" />
+        <feColorMatrix in="blur" mode="matrix"
+          values="1 0 0 0 0  
+                  0 1 0 0 0  
+                  0 0 1 0 0  
+                  0 0 0 15 -7" result="goo" />
+        <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script>
+    const circle = document.querySelector(".circle");
+    const box = document.querySelector(".box");
+
+    circle.addEventListener("mouseenter", () => {
+      // temporarily disable goo filter to make edges perfect
+      box.style.filter = "none";
     
+      gsap.to(".fa-arrow-up",{
+        rotate: 180,
+        duration: 0.8,
+        ease: "power2.out"
+      })
+
+      gsap.to(circle, {
+        x: 6, // separation distance
+        duration: 1,
+        ease: "elastic.out(1, 0.4)",
+        onComplete: () => {
+          // keep it clean circle while hovered
+        }
+      });
+    });
+
+    circle.addEventListener("mouseleave", () => {
+      // restore goo effect when merging back
+      box.style.filter = "url(#goo)";
+
+      gsap.to(".fa-arrow-up",{
+        rotate: 45,
+        duration: 0.8,
+        ease: "power2.out"
+      })
+
+      gsap.to(circle, {
+        x: 0,
+        duration: 1,
+        ease: "elastic.out(1, 0.4)"
+      });
+    });
+  </script>
 </body>
 </html>
