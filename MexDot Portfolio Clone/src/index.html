@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio!</title>
+    <link href="../dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Outfit:wght@100..900&family=Satisfy&display=swap"
+        rel="stylesheet">
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+</head>
+
+<body class="bg-primary scroll-smooth">
+    <div
+        class="relative w-full h-screen bg-[linear-gradient(135deg,theme(colors.primary)_0%,theme(colors.primary)_10%,theme(colors.accent)_50%,theme(colors.primary)_90%,theme(colors.primary)_100%)] overflow-hidden">
+
+        <!-- Navbar -->
+        <div id="navbar"
+            class="navbar fixed top-[30px] left-1/2 -translate-x-1/2 w-[95%] h-[85px] bg-[#0A0A0A]/45 rounded-full backdrop-blur-sm transition-transform duration-500 z-50 flex justify-between items-center px-10">
+            <div class="logo flex justify-left items-center">
+                <a href="#">
+                    <img src="https://template.dsngrid.com/mexdot/dark/assets/img/logo-light.png" 
+                    alt="logo"
+                    loading="eager"
+                    class="w-[80px]">
+                </a>
+            </div>
+            <ul class="nav font-outfit flex gap-7 text-white text-right text-[clamp(1rem,1vw,1.5rem)]">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <div class="text-white text-xl">
+                <i class="fi fi-sr-menu-burger flex justify-center items-center cursor-pointer"></i>
+            </div>
+        </div>
+
+
+        <!-- Small Heading -->
+        <h2
+            class="absolute top-[160px] left-0 right-0 font-satisfy font-semibold text-xl text-white flex justify-center items-center leading-[1]">
+            Hey - I'm
+        </h2>
+
+        <!-- Blank Div -->
+        <div class="blank w-full h-[175px]"></div>
+
+        <!-- Big Heading -->
+        <h1 class="font-antonio flex justify-center items-center font-black 
+           text-[clamp(5rem,15vw,16rem)] leading-[1] text-white text-center">
+            MD. AL BAKI AKON
+        </h1>
+
+
+        <!-- Profile Image -->
+        <div class="absolute bottom-0 left-0 w-full h-[600px] overflow-hidden">
+            <img src="../asset/portrait.png" alt="profile-pic" loading="eager"
+                class="absolute bottom-[-180px] left-1/2 -translate-x-1/2 w-[500px] max-w-[85%] z-10">
+        </div>
+
+    </div>
+
+    <div class="container h-[500px]">
+
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
