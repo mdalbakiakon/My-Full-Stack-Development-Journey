@@ -29,7 +29,7 @@
                 </a>
             </div>
             <ul
-                class="nav font-poppins font-semibold gap-7 text-white text-right text-[clamp(1rem,1vw,1.5rem)] hidden md:inline-flex">
+                class="nav font-poppins font-semibold gap-7 text-[#F8F9F4] text-right text-[clamp(0.9rem,1vw,1rem)] hidden md:inline-flex">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Project</a></li>
@@ -49,7 +49,7 @@
         </h2>
 
         <!-- Blank Div -->
-        <div class="blank w-full h-[185px]"></div>
+        <div class="blank w-full h-[180px]"></div>
 
         <!-- Big Heading -->
         <h1 class="font-antonio flex justify-center items-center font-semibold 
@@ -62,12 +62,30 @@
             <img src="../asset/portrait.png" alt="profile-pic" loading="eager"
                 class="absolute bottom-[-180px] left-1/2 -translate-x-1/2 w-[500px] max-w-[85%] z-10">
         </div>
+
+
+        <div class="div-partition w-full h-[120px] absolute bottom-0 flex justify-center">
+            <div class="blank w-1/2 h-full"></div>
+            <div class="div-resume w-1/2 h-full flex justify-center items-center">
+                <div class="btn flex justify-center items-center gap-0 cursor-pointer [filter:url('../asset/goo-filter.svg#goo')]">
+                    <div class="bar px-[80px] py-[10px] font-poppins bg-[#161616] rounded-[20px] flex justify-center items-center text-[16px] text-center tracking-widest font-semibold transition-colors duration-300 ease-in-out text-[#dbdbdb] overflow-hidden"><span class="bar-text flex justify-center items-center">RESUME</span></div>
+                    <div class="circle h-[44px] aspect-square bg-[#161616] rounded-full flex justify-center items-center transition-colors duration-300 ease-in-out">
+                        <i class="fa-solid fa-arrow-up text-white [rotate:45deg] text-base"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
 
     <div class="container h-screen">
 
     </div>
 
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 
