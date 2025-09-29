@@ -83,7 +83,7 @@
     <defs>
       <filter id="goo">
         <!-- Lower blur for sharper edges -->
-        <feGaussianBlur in="SourceGraphic" stdDeviation="4 0" result="blur" />
+        <feGaussianBlur in="SourceGraphic" stdDeviation="4 4" result="blur" />
         <feColorMatrix in="blur" mode="matrix"
           values="1 0 0 0 0  
                   0 1 0 0 0  
@@ -110,7 +110,7 @@
       })
 
       gsap.to(circle, {
-        x: 6, // separation distance
+        x: 10, // separation distance
         duration: 1,
         ease: "elastic.out(1, 0.4)",
         onComplete: () => {
