@@ -636,8 +636,8 @@ video {
   z-index: 50;
 }
 
-.col-start-auto {
-  grid-column-start: auto;
+.block {
+  display: block;
 }
 
 .flex {
@@ -648,12 +648,12 @@ video {
   display: none;
 }
 
-.h-\[175px\] {
-  height: 175px;
+.h-\[185px\] {
+  height: 185px;
 }
 
-.h-\[500px\] {
-  height: 500px;
+.h-\[30px\] {
+  height: 30px;
 }
 
 .h-\[600px\] {
@@ -670,10 +670,6 @@ video {
 
 .w-\[500px\] {
   width: 500px;
-}
-
-.w-\[80px\] {
-  width: 80px;
 }
 
 .w-\[95\%\] {
@@ -725,19 +721,6 @@ video {
   border-radius: 9999px;
 }
 
-.border-2 {
-  border-width: 2px;
-}
-
-.border {
-  border-width: 1px;
-}
-
-.border-red-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(239 68 68 / var(--tw-border-opacity, 1));
-}
-
 .bg-\[\#0A0A0A\]\/45 {
   background-color: rgb(10 10 10 / 0.45);
 }
@@ -768,12 +751,17 @@ video {
   font-family: Antonio, sans-serif;
 }
 
-.font-outfit {
-  font-family: Outfit, sans-serif;
-}
-
 .font-satisfy {
   font-family: Satisfy, cursive;
+}
+
+.font-poppins {
+  font-family: Poppins, sans-serif;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-\[clamp\(1rem\2c 1vw\2c 1\.5rem\)\] {
@@ -789,36 +777,12 @@ video {
   line-height: 1.75rem;
 }
 
-.font-black {
-  font-weight: 900;
-}
-
 .font-semibold {
   font-weight: 600;
 }
 
 .leading-\[1\] {
   line-height: 1;
-}
-
-.leading-\[1\.05\] {
-  line-height: 1.05;
-}
-
-.leading-\[1\.0\] {
-  line-height: 1.0;
-}
-
-.leading-\[1\.01\] {
-  line-height: 1.01;
-}
-
-.leading-\[1\.\] {
-  line-height: 1.;
-}
-
-.leading-\[1\.1\] {
-  line-height: 1.1;
 }
 
 .text-white {
@@ -831,18 +795,13 @@ video {
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
-.transition-transform {
-  transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
+@media (min-width: 768px) {
+  .md\:inline-flex {
+    display: inline-flex;
+  }
 
-.duration-500 {
-  transition-duration: 500ms;
-}
-
-@media (min-width: 640px) {
-  .sm\:hidden {
+  .md\:hidden {
     display: none;
   }
 }
+

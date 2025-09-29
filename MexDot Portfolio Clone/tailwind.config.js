@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        outfit: ["Outfit", "sans-serif"], //custom font [add in html from google as well]
+        poppins: ["Poppins", "sans-serif"], //custom font [add in html from google as well]
         antonio: ["Antonio", "sans-serif"],
         satisfy: ["Satisfy", "cursive"],
       },

@@ -9,9 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Outfit:wght@100..900&family=Satisfy&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy&display=swap"
         rel="stylesheet">
-        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="bg-primary scroll-smooth">
@@ -20,24 +22,22 @@
 
         <!-- Navbar -->
         <div id="navbar"
-            class="navbar fixed top-[30px] left-1/2 -translate-x-1/2 w-[95%] h-[85px] bg-[#0A0A0A]/45 rounded-full backdrop-blur-sm transition-transform duration-500 z-50 flex justify-between items-center px-10">
+            class="navbar fixed top-[30px] left-1/2 -translate-x-1/2 w-[95%] h-[85px] bg-[#0A0A0A]/45 rounded-full backdrop-blur-sm z-50 flex justify-between items-center px-10">
             <div class="logo flex justify-left items-center">
                 <a href="#">
-                    <img src="https://template.dsngrid.com/mexdot/dark/assets/img/logo-light.png" 
-                    alt="logo"
-                    loading="eager"
-                    class="w-[80px]">
+                    <img src="../asset/logo.svg" alt="logo" loading="eager" class="h-[30px]">
                 </a>
             </div>
-            <ul class="nav font-outfit flex gap-7 text-white text-right text-[clamp(1rem,1vw,1.5rem)]">
+            <ul
+                class="nav font-poppins font-semibold gap-7 text-white text-right text-[clamp(1rem,1vw,1.5rem)] hidden md:inline-flex">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Project</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
 
-            <div class="text-white text-xl">
-                <i class="fi fi-sr-menu-burger flex justify-center items-center cursor-pointer"></i>
+            <div class="text-white text-2xl cursor-pointer block md:hidden">
+                <i class="fa-solid fa-bars"></i>
             </div>
         </div>
 
@@ -49,24 +49,22 @@
         </h2>
 
         <!-- Blank Div -->
-        <div class="blank w-full h-[175px]"></div>
+        <div class="blank w-full h-[185px]"></div>
 
         <!-- Big Heading -->
-        <h1 class="font-antonio flex justify-center items-center font-black 
+        <h1 class="font-antonio flex justify-center items-center font-semibold 
            text-[clamp(5rem,15vw,16rem)] leading-[1] text-white text-center">
             MD. AL BAKI AKON
         </h1>
-
 
         <!-- Profile Image -->
         <div class="absolute bottom-0 left-0 w-full h-[600px] overflow-hidden">
             <img src="../asset/portrait.png" alt="profile-pic" loading="eager"
                 class="absolute bottom-[-180px] left-1/2 -translate-x-1/2 w-[500px] max-w-[85%] z-10">
         </div>
-
     </div>
 
-    <div class="container h-[500px]">
+    <div class="container h-screen">
 
     </div>
 
