@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme{
+    --font-roboto: "Roboto", sans-serif;
+}
+
+.main-div:nth-child(odd){
+    background-color: #121212;
+}
+
+.main-div:nth-child(even){
+    background-color: #181818;
+}
