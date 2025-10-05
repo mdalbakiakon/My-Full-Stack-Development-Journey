@@ -1,6 +1,6 @@
 const feedCat = () =>{
     return new Promise((resolve, reject)=>{
-        isThereFood = false
+        isThereFood = true
         isThereFood ? resolve("feed the cat!") : reject("No food for cat!")
     })
 }
