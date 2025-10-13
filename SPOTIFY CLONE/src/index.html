@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body class="bg-[#000] h-screen p-2 flex flex-col font-sans">
+    <nav class="relative h-[50px] flex justify-between items-center px-4 mb-2">
+        <div id="logo" class="cursor-pointer">
+            <img src="./asset/logo.svg" alt="spotify-logo">
+        </div>
+
+        <div class="absolute left-1/2 -translate-x-1/2 w-[50%] lg:w-[30%] h-full flex gap-2">
+            <div id="home"
+                class="bg-[#1F1F1F] h-full aspect-square rounded-full flex justify-center items-center cursor-pointer">
+                <img src="./asset/home.svg" alt="">
+            </div>
+
+            <div id="search" class="bg-[#1F1F1F] flex-1 w-full h-full rounded-3xl flex items-center px-2 gap-2">
+                <img src="./asset/search.svg" alt="">
+                <h2 class="text-[#707070] text-[1rem] lg:text-lg font-sans text-left">
+                    What do you want to listen?
+                </h2>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-3 h-full">
+            <h2 class="text-[#707070] font-semibold text-md font-sans text-center">Sign up</h2>
+            <div class="h-full bg-[white] flex items-center justify-center px-8 rounded-3xl">
+                <h2 class="font-semibold text-md font-sans text-center">Log in</h2>
+            </div>
+        </div>
+    </nav>
+
+    <main class="w-full flex-1 flex gap-2 min-h-0">
+        <div class="w-2/5 lg:w-[25vw] h-full bg-[#121212] rounded-lg">
+
+        </div>
+        <div id="scroll-div" class="text-white flex-1 bg-[linear-gradient(to_bottom,#181818_0%,#121212_10%,#121212_100%)] rounded-lg py-6 px-4 h-full overflow-y-auto scroll-smooth">
+            
+        </div>
+
+    </main>
+</body>
+
+</html>
