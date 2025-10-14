@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  font-family: {
+    outfit: "Outfit, sans-serif";
+    engagement: "Engagement, cursive";
+  }
+}
