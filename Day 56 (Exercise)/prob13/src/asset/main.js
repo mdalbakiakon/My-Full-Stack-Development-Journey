@@ -37,7 +37,6 @@ products.forEach((p) => {
 });
 
 let purchased = [];
-let count = 0;
 
 let orders_btn = document.querySelectorAll(".order");
 
@@ -49,4 +48,22 @@ orders_btn.forEach((btn) => {
     let count_purchase = document.getElementById("counter");
     count_purchase.innerText = purchased.length;
   });
+});
+
+const cart = document.getElementById("cart");
+const overlay = document.getElementById("overlay-click");
+const overlay_sidebar = document.getElementById("overlay-sidebar");
+const isEmpty = document.getElementById("empty-cart");
+
+
+cart.addEventListener("click", () => {
+  document.body.classList.add("overflow-hidden");
+  overlay.classList.remove("hidden");
+  overlay_sidebar.classList.remove("hidden");
+});
+
+overlay.addEventListener("click", () => {
+  document.body.classList.remove("overflow-hidden");
+  overlay.classList.add("hidden");
+  overlay_sidebar.classList.add("hidden");
 });
