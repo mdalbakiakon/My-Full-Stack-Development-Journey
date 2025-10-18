@@ -202,6 +202,9 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
+  .top-5 {
+    top: calc(var(--spacing) * 5);
+  }
   .top-10 {
     top: calc(var(--spacing) * 10);
   }
@@ -356,6 +359,10 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
   .bg-amber-300 {
     background-color: var(--color-amber-300);
   }
@@ -370,6 +377,9 @@
   }
   .bg-zinc-900 {
     background-color: var(--color-zinc-900);
+  }
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
   }
   .px-1 {
     padding-inline: calc(var(--spacing) * 1);
