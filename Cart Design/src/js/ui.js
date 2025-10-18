@@ -91,7 +91,8 @@ function createProductCard(product) {
   const cardPrice = document.createElement("div");
   cardPrice.className = "absolute bottom-[107px] left-2 text-2xl font-bold text-white px-2 py-1 rounded-full";
   cardPrice.textContent = price;
-  cardPrice.style.backgroundColor = "#303030";
+  cardPrice.style.backgroundColor = "#FFD230";
+  cardPrice.style.color = "#303030";
   card.appendChild(cardPrice);
 
 

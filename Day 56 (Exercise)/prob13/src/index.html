@@ -2,70 +2,67 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Design | E-Commerce</title>
 
-  <!-- Tailwind output -->
-  <link rel="stylesheet" href="output.css" />
+    <!-- tailwindcss -->
+    <link rel="stylesheet" href="output.css">
 
-  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Engagement&family=Outfit:wght@100..900&display=swap"
-    rel="stylesheet" />
+    <!-- icon -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
 </head>
 
-<body class="font-outfit text-[#181818] relative min-h-screen">
-  <header class="w-full sticky top-0 bg-red-500 z-40">
-    <nav class="w-full lg:w-5xl xl:w-7xl mx-auto h-[70px] px-5 flex justify-between items-center">
-      <!-- Navigation content -->
-      <div class="logo text-4xl tracking-tighter cursor-pointer font-black underline">
-        Shop
-      </div>
-      <div class="h-full flex justify-center items-center gap-3">
-        <div id="cart" class="relative flex justify-center items-center">
-          <span id="counter"
-            class="absolute -top-1.5 -right-2 text-xs font-black flex justify-center items-center bg-amber-300 rounded-full px-[5px]"></span>
-          <i class="fi fi-br-shopping-bag text-[#181818] text-2xl cursor-pointer"></i>
+<body class="bg-zinc-900 font-outfit text-white">
+    <header class="fixed top-0 py-5 w-full z-50 bg-zinc-900 shadow-2xl">
+        <nav
+            class="w-[85vw] md:w-[75vw] h-[80px] bg-amber-300 rounded-full flex justify-between items-center px-5 mx-auto">
+            <div id="logo">
+                <a href="#" class="font-bold text-5xl tracking-tighter text-left text-zinc-900">Logo</a>
+            </div>
+
+            <div class="text-3xl text-zinc-900 flex justify-center items-center gap-2">
+                <div class="relative">
+                    <i id="cart-btn" class="fi fi-br-shopping-bag flex justify-center items-center cursor-pointer">
+                        <span id="counter" class="absolute bg-white rounded-full text-sm px-1 font-semibold -top-2 -right-1 flex justify-center items-center text-end not-italic"></span>
+                    </i>
+                </div>
+                <i class="fi fi-br-circle-user flex justify-center items-center cursor-pointer"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="mt-40">
+        <h1 class="text-5xl tracking-tighter font-semibold text-center">Cart Your <span class="text-amber-300">Wishes</span></h1>
+
+        <div id="cart-sidebar" class="fixed w-[25vw] h-screen top-0 right-0 z-70 bg-zinc-800 hidden">
+            <div id="cross-btn" class="text-3xl text-amber-300"><i
+                    class="fi fi-br-cross cursor-pointer absolute right-5 top-10 flex justify-center items-center"></i>
+            </div>
         </div>
-        <i class="fi fi-br-circle-user text-[#181818] text-2xl cursor-pointer"></i>
-      </div>
-    </nav>
-  </header>
-
-  <main class="mt-15 p-4">
-    <div id="overlay-click"
-      class="overlay z-50 bg-[#000000d0] absolute w-full h-full top-0 left-0 right-0 bottom-0 hidden">
-    </div>
-
-    <div id="overlay-sidebar"
-      class="overlay sidebar bg-red-500 w-[75vw] sm:w-[60vw] md:w-[45vw] lg:w-[35vw] xl:w-[25vw] h-screen absolute top-0 right-0 z-60 hidden flex flex-col justify-center items-center">
-      
-      <div id="empty-cart" class="w-full h-full flex flex-col justify-center items-center">
-        <img src="./asset/ghost.svg" alt="" class="w-28 mb-4">
-        <h2 class="font-semibold text-lg">Your Cart is Empty!</h2>
-      </div>
-    </div>
 
 
+        <!-- product container -->
+        <div id="product-container"
+            class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-5 gap-y-10 w-[85vw] md:w-[75vw] xl:w-[65vw] mx-auto mt-5 py-5">
+        
+        </div>
 
-    <h1 class="text-[#181818] text-4xl lg:text-5xl font-semibold tracking-tighter text-center mb-15">
-      Cart Your <span class="text-red-500">Wishes</span>
-    </h1>
+    </main>
 
-    <div id="container"
-      class="w-full lg:w-5xl xl:w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 gap-y-20">
-    </div>
-  </main>
+    <footer>
 
-  <footer class="mt-10 text-center">
-    <!-- Footer content -->
-  </footer>
+    </footer>
 
-  <script type="module" src="./asset/main.js"></script>
+
+    <script type="module" src="./asset/ui.js"></script>
+    <script type="module" src="./asset/products.js"></script>
+    <script type="module" src="./asset/cart.js"></script>
 </body>
 
 </html>
