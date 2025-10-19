@@ -3,7 +3,7 @@ export let products = [
         p_id: "001",
         p_img: "https://img-prd-pim.poorvika.com/cdn-cgi/image/width=1600,height=1600,quality=75/product/Apple-iphone-17-sage-512gb-Front-Back-Side-View.png",
         p_name: "Iphone 17",
-        p_price: "899",
+        p_price: "899.89",
         p_description: "Latest iPhone 17 with advanced features and sleek design."
     },
     {

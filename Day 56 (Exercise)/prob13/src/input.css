@@ -3,3 +3,31 @@
 @theme{
     --font-outfit: "Outfit", sans-serif;
 }
+
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-track {
+  background: #27272A;
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #FFD230;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+#cart-item-list::-webkit-scrollbar {
+  width: 8px;
+}
+#cart-item-list::-webkit-scrollbar-track {
+  background: #27272A;
+  border-radius: 10px;
+}
+#cart-item-list::-webkit-scrollbar-thumb {
+  background: #FFD230;
+  cursor: pointer;
+  border-radius: 10px;
+}

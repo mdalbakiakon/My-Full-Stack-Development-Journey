@@ -50,6 +50,9 @@ function card_render(p) {
                 </svg>
 
                 <div data-product_id="${p.p_id}"
+                    data-product_price = "${p.p_price}"
+                    data-product_name = "${p.p_name}"
+                    data-product_img = "${p.p_img}"
                     class="order-btn rounded-full h-[50px] aspect-square bg-amber-300 absolute right-2.5 bottom-2.5 cursor-pointer flex justify-center items-center text-2xl text-zinc-900">
                     <i class="fi fi-br-shopping-cart-add flex justify-center items-center"></i>
                 </div>

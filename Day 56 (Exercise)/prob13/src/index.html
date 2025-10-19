@@ -29,7 +29,8 @@
             <div class="text-3xl text-zinc-900 flex justify-center items-center gap-2">
                 <div class="relative">
                     <i id="cart-btn" class="fi fi-br-shopping-bag flex justify-center items-center cursor-pointer">
-                        <span id="counter" class="absolute bg-white rounded-full text-sm px-1 font-semibold -top-2 -right-1 flex justify-center items-center text-end not-italic"></span>
+                        <span id="counter"
+                            class="absolute bg-white rounded-full text-sm px-1 font-semibold -top-2 -right-1 flex justify-center items-center text-end not-italic">0</span>
                     </i>
                 </div>
                 <i class="fi fi-br-circle-user flex justify-center items-center cursor-pointer"></i>
@@ -38,22 +39,50 @@
     </header>
 
     <main class="mt-40">
-        <h1 class="text-5xl tracking-tighter font-semibold text-center">Cart Your <span class="text-amber-300">Wishes</span></h1>
+        <h1 class="text-5xl tracking-tighter font-semibold text-center">Cart Your <span
+                class="text-amber-300">Wishes</span></h1>
 
-        <div id="cart-sidebar" class="fixed w-[25vw] h-screen top-0 right-0 z-70 bg-zinc-800 p-5 hidden">
-            <div class="w-full flex justify-between items-center">
-                <h2 class="text-3xl font-semibold tracking-tighter">Your <span class=" text-amber-300">Wishes</span></h2>
+        <div id="cart-sidebar"
+            class="fixed w-[75vw] sm:w-[60vw] md:w-[50vw] lg:w-[35vw] xl:w-[25vw] h-screen top-0 right-0 z-70 bg-zinc-800 p-4 xl:p-5 flex flex-col gap-5 hidden">
+            <div class="w-full flex justify-between items-center mb-4">
+                <h2 class="text-3xl font-semibold tracking-tighter">Your <span class=" text-amber-300">Wishes</span>
+                </h2>
                 <i id="cross-btn"
-                    class="fi fi-br-cross cursor-pointer flex justify-center items-center text-3xl text-amber-300"></i>
+                    class="fi fi-br-cross cursor-pointer flex justify-center items-center text-2xl text-amber-300"></i>
             </div>
-            <!-- <h2 class="text-3xl font-semibold tracking-tighter">Your <span class=" text-amber-300">Wishes</span></h2> -->
+
+            <!-- ghost svg -->
+            <div id="empty-cart-list" class="flex-1 flex flex-col justify-center items-center gap-2">
+                <img src="./asset/ghost.svg" alt="" class="w-32">
+                <h2 class="text-xl font-semibold text-[#121212]">Oh no! Your cart is empty!!!</h2>
+            </div>
+
+            <h2 id="remove-all" class="text-xl text-right text-amber-300 font-semibold cursor-pointer mb-1 hidden">Remove all
+            </h2>
+            
+            <div id="cart-item-list" class="flex-1 min-h-0 overflow-auto flex flex-col gap-1 hidden">
+                <!-- added items container -->
+                <div id="cart-list-container" class="flex flex-col gap-2">
+                    
+                </div>
+            </div>
+
+            <div class="w-full flex justify-between items-end text-3xl font-semibold tracking-tighter">
+                <div>Total</div>
+                <div>$<span id="total-pay">0.00</span></div>
+            </div>
+            <div
+                class="w-full rounded-2xl bg-amber-300 h-[50px] font-semibold text-2xl text-center flex justify-center items-center text-zinc-900 gap-1 cursor-pointer">
+                Checkout
+                <i class="fi fi-br-shopping-cart-check flex justify-center items-center text-2xl"></i>
+            </div>
         </div>
 
 
         <!-- product container -->
         <div id="product-container"
             class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-5 gap-y-10 w-[85vw] md:w-[75vw] xl:w-[65vw] mx-auto mt-5 py-5">
-        
+
         </div>
 
     </main>
