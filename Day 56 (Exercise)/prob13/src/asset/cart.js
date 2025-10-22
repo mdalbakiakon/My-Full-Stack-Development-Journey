@@ -25,15 +25,15 @@ function add_to_cart_list_container(p_img,p_name,p_price) {
     added_item.className = "w-full flex items-center gap-2";
 
     added_item.innerHTML = `
-                        <div class="h-[65px] aspect-square bg-amber-300 p-1 rounded-2xl flex justify-center items-center">
+                        <div class="h-[65px] aspect-square bg-white p-1 rounded-2xl flex justify-center items-center">
                             <img src=${p_img}
                                 alt="" class="object-contain drop-shadow-lg">
                         </div>
                         <div
                             class="flex-1 overflow-x-hidden h-full flex flex-col justify-center items-start tracking-tighter">
                             <h2 class="font-semibold text-xl truncate w-full">${p_name}</h2>
-                            <h2 class="text-md text-[#858585] line-clamp-1 truncate w-full font-semibold">Price per unit
-                                $<span>${p_price}</span>
+                            <h2 class="text-md text-[#858585] line-clamp-1 truncate w-full font-semibold">Price:
+                                $<span class="text-xl text-[#a1a1a1]">${p_price}</span>/unit
                             </h2>
                         </div>
     `;

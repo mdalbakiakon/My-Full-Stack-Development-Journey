@@ -37,7 +37,6 @@ function card_render(p) {
 
 
                     <image
-                        
                         href= ${p.p_img}
                         width="18px" 
                         height="18px" 

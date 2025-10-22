@@ -253,9 +253,6 @@
   .mb-1 {
     margin-bottom: calc(var(--spacing) * 1);
   }
-  .mb-2 {
-    margin-bottom: calc(var(--spacing) * 2);
-  }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
@@ -375,6 +372,9 @@
   .overflow-auto {
     overflow: auto;
   }
+  .overflow-hidden {
+    overflow: hidden;
+  }
   .overflow-x-hidden {
     overflow-x: hidden;
   }
@@ -451,6 +451,10 @@
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
   }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
   .text-sm {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
@@ -483,6 +487,12 @@
   }
   .text-\[\#858585\] {
     color: #858585;
+  }
+  .text-\[\#929292\] {
+    color: #929292;
+  }
+  .text-\[\#a1a1a1\] {
+    color: #a1a1a1;
   }
   .text-amber-300 {
     color: var(--color-amber-300);
@@ -570,11 +580,11 @@ body::-webkit-scrollbar {
   width: 8px;
 }
 body::-webkit-scrollbar-track {
-  background: #27272A;
+  background: #18181B;
   border-radius: 10px;
 }
 body::-webkit-scrollbar-thumb {
-  background: #FFD230;
+  background: #505050;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -586,7 +596,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
 }
 #cart-item-list::-webkit-scrollbar-thumb {
-  background: #FFD230;
+  background: #505050;
   cursor: pointer;
   border-radius: 10px;
 }

@@ -9,11 +9,11 @@ body::-webkit-scrollbar {
   width: 8px;
 }
 body::-webkit-scrollbar-track {
-  background: #27272A;
+  background: #18181B;
   border-radius: 10px;
 }
 body::-webkit-scrollbar-thumb {
-  background: #FFD230;
+  background: #505050;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -27,7 +27,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
 }
 #cart-item-list::-webkit-scrollbar-thumb {
-  background: #FFD230;
+  background: #505050;
   cursor: pointer;
   border-radius: 10px;
 }
