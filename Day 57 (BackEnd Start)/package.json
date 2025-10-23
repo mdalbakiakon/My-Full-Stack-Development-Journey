@@ -1,0 +1,20 @@
+{
+  "name": "backend_intro",
+  "version": "1.0.0",
+  "description": "My journey with Backend starts from here",
+  "keywords": [
+    "Backend"
+  ],
+  "license": "ISC",
+  "author": "Md. Al Baki Akon",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "slugify": "^1.6.6"
+  }
+}
