@@ -33,7 +33,11 @@
 
 
 let a = require("./myModule2.js")
-console.log(a)
+console.log(a, __filename, __dirname)
 
 // require is old
-// use "type":"module" in package.json for modern 
+// use "type":"module" in package.json for modern ES6
+
+// function(exports, require, module, __filename, __dirname){
+    //Module code actually lives here
+// };

@@ -10,3 +10,5 @@ let obj = {
 }
 
 export default obj
+
+// learn ES6!!!
