@@ -2,6 +2,10 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+// public folder will allow the user to see the content
+app.use(express.static('public'))
+
+
 app.get('/', (req, res) => {
   res.send('<h1>Hello World2222!</h1>')
 })
@@ -11,6 +15,9 @@ app.get('/home', (req, res)=>{
 })
 
 app.get('/:slug', (req, res)=>{
+    // for url: http://localhost:3000/blog?mode=dark&region=bd
+    console.log(req.params)
+    console.log(req.query)
     res.send(`<h1>I am ${req.params.slug} page</h1>`)
 })
 
