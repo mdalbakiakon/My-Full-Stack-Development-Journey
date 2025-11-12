@@ -5,9 +5,9 @@ const port = 3000
 // public folder will allow the user to see the content
 app.use(express.static('public'))
 
-
+// when app
 app.get('/', (req, res) => {
-  res.send('<h1>Hello World2222!</h1>')
+  res.send('<h1>Hello World!</h1>')
 })
 
 app.get('/home', (req, res)=>{
