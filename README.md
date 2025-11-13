@@ -1,7 +1,7 @@
 # 🚀 **My Web Development Journey**  
 
 ## 🌟 **About This Repository**  
-This repository is a personal diary of my **journey to becoming a Web Developer**.  
+This repository is a personal diary of my **journey to becoming a Full-Stack Web Developer**.  
 I’ll document my progress, share projects, and reflect on my experiences as I learn and grow in the world of web development.  
 
 ## 🛠️ **Technologies I'm Learning**  
@@ -11,7 +11,7 @@ I’ll document my progress, share projects, and reflect on my experiences as I 
 | **HTML & CSS** | **Python** | **Git & GitHub** |
 | **JavaScript** | **Django** | **VS Code** |
 | **React.js** | **PostgreSQL** | **Figma** |
-| **Next.js** | **MySQL** | **Tailwind CSS** |
+| **Next.js** | **MongoDB** | **Tailwind CSS** |
 
 <!--
 ## 🚀 **My Projects**  
