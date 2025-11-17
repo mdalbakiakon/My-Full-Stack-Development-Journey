@@ -11,7 +11,7 @@ function App() {
       <div className="bg-[#121212] h-screen flex flex-col justify-center items-center relative p-5 font-outfit">
         <button
           onClick={() => setCount(0)}
-          className="text-center text-sm md:text-lg bg-[#252525] px-5 py-2.5 rounded-2xl font-semibold text-white cursor-pointer select-none"
+          className="text-center text-sm md:text-lg bg-[#303030] px-5 py-2.5 rounded-2xl font-semibold text-white cursor-pointer select-none"
         >
           Reset
         </button>
