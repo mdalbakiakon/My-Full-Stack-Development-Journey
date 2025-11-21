@@ -9,7 +9,7 @@ const port = 3000
 
 app.get('/', (req, res) => {
   console.log('This is a get request') //console just print in the running terminal
-  res.send('Hello World!') //res send the info to the direct html page or browser console
+  res.send('Hello World22!') //res send the info to the direct html page or browser console
 })
 
 
