@@ -1,6 +1,13 @@
 const express = require('express')
+const blog = require('./routes/blog.js')
 const app = express()
 const port = 3000
+
+
+
+// ...
+
+app.use('/blog', blog)
 
 // get request has limitation say 2083 character in the URL otherwise giving 414 error which is too long URL
 // 2KB~8KB is the size of get request
