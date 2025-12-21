@@ -81,3 +81,30 @@ console.log(typeof(d.toArray()))
 console.log(Array.isArray(d.toArray()))
 // see it returns true
 // | so arrays are object type in JS
+
+
+let gt_22_one = db.CRUD_Collection.findOne({
+    Age: { $gte:22}
+})
+
+// | find supports pretty findOne doesnt support pretty
+console.log("\n\n\n")
+console.log(gt_22_one)
+
+
+console.log(db.CRUD_Collection.find({
+    Age: { $gte: 22 }
+}).sort({ Age: 1 }).limit(1))
+
+
+
+
+
+// * UPDATE
+db.CRUD_Collection.updateOne({Name:"Rahim}"}, 
+    {$set:{Name: "Rahim"}})
+
+db.CRUD_Collection.updateMany(
+    {},
+    { $set: { Status: "Active" } }
+)
