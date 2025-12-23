@@ -1,6 +1,6 @@
 import os
 
 folder_path = 'D:\\Working on Programme\\Full-Stack-Development-Journey'
-new_folder_path = os.path.join(folder_path, 'Day 66 (Mongoose Introduction)')
+new_folder_path = os.path.join(folder_path, 'Day 67 (Mongoose Basic Exercise)')
 
 os.makedirs(new_folder_path, exist_ok=True)
