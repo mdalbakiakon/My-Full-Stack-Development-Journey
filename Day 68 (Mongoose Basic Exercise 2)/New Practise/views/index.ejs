@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Miniver&family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="font-outfit h-dvh w-dvw flex bg-black">
+  <div id="hero-image" class="
+  w-[70vw]
+  h-full
+  bg-[linear-gradient(-270deg,rgba(0,0,0,0.8),rgba(0,0,0,0.6),rgba(0,0,0,1)),url('/image/hero.webp')]
+  bg-no-repeat
+  bg-right
+  bg-cover">
+  </div>
+
+
+  <form id="petForm" action="/pets" method="POST"
+    class="flex-1 h-full text-white py-25 flex flex-col gap-5 justify-center items-center">
+
+    <img src="/image/logo.svg" alt="" class="w-30">
+
+    <input type="text" name="petName" placeholder="Pet Name"
+      class="w-3/5 p-3 bg-[#0f0f0f] outline-none rounded-2xl placeholder:opacity-30" required />
+
+    <input type="text" name="ownerName" placeholder="Owner Name"
+      class="w-3/5 p-3 bg-[#0f0f0f] outline-none rounded-2xl placeholder:opacity-30" required />
+
+    <input type="number" name="age" placeholder="Age"
+      class="w-3/5 p-3 bg-[#0f0f0f] outline-none rounded-2xl placeholder:opacity-30" required />
+
+    <input type="text" name="type" placeholder="Dog / Cat"
+      class="w-3/5 p-3 bg-[#0f0f0f] outline-none rounded-2xl placeholder:opacity-30" required />
+
+    <button type="submit" class="bg-[yellowgreen] w-1/3 text-black font-semibold p-3 rounded-full cursor-pointer">
+      Feed Pet
+    </button>
+  </form>
+</body>
+
+</html>

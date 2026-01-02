@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-outfit: "Outfit", sans-serif;
+    --font-mini: "Miniver", cursive;
+  }
+}
+
+@layer utilities {
+  .font-outfit {
+    font-family: var(--font-outfit);
+  }
+
+  .font-mini {
+    font-family: var(--font-mini);
+  }
+}
