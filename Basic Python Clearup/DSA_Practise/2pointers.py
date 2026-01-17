@@ -16,7 +16,6 @@ def find_pair_with_sum(arr, target_sum):
             right = len(arr)-1
             
             
-
 arr = [1,2,3,4,5,15,6,7,8,9]
 result = find_pair_with_sum(arr, 20)
 print(result)
