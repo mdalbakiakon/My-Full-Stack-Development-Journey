@@ -30,3 +30,10 @@ def inOrder(node):
 
 print("In Order Traverse:", end=" ")
 inOrder(root)
+
+
+s = 'Bangladesh'
+print(list(s))
+
+print(bool(12))
+print(bool(0))
