@@ -1,7 +1,0 @@
-@import "tailwindcss";
-
-@layer utilities{
-    .font-mon{
-        font-family: "Montserrat", sans-serif;
-    }
-}
