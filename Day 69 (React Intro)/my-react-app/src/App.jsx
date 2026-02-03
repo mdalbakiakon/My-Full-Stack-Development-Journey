@@ -8,7 +8,11 @@ function App() {
 
   return (
     <div className='bg-[#121212] font-outfit h-screen w-screen flex items-center justify-center flex-col gap-10'>
+      
+      {/* view count */}
       <div className='text-9xl text-white font-bold tracking-tighter'>{count}</div>
+      
+      {/* click button */}
       <button className='bg-[yellowgreen] px-10 py-4 font-semibold rounded-4xl shadow-2xl active:scale-95 transition-transform cursor-pointer'
       onClick={()=>setCount(count+1)}>
         click me
