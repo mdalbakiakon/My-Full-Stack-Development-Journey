@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+/* smooth transition */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light (default) */
+body {
+  background: linear-gradient(45deg, #121212 60%, #252525 90%, #303030);
+  color: white;
+}
+
+/* Dark mode */
+.dark body {
+  background: white;
+  color: black;
+}
