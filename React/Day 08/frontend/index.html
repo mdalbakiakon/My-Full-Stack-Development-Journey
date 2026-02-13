@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- image preload -->
+  <link rel="preload" href="/hero_1440.webp" as="image"
+    imagesrcset="/hero_640.webp 640w,/hero_800.webp 800w,/hero_1024.webp 1024w,/hero_1440.webp 1440w,/hero_1920.webp 1920w,/hero_2560.webp 2560w"
+    imagesizes="100vw">
+  
+    <!-- font preload -->
+  <link rel="preload" href="/fonts/Orbito.otf" as="font" type="font/otf" crossorigin />
+  
+  <title>frontend</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
