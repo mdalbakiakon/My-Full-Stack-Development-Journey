@@ -25,9 +25,19 @@ const Home = () => {
       </picture>
 
       <Wrapper>
-        <div className="relative z-20">
-          <h1 className="text-9xl text-white">Title</h1>
-          <p></p>
+        {/* hero title */}
+        <div className="relative z-20 text-center flex flex-col justify-center items-center gap-2.5">
+          <div className="h-75">
+            <img
+              src="/logo.svg"
+              alt="Linguini Logo"
+              className="h-full"
+              fetchPriority="high"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+          <p className="text-3xl">How about a one fine dining?</p>
         </div>
       </Wrapper>
     </section>

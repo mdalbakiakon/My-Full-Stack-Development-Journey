@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+:root{
+  --btn-col: #4d7508;
+}
+
 @font-face {
   font-family: "Orbito";
   src: url("/fonts/Orbito.otf") format("opentype");
@@ -12,5 +16,5 @@
 body{
     font-family: "Orbito", sans-serif;
     background-color: #121212;
-    color: white;
+    color: rgba(255, 255, 255, 0.8);
 }
