@@ -2,7 +2,7 @@ const jobs = [
   {
     id: 1,
     company: "Amazon",
-    posted: "5 days ago",
+    postedAt: "2026-02-10T00:00:00Z", // 5 days ago
     role: "Full Stack Developer",
     type: "Full Time",
     level: "Senior Level",
@@ -13,7 +13,7 @@ const jobs = [
   {
     id: 2,
     company: "Google",
-    posted: "2 days ago",
+    postedAt: "2026-02-13T00:00:00Z", // 2 days ago
     role: "Frontend Developer",
     type: "Full Time",
     level: "Mid Level",
@@ -24,7 +24,7 @@ const jobs = [
   {
     id: 3,
     company: "Microsoft",
-    posted: "1 week ago",
+    postedAt: "2026-02-08T00:00:00Z", // 1 week ago
     role: "Backend Developer",
     type: "Full Time",
     level: "Senior Level",
@@ -35,7 +35,7 @@ const jobs = [
   {
     id: 4,
     company: "Meta",
-    posted: "3 days ago",
+    postedAt: "2026-02-12T00:00:00Z", // 3 days ago
     role: "React Developer",
     type: "Contract",
     level: "Mid Level",
@@ -46,7 +46,7 @@ const jobs = [
   {
     id: 5,
     company: "Netflix",
-    posted: "6 days ago",
+    postedAt: "2026-02-09T00:00:00Z", // 6 days ago
     role: "UI Engineer",
     type: "Full Time",
     level: "Senior Level",
@@ -57,7 +57,7 @@ const jobs = [
   {
     id: 6,
     company: "Apple",
-    posted: "4 days ago",
+    postedAt: "2026-02-11T00:00:00Z", // 4 days ago
     role: "iOS Developer",
     type: "Full Time",
     level: "Senior Level",
@@ -68,7 +68,7 @@ const jobs = [
   {
     id: 7,
     company: "Spotify",
-    posted: "1 day ago",
+    postedAt: "2026-02-14T00:00:00Z", // 1 day ago
     role: "Web Developer",
     type: "Part Time",
     level: "Junior Level",
@@ -79,7 +79,7 @@ const jobs = [
   {
     id: 8,
     company: "Airbnb",
-    posted: "2 weeks ago",
+    postedAt: "2026-02-01T00:00:00Z", // 2 weeks ago
     role: "Full Stack Engineer",
     type: "Full Time",
     level: "Mid Level",

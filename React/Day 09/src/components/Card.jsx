@@ -3,7 +3,7 @@ import { Bookmark } from "lucide-react";
 
 const Card = (props) => {
   return (
-    <div className="bg-white px-8 py-6.5 w-85 aspect-[2.5/3] rounded-[40px] flex flex-col justify-between items-center">
+    <div key={props.key} className="bg-white px-8 py-6.5 w-85 aspect-[2.5/3] rounded-[40px] flex flex-col justify-between items-center">
       <div className="w-full h-1/5 flex justify-between items-start">
         <img
           src={props.logo}
