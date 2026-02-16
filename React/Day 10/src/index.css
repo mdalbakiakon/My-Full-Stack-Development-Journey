@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+
+body{
+  width: 100%;
+  background: #252525;
+}
+
+.card{
+  clip-path:url(#inverted-card);
+  transition: clip-path 5s;
+}
+
+.card:hover{
+  clip-path:url(#hover-card);
+}
