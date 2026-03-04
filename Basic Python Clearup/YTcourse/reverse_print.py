@@ -21,6 +21,6 @@ print("count", count)
 
 
 # more easy way use logarithm
-n = 1532 
+n = 100 
 import math
-print("count", math.ceil(math.log(n, 10)))
+print("count", int(math.log(n, 10)+1))
