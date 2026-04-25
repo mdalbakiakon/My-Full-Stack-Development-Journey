@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { useState } from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const btnClicked = () => {
+    if (name === "Md. Al Baki Akon"){
+      setName("Mishkath")
+    }
+    else{
+      setName("Md. Al Baki Akon")
+    }
+  };
+
+  const [name, setName] = useState("Md. Al Baki Akon")
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+      <div className="w-full h-dvh bg-[#111] text-white flex flex-col justify-center items-center gap-5">
+        <h1 className="text-8xl font-bold text-center">{name}</h1>
+        <button
+          onClick = {btnClicked}
+          className="px-5 py-2.5 bg-gray-500 rounded-2xl text-4xl font-semibold cursor-pointer"
+        >
+          Change Name
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
