@@ -11,7 +11,7 @@ const To = () => {
     const parent = box.parentElement;
 
     gsap.to(box, {
-      x: () => parent.offsetWidth - box.offsetWidth,
+      x: parent.offsetWidth - box.offsetWidth,
       repeat: -1,
       yoyo: true,
       duration: 1,

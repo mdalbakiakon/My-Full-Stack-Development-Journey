@@ -15,7 +15,7 @@ const App = () => {
 
   return (
     <>
-      <div className="w-full h-dvh bg-[#111] text-white flex flex-col justify-center items-center gap-5">
+      <div className="w-full h-dvh bg-[#111] text-white flex flex-col justify-center items-center gap-25">
         <h1 className="text-8xl font-bold text-center">{name}</h1>
         <button
           onClick = {btnClicked}
