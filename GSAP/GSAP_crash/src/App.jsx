@@ -1,6 +1,5 @@
 import From from "./components/From"
 import To from "./components/To"
-import To2 from "./components/To2"
 
 function App() {
   return (
@@ -8,7 +7,6 @@ function App() {
       <h1 className="text-white font-bold text-9xl mt-25">GSAP</h1>
       <To />
       <From />
-      <To2 />
     </section>
   )
 }
