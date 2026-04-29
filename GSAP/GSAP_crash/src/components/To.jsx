@@ -17,6 +17,7 @@ const To = () => {
       x: parent.offsetWidth - box.offsetWidth,
       repeat: -1,
       yoyo: true,
+      repeatDelay: 3,
       duration: 2,
       ease: "sine.inOut",
       borderRadius: "100%",
@@ -67,7 +68,7 @@ const To = () => {
 
         <div
           ref={boxRef}
-          className="bg-violet-500 rounded-xl w-30 aspect-square"
+          className="bg-amber-500 rounded-xl w-25 lg:w-30 aspect-square"
         />
       </div>
     </Card>
