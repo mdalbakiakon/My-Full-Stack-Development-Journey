@@ -1,5 +1,6 @@
 import From from "./components/From"
 import FromTo from "./components/FromTo"
+import MorphSVG from "./components/MorphSVG"
 import Stagger from "./components/Stagger"
 import Timeline from "./components/Timeline"
 import To from "./components/To"
@@ -13,6 +14,7 @@ function App() {
       <FromTo />
       <Timeline />
       <Stagger />
+      <MorphSVG />
     </section>
   )
 }
