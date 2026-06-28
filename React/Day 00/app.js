@@ -1,5 +1,4 @@
-let arr = [0,1,2,3,4,5];
+let a = 12;
+export let arr = [10, 20, 30];
 
-export const chacha = "xyz"
-export const age = 12
-export default arr
+export default a;

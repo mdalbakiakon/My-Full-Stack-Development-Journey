@@ -1,6 +1,7 @@
 import From from "./components/From"
 import FromTo from "./components/FromTo"
 import MorphSVG from "./components/MorphSVG"
+import ScrollTrigger from "./components/ScrollTrigger"
 import Stagger from "./components/Stagger"
 import Timeline from "./components/Timeline"
 import To from "./components/To"
@@ -15,6 +16,7 @@ function App() {
       <Timeline />
       <Stagger />
       <MorphSVG />
+      <ScrollTrigger />
     </section>
   )
 }
