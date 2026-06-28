@@ -25,7 +25,7 @@ import ax from "./app.js";
 import { arr } from "./app.js";
 
 let h1 = document.createElement("h1");
-h1.innerHTML = "<div>Hello From Js</div>";
+h1.innerHTML = "Hello From Js";
 console.log(h1);
 
 // now this is not showing in the body of course it is only rendering on console so to show in body we will be using followings...
@@ -36,3 +36,7 @@ document.body.appendChild(h1);
 
 console.log(ax);
 console.log(arr);
+
+let array = document.createElement("div")
+array.innerText = arr;
+document.body.appendChild(array);
