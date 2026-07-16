@@ -1,22 +1,22 @@
 # React Roadmap
 
 ## 1. JavaScript Fundamentals (prerequisite)
-- [ ] ES6+ syntax (let/const, arrow functions, destructuring)
+- [x] ES6+ syntax (let/const, arrow functions, destructuring)
 - [ ] Array methods (map, filter, reduce)
 - [ ] Promises & async/await
-- [ ] Modules (import/export)
+- [x] Modules (import/export)
 
 ## 2. React Basics
-- [ ] JSX syntax
-- [ ] Components (function components)
-- [ ] Props
-- [ ] State (useState)
+- [x] JSX syntax
+- [x] Components (function components)
+- [x] Props
+- [x] State (useState)
 - [ ] Event handling
 - [ ] Conditional rendering
-- [ ] Lists & keys
+- [x] Lists & keys
 
 ## 3. Component Lifecycle & Hooks
-- [ ] useEffect (side effects, cleanup)
+- [x] useEffect (side effects, cleanup)
 - [ ] useRef
 - [ ] useContext
 - [ ] useMemo / useCallback
@@ -29,9 +29,9 @@
 - [ ] Redux / Redux Toolkit (or Zustand as lighter alt)
 
 ## 5. Routing
-- [ ] React Router basics
-- [ ] Nested routes
-- [ ] Dynamic routes & params
+- [x] React Router basics
+- [x] Nested routes
+- [x] Dynamic routes & params
 - [ ] Protected routes
 
 ## 6. Forms & Validation
@@ -40,14 +40,14 @@
 - [ ] Validation (Yup / Zod)
 
 ## 7. API Integration
-- [ ] fetch / axios
-- [ ] Loading & error states
+- [x] fetch / axios
+- [x] Loading & error states
 - [ ] React Query / SWR (data fetching & caching)
 
 ## 8. Styling
-- [ ] CSS Modules
-- [ ] Styled-components / Emotion
-- [ ] Tailwind CSS
+- [x] CSS Modules
+- [x] Styled-components / Emotion
+- [x] Tailwind CSS
 
 ## 9. Performance
 - [ ] React.memo
@@ -66,6 +66,6 @@
 - [ ] Animation (Framer Motion)
 
 ## 12. Deployment
-- [ ] Build & optimize for production
-- [ ] Deploy (Vercel / Netlify)
+- [x] Build & optimize for production
+- [x] Deploy (Vercel / Netlify)
 - [ ] CI/CD basics
