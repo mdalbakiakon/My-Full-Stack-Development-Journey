@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Card = ({image, description, tag, number}) => {
+const Card = ({image, description, tag, number, key}) => {
   return (
-    <div className='w-75 h-2/3 rounded-3xl flex flex-col justify-center items-start gap-2.5 p-2.5 relative overflow-hidden shrink-0 select-none shadow-lg'>
+    <div key={key} className='w-75 h-2/3 rounded-3xl flex flex-col justify-center items-start gap-2.5 p-2.5 relative overflow-hidden shrink-0 select-none shadow-lg'>
         <div className='absolute top-0 left-0 w-full h-full z-5'>
             <img src={image} alt="" className='w-full h-full object-center object-cover' />
         </div>

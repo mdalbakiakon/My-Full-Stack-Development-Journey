@@ -10,7 +10,7 @@ const Hero_right = () => {
     >
       {cardsData.map((elem, id) => (
         <Card
-          image={elem.image} description={elem.description} tag={elem.tag} number={id + 1}
+          image={elem.image} description={elem.description} tag={elem.tag} number={id + 1} key={id}
         />
       ))}
     </div>
