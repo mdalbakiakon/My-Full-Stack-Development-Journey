@@ -8,7 +8,10 @@ const Exercise = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(`form submitted by ${username}`);
     setLoading(true);
+    setUsername("");
+    setPassword("");
     setError("");
 
     try {
@@ -42,7 +45,7 @@ const Exercise = () => {
           required
           autoComplete="username"
           value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          onChange={(e) => setUsername(e.target.value.toUpperCase())}
           className="bg-white/10 p-2.5 rounded-lg outline-none"
         />
 
