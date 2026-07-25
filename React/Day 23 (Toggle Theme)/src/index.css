@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root[data-theme="light"] {
+  --bg-main-col: beige;
+  --txt-main-col: black;
+}
+
+:root[data-theme="dark"] {
+  --bg-main-col: #111;
+  --txt-main-col: white;
+}
+
+body{
+  font-family: "Orbitron", sans-serif;
+}
+
+button {
+  background: yellowgreen;
+  padding: 2px;
+  width: 50px;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon {
+  color: white;
+  width: 32px;
+  height: 32px;
+}
