@@ -31,7 +31,7 @@ const App = () => {
       </div>
 
       {/* headings */}
-      <h1 className="text-9xl font-black leading-none absolute bottom-7.5 left-5 text-left mask-[linear-gradient(to_bottom,red_25%,transparent_100%)] select-none flex flex-col">
+      <h1 className="text-9xl font-black leading-none absolute bottom-7.5 left-5 text-left mask-[linear-gradient(to_bottom,red_50%,transparent_100%)] select-none flex flex-col p-0">
         <span className="leading-[0.85]">Oxford</span>
         <span className="leading-[0.85]">Nuke</span>
         <span className="leading-[0.85]">Radient</span>
