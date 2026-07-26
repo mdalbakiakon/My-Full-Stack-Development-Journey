@@ -1,8 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { imageList } from "./assets/image_dummy.js";
 
 const App = () => {
   const [activateId, setActivateId] = useState(null);
+  const [noteList, setNoteList] = useState(() => {
+    const saved = localStorage.getItem("note-list");
+    return saved ? JSON.parse(saved) : [];
+  });
+  const [noteTitle, setNoteTitle] = useState("");
+  const [noteText, setNoteText] = useState("");
+
+  useEffect(() => {
+    const drafList = noteList;
+    localStorage.setItem("note-list", JSON.stringify(drafList));
+  }, [noteList]);
+
   const fallBackId = 0;
 
   const imageExpand = (id) => {
@@ -11,6 +23,20 @@ const App = () => {
 
   const imageNormal = () => {
     setActivateId(null);
+  };
+
+  const formSubmit = (e) => {
+    e.preventDefault();
+    console.log("form submitted");
+    const newNoteList = [...noteList];
+    const newNote = {
+      title: noteTitle,
+      text: noteText,
+    };
+    newNoteList.push(newNote);
+    setNoteList(newNoteList);
+    setNoteTitle("");
+    setNoteText("");
   };
 
   return (
@@ -27,7 +53,7 @@ const App = () => {
       </section>
 
       {/* 2nd container */}
-      <section className="w-full h-dvh flex flex-col justify-center items-center gap-5 bg-black">
+      <section className="w-full h-dvh flex flex-col justify-center items-center gap-5 bg-black p-5">
         <div>
           <h1
             style={{
@@ -39,7 +65,7 @@ const App = () => {
           </h1>
         </div>
 
-        <div className="w-2/5 h-1/2 flex justify-center items-center gap-2.5 flex-nowrap">
+        <div className="w-full max-w-5xl h-1/2 flex justify-center items-center gap-2.5 flex-nowrap">
           {imageList.map((elem, idx) => {
             return (
               <div
@@ -53,6 +79,48 @@ const App = () => {
                   className="w-full h-full object-center object-cover"
                 />
               </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* 3rd container */}
+      <section className="bg-black w-full h-dvh flex justify-center items-center p-5">
+        <form
+          onSubmit={formSubmit}
+          className="bg-red-500 p-5 rounded-4xl flex flex-col justify-center items-start gap-2.5 w-full max-w-5xl"
+        >
+          <input
+            type="text"
+            value={noteTitle}
+            onChange={(e) => setNoteTitle(e.target.value)}
+            placeholder="Enter Name"
+            className="w-full p-2.5 outline-none border-2 border-black placeholder:text-black/50 rounded-2xl font-bold"
+          />
+          <textarea
+            value={noteText}
+            onChange={(e) => setNoteText(e.target.value)}
+            placeholder="Enter note here"
+            className="resize-none w-full h-75 p-2.5 outline-none border-2 border-black placeholder:text-black/50 rounded-2xl font-bold"
+          ></textarea>
+
+          <button
+            type="submit"
+            className="font-bold p-2.5 border-2 border-black self-center shadow-xl rounded-2xl cursor-pointer"
+          >
+            submit form
+          </button>
+        </form>
+      </section>
+
+      {/* 4th container */}
+      <section className="w-full h-dvh bg-black flex justify-center items-center">
+        <div className="w-full h-dvh bg-red-400 font-bold overflow-auto grid grid-cols-12 grid-rows-12">
+          {noteList.map((elem, id) => {
+            return (
+              <span key={id} className="flex justify-center items-center">
+                {noteList[id].title}
+              </span>
             );
           })}
         </div>
