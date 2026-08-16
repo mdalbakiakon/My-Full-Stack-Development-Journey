@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+:root[data-theme="light"] {
+  --bg-col: antiquewhite;
+  --txt-col: #111;
+}
+
+:root[data-theme="dark"] {
+  --bg-col: #111;
+  --txt-col: #d3d3d3;
+}
+
+body {
+  background-color: var(--bg-col);
+  color: var(--txt-col);
+}
