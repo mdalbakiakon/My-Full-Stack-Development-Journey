@@ -1,0 +1,9 @@
+Project: Theme + Cart Mini Store
+
+A tiny product listing page with two contexts working together — enough to feel real, small enough to finish in an evening.
+
+Features to build:
+
+1.. ThemeContext — toggle light/dark mode, applied globally (background, text, card colors)
+
+2.. CartContext — add/remove items from a product list, show item count in a header badge, and a cart page/panel showing total price
