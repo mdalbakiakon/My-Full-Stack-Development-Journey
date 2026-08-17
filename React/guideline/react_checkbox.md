@@ -2,7 +2,7 @@
 
 ## 1. JavaScript Fundamentals (prerequisite)
 - [x] ES6+ syntax (let/const, arrow functions, destructuring)
-- [ ] Array methods (map, filter, reduce)
+- [x] Array methods (map, filter, reduce)
 - [ ] Promises & async/await
 - [x] Modules (import/export)
 
@@ -18,13 +18,13 @@
 ## 3. Component Lifecycle & Hooks
 - [x] useEffect (side effects, cleanup)
 - [ ] useRef
-- [ ] useContext
+- [x] useContext
 - [ ] useMemo / useCallback
 - [ ] Custom hooks
 
 ## 4. State Management
 - [ ] Lifting state up
-- [ ] Context API
+- [x] Context API
 - [ ] useReducer
 - [ ] Redux / Redux Toolkit (or Zustand as lighter alt)
 
