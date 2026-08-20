@@ -1,0 +1,16 @@
+import dns from 'dns'
+dns.setDefaultResultOrder('ipv4first')
+dns.setServers(['8.8.8.8', '8.8.4.4'])
+
+import dotenv from 'dotenv'
+import app from './src/app.js'
+import connectDB from './src/db/db.js'
+
+dotenv.config()
+const PORT = process.env.PORT
+
+connectDB()
+
+app.listen(PORT, ()=>{
+    console.log(`server is running on port: ${PORT}`);
+})
