@@ -1,8 +1,11 @@
 import express from "express";
-import authControllers from "../controllers/auth.controller.js";
+import authController from "../controllers/auth.controller.js";
 
 const router = express.Router();
 
-router.post('/register', authControllers.registerUser);
+router.post('/register', authController.registerUser);
+router.get('/test', (req, res)=>{
+    console.log("cookies: ", req.cookies);
+})
 
 export default router;

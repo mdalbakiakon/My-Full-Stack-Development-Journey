@@ -12,10 +12,11 @@ const registerUser = async (req, res) => {
             id: newUser._id
         }, process.env.JWT_SECRET);
 
+        res.cookie("token", token);
+
         res.status(201).json({
             message: "successfully created new user",
-            newUser: newUser,
-            token: token
+            newUser: newUser
         })
 
     } catch (err) {
