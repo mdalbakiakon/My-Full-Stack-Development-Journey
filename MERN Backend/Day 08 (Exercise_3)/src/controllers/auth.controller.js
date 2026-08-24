@@ -1,0 +1,54 @@
+import userModel from "../models/user.model.js";
+import jwt from "jsonwebtoken";
+
+const registerUser = async (req, res) => {
+    try {
+
+        const data = req.body;
+
+        const user = await userModel.create({
+            ...data
+        })
+
+        const safeUser = user.toObject();
+        delete safeUser.password;
+
+        const token = jwt.sign({
+            id: user._id
+        }, process.env.JWT_SECRET);
+
+        res.cookie("OLIVE_TOKEN", token);
+
+        return res.status(201).json({
+            message: 'user created successfully',
+            user: safeUser,
+            token
+        })
+
+    } catch (error) {
+        console.log(error);
+
+        if (error.name === 'ValidationError') {
+            const found_errors = {};
+            Object.values(error.errors).forEach((err) => {
+                found_errors[err.path] = err.message;
+            });
+            return res.status(400).json({
+                message: 'validation failed',
+                found_errors
+            });
+        }
+
+        if (error.code === 11000) {
+            return res.status(409).json({
+                message: 'username or email is already registered'
+            });
+        }
+
+        return res.status(500).json({
+            message: 'something went wrong'
+        });
+    }
+}
+
+export default { registerUser };
