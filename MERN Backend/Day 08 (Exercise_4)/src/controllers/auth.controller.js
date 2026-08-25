@@ -53,4 +53,30 @@ const registerUser = async (req, res) => {
     }
 }
 
-export default { registerUser };
+
+
+const loginUser = async (req, res) => {
+    try {
+        
+        const data = req.body;
+        const token = req.cookies.MEDIA_TOKEN;
+
+        const decode = jwt.verify(token, process.env.JWT_SECRET);
+
+        if(!decode){
+            return res.status(409).json({
+                message: 'unauthorized user'
+            })
+        }
+        
+
+    } catch (error) {
+        console.log(error);
+
+        return res.status(500).json({
+            message: 'something went wrong'
+        })
+    }
+}
+
+export default { registerUser, loginUser };
