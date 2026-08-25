@@ -52,4 +52,37 @@ const registerUser = async (req, res) => {
     }
 };
 
-export default { registerUser };
+
+const loginUser = async (req, res) => {
+    try {
+
+        const { identifier, password } = req.body;
+        const token = req.cookies.TEST_TOKEN;
+
+        console.log(identifier, password);
+        console.log(token);
+
+        if (!token) {
+            return res.status(401).json({
+                message: 'unauthorized user'
+            })
+        }
+
+        const isValidUser = jwt.verify(token, process.env.JWT_SECRET);
+
+    } catch (error) {
+        console.log(error);
+
+        if(error.name === "JsonWebTokenError"){
+            return res.status(401).json({
+                message: 'invalid token'
+            })
+        }
+
+        return res.status(500).json({
+            message: 'something went wrong'
+        })
+    }
+}
+
+export default { registerUser, loginUser };
