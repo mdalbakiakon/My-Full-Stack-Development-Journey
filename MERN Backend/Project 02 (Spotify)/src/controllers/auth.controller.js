@@ -1,6 +1,8 @@
 import userModel from "../models/user.model.js";
 import jwt from "jsonwebtoken";
 
+
+// signup auth
 const signupUser = async (req, res) => {
     try {
 
@@ -20,7 +22,7 @@ const signupUser = async (req, res) => {
 
         return res.status(201).json({
             message: 'user created successfully',
-            createdUser,
+            user: createdUser,
             token
         })
 
@@ -53,4 +55,57 @@ const signupUser = async (req, res) => {
 };
 
 
-export default { signupUser };
+
+// login auth
+const loginUser = async (req, res) => {
+    try {
+        
+        const {identifier, password} = req.body;
+        const foundUser = await userModel.findOne({
+            $or: [{email: identifier}, {username: identifier}]
+        }).select("+password");
+
+
+        if(!foundUser){
+            return res.status(401).json({
+                // we will not pass that email or username is not registered here for security purpose
+                message: 'invalid credientials'
+            })
+        };
+
+        const isPasswordValid = await foundUser.comparePassword(password);
+
+        if(!isPasswordValid){
+            return res.status(401).json({
+                // we will not pass password is wrong for the security purpose
+                message: 'invalid credentials'
+            })
+        }
+
+        const loginToken = jwt.sign({
+            id: foundUser._id
+        }, process.env.JWT_SECRET);
+
+        res.cookie('SPOTIFY_TOKEN', loginToken);
+
+        const safeUser = foundUser.toObject();
+        delete safeUser.password;
+
+        return res.status(200).json({
+            message: 'login successful -- welcome user',
+            user: safeUser
+        })
+
+
+    } catch (error) {
+        console.log(error);
+
+        return res.status(500).json({
+            message: 'something went wrong'
+        })
+    }
+}
+
+
+
+export default { signupUser, loginUser };
