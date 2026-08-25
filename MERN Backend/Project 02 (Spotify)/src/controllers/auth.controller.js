@@ -6,9 +6,9 @@ import jwt from "jsonwebtoken";
 const signupUser = async (req, res) => {
     try {
 
-        const { email, username, password } = req.body;
+        const { email, username, password, role='listener'} = req.body;
         const newUser = await userModel.create({
-            email, password, username
+            email, password, username, role
         });
 
         const token = jwt.sign({
