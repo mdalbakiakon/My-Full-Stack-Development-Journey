@@ -5,7 +5,7 @@ import bcrypt from "bcrypt";
 const userSchema = new mongoose.Schema({
     email: {
         type: String,
-        required: true,
+        required: [true, 'email is required'],
         unique: true,
         trim: true,
         lowercase: true,
@@ -22,7 +22,7 @@ const userSchema = new mongoose.Schema({
     },
     password: {
         type: String,
-        required: true,
+        required: [true, 'password is required'],
         minLength: [8, 'password must be at least 8 characters long'],
         maxLength: [20, 'password must be under 20 characters']
     },
