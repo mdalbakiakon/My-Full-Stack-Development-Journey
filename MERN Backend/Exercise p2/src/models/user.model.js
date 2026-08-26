@@ -31,7 +31,7 @@ const userSchema = new mongoose.Schema({
         enum: ["artist", "listener"],
         default: "listener"
     }
-})
+}, {timestamps: true});
 
 // hashing password before save to database automatically
 userSchema.pre("save", async function () {
