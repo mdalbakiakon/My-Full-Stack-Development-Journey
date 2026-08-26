@@ -12,7 +12,8 @@ const signupUser = async (req, res) => {
         });
 
         const token = jwt.sign({
-            id: newUser._id
+            id: newUser._id,
+            role: newUser.role
         }, process.env.JWT_SECRET);
 
         res.cookie("SPOTIFY_TOKEN", token);
@@ -83,7 +84,8 @@ const loginUser = async (req, res) => {
         }
 
         const loginToken = jwt.sign({
-            id: foundUser._id
+            id: foundUser._id,
+            role: foundUser.role
         }, process.env.JWT_SECRET);
 
         res.cookie('SPOTIFY_TOKEN', loginToken);

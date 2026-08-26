@@ -9,8 +9,8 @@ const userSchema = new mongoose.Schema(
             required: true,
             unique: true,
             match: [
-                /^[a-z0-9_.]{5,12}$/,
-                "username must be between 5 to 12 characters (lowercase letters, numbers, underscore, dot only)",
+                /^[a-z0-9_.]{5,15}$/,
+                "username must be between 5 to 15 characters (lowercase letters, numbers, underscore, dot only)",
             ],
         },
         email: {
