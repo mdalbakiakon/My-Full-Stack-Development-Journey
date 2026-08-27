@@ -8,7 +8,7 @@ const musicSchema = new mongoose.Schema({
         required: [true, 'song title is required'],
         maxLength: [150, 'title must be under 150 characters']
     },
-    author: {
+    authorId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "exercise_users",
         required: [true, 'author is required']

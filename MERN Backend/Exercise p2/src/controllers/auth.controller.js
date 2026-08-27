@@ -6,10 +6,11 @@ const signupUser = async (req, res) => {
     try {
 
         // destructering user input
-        const { email, password } = req.body;
+        const { email, password, role = 'listener' } = req.body;
         const newUser = await userModel.create({
             email,
-            password
+            password,
+            role
         });
 
         // creating a valid token for newly created user
