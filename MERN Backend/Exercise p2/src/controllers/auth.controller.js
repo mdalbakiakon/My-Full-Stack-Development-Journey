@@ -62,7 +62,7 @@ const signupUser = async (req, res) => {
 
         // fallback error message handle
         return res.status(500).json({
-            message: 'somthing went wrong',
+            message: 'something went wrong',
             error: error.message
         })
     }

@@ -9,7 +9,7 @@ cloudinary.config({
     api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
-const uploadFile = async (buffer, mimetype) => {
+const cloudUpload = async (buffer, mimetype) => {
 
     try {
         // Buffer to Base64
@@ -21,8 +21,7 @@ const uploadFile = async (buffer, mimetype) => {
         // Upload and convert to Opus
         const result = await cloudinary.uploader.upload(dataUri, {
             folder: "exercise_spotify",
-            resource_type: "auto",
-            format: "opus",
+            resource_type: "auto"
         });
 
         return result;
@@ -32,4 +31,4 @@ const uploadFile = async (buffer, mimetype) => {
     }
 };
 
-export default uploadFile;
+export default cloudUpload;
