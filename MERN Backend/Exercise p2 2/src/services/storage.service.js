@@ -19,7 +19,7 @@ const cloudUpload = async (buffer, mimetype) => {
             folder: "new_exercise"
         });
 
-        return result.secure_url;
+        return result;
 
     } catch (err) {
         console.log(err.message);

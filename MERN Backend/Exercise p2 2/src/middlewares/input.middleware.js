@@ -1,6 +1,10 @@
 const isUserInputValid = async (req, res, next) => {
     try {
         let {identifier, password} = req.body;
+
+        if(req.body.role === "artist"){
+            req.role = "artist";
+        }
         
         if(!identifier || !password){
             return res.status(400).json({

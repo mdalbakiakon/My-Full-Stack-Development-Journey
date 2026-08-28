@@ -7,7 +7,8 @@ const signupUser = async (req, res) => {
 
         const newUser = await userModel.create({
             email: req.email,
-            password: req.password
+            password: req.password,
+            role: req.role
         })
 
         const token = jwt.sign({
@@ -61,8 +62,6 @@ const signupUser = async (req, res) => {
         })
     }
 };
-
-
 
 
 const loginUser = async (req, res) => {
