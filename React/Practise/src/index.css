@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: "roboto";
+  src: url("/fonts/roboto.woff2") format("woff2");
+}
+
+@theme{
+  --font-robo: "roboto"
+}
+
+body{
+  font-family: var(--font-robo);
+}

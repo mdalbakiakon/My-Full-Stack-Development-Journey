@@ -1,0 +1,13 @@
+import React from "react";
+import CountBtn from "../components/CountBtn";
+
+const About = () => {
+  return (
+    <div>
+      <h2>This is About Page</h2>
+      <CountBtn />
+    </div>
+  );
+};
+
+export default About;
