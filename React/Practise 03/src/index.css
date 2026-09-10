@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+body {
+  background-color: black;
+  font-family: Helvetica, sans-serif;
+  color: #d3d3d3;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #526119;
+  border-radius: 999px;
+}
+
+@keyframes scroll-left {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-left{
+  animation: scroll-left 10s linear infinite;
+}
+
+.animate-scroll-left:hover{
+  animation-play-state: paused;
+}
