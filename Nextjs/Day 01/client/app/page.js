@@ -1,5 +1,7 @@
+"use strict";
 // import Image from "next/image";
-
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = Home;
 // export default function Home() {
 //   return (
 //     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
@@ -67,19 +69,11 @@
 //     </div>
 //   );
 // }
-
-
-
-
-
-
-export default function Home(){
-  return(
-    <div className="relative top-7.5">
+function Home() {
+    return (<div className="relative top-7.5">
       <main>
         <h1 className="text-red-500">Home Page</h1>
         <p>this is a home page!</p>
       </main>
-    </div>
-  )
+    </div>);
 }
