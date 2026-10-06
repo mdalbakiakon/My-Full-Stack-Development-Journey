@@ -76,7 +76,7 @@ interface User {
 }
 
 // even declaring the age later is also valid because it will direct to the main and only one User
-
+// this is called declaration merging as well
 
 
 
@@ -108,10 +108,12 @@ type Animal = {
     species: string;
 }
 
+type Sound = {
+    bark: boolean;
+}
+
 // interface uses the keyword extends while type use the &
-type Dog = Animal & { 
-    bark: boolean
-};
+type Dog = Animal & Sound;
 
 
 let pet: Dog = {
@@ -146,4 +148,57 @@ console.log(myData);
 
 
 
-// 
+// practising with a function now which rollDice
+type NumOnDice = 1 | 2 | 3 | 4 | 5 | 6;
+
+function rollDice(): number{
+    return Math.floor(Math.random()*6 + 1) as NumOnDice;
+}
+
+console.log(rollDice());
+console.log(rollDice());
+console.log(rollDice());
+console.log(rollDice());
+
+console.log("\n");
+
+
+// practise with another function
+function getLength(params: string | string[]): number{
+    return params.length;
+}
+
+let fruits: string[] = ["apple", "banana"];
+
+console.log(getLength("test"));
+console.log(getLength(fruits));
+
+
+
+
+
+
+// Alias
+// aliases is like giving a custom name to each category
+// no need actually but if any
+
+type CarFuel = string;
+type CarName = string;
+
+type Car = {
+    name: CarName;
+    fuel: CarFuel;
+}
+
+
+const myCar: Car = {
+    name: "toyota",
+    fuel: "petrol"
+}
+
+console.log(myCar);
+
+
+
+
+// generic
